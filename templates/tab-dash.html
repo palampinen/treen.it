@@ -1,0 +1,15 @@
+<ion-view title="Dashboard">
+  <ion-content class="has-header">
+    <h1>Dash</h1>
+	
+	<ion-list>
+      <ion-item ng-repeat="training in trainings" type="item-text-wrap" href="#/tab/training/{{training.id}}">
+        <div class="row">
+			<div class="col"><span class="pull-right"><i class="icon ion-ios7-calendar-outline"></i> {{training.time}}</span></div>
+			<div class="col">{{training.name}}</div>
+		</div>
+      </ion-item>
+    </ion-list>
+	
+  </ion-content>
+</ion-view>
