@@ -11,7 +11,7 @@ angular.module('starter.controllers', [])
             $scope.trainings = data;
         }, function(data) {
             // call returned an error
-            $scope.trainings = data;
+            alert('fail');
         });
 	
 	
@@ -26,5 +26,34 @@ angular.module('starter.controllers', [])
   $scope.friend = Friends.get($stateParams.friendId);
 })
 
-.controller('AccountCtrl', function($scope) {
-});
+.controller('AccountCtrl', ['MonthActivity', '$scope', function (MonthActivity, $scope) {
+
+	
+	var options = {
+		title: 'kk treenit'
+	};
+
+	
+	
+	$scope.monthactivity = []; 
+	
+	MonthActivity.all()
+        .then(function(data) {
+            // call was successful
+
+			
+			var gData = new google.visualization.DataTable(data);
+			var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+			chart.draw(gData, options);
+			
+            $scope.monthactivity = data;
+			
+        }, function(data) {
+            // call returned an error
+			alert('fail');
+        });
+	
+	
+	
+
+}]);
