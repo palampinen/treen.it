@@ -1,0 +1,44 @@
+<!-- 
+	Template for Intro
+
+-->
+      <ion-view left-buttons="leftButtons" right-buttons="rightButtons">
+        <ion-slide-box on-slide-changed="slideChanged(index)">
+          <ion-slide>
+            <h3>TREENIT</h3>
+            <div id="logo">
+              <img style="width:200px;" src="http://leikkikentta.com/fressi/reenari/img/squaredot_black.png">
+            </div>
+            <p>
+				Oletko kova treenaaja?
+            </p>
+            <p>
+				Ota selvää
+            </p>
+          </ion-slide>
+          <ion-slide>
+            <h3>Aloita tästä</h3>
+            
+            <div id="list">
+              <h5>Syötä tunnukset</h5>
+              <div class="list">
+			   <label class="item item-input">
+				<input type="text" placeholder="Käyttäjätunnus">
+			   </label>
+			   <label class="item item-input">
+				<input type="text" placeholder="Salasana">
+			   </label>
+			</div>
+
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <h3>Siirry ohjelmaan</h3>
+            <p>
+              <a class="button button-stable" id="startApp" href="#/tab/dash">
+				  Aloita
+			  </a>
+            </p>
+          </ion-slide>
+        </ion-slide-box>
+      </ion-view>
