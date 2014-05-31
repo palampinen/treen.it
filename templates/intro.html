@@ -2,18 +2,14 @@
 	Template for Intro
 
 -->
+
+    <ion-nav-bar class="bar-dark nav-title-slide-ios7" style="background-color:#000;">
+		<img src="http://leikkikentta.com/fressi/reenari/img/squaredot_white_gradient.png" style=" height:30px;display:block;margin:2px auto 0;" />
+	</ion-nav-bar>
+
       <ion-view left-buttons="leftButtons" right-buttons="rightButtons"  >
         <ion-slide-box on-slide-changed="slideChanged(index)" style="background:url(img/loadman/run.jpg) no-repeat 20% 0; background-size:auto 100%;" >
-          <ion-slide style="background:transparent;">
-            <h1>TREENIT</h1>
-
-            <p>
-				Oletko kova treenaaja?
-            </p>
-            <p>
-				Ota selvää
-            </p>
-          </ion-slide>
+          
           <ion-slide style="background:transparent;">
             <h1>Aloita tästä</h1>
             
@@ -43,12 +39,25 @@
 				</select>
 				</label>
 			   
-			   <a class="button button-block button-dark " id="startApp" href="#/tab/dash">
-				  Aloita
+			   <a class="button button-block button-dark" id="startApp" href="#/tab/dash">
+				 Aloita <i class="icon ion-ios7-checkmark-outline"></i> <i class="icon ion-ios7-close-outline"></i> <i class="icon ion-ios7-reloading"></i>
 			  </a>
 			</div>
 
             </div>
           </ion-slide>
+		  <ion-slide style="background:transparent;">
+           
+			<h1 style="font-size:350%;">TREENIT</h1>
+
+            <p>
+				Oletko kova treenaaja?
+            </p>
+            <p>
+				Ota selvää
+            </p>
+			
+          </ion-slide>
+		  
         </ion-slide-box>
       </ion-view>
