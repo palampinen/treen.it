@@ -1,5 +1,15 @@
-var API_URL = 'http://minnemenna.com/dev/wp-content/plugins/omafressi/dev/api/';
+var API_URL = 'http://minnemenna.com/dev/wp-content/plugins/omafressi/dev/api/',
+	API_USER = 'pasilampinen',
+	API_PASS = 'iaY25mx',
+	API_CENTERURL = 'https://fressi.bypolar.fi/mobile/10/history.html';
 
+	
+// TEMP
+var logindata = {};
+logindata.u = API_USER;
+logindata.p = API_PASS;
+logindata.c = API_CENTERURL;
+	
 angular.module('starter.services', [])
 
 /**
@@ -35,9 +45,11 @@ angular.module('starter.services', [])
 
 	return {
 		all: function() {
+
+			
 			var deferred = $q.defer();
 			
-			$http({method : 'GET',url : API_URL+'test'})
+			$http({method : 'GET',url : API_URL+'all'})
 				.success(function(data, status) {
 					//return data;
 					deferred.resolve(data)

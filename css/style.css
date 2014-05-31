@@ -58,8 +58,8 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
   font-weight: 300;
 }
 #list {
-  width: 170px;
-  margin: 30px auto;
+  width: 85%;
+  margin: 10px auto;
   font-size: 20px;
 }
 #list ol {
