@@ -1,7 +1,7 @@
 /* App Styles */
 
 
-body {font-weight:100; font-family:'Roboto','Helvetica',Arial;}
+body {font-weight:100; font-family:'Roboto','Helvetica',Arial; background:#000;color:#FFF;}
 #chart_div { font-family:'Roboto','Helvetica',Arial;}
 h1,h2,h3,h4 {font-weight:100; font-family:'Roboto','Helvetica',Arial;}
 
