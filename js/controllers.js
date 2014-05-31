@@ -134,7 +134,15 @@ if(window.localStorage['didTutorial'] === "true") {
 
 	
 	var options = {
-		title: 'kk treenit'
+		title: 'kk treenit',
+		curveType: 'function',
+		colors: ['#000'],
+		legend: 'none',
+		lineWidth: 5,
+        pointSize: 20,
+		pointShape: 'square',
+		crosshair: { trigger: 'both' }
+
 	};
 
 	
@@ -147,7 +155,7 @@ if(window.localStorage['didTutorial'] === "true") {
 
 			
 			var gData = new google.visualization.DataTable(data);
-			var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+			var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
 			chart.draw(gData, options);
 			
             $scope.monthactivity = data;

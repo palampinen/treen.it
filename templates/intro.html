@@ -2,13 +2,11 @@
 	Template for Intro
 
 -->
-      <ion-view left-buttons="leftButtons" right-buttons="rightButtons">
-        <ion-slide-box on-slide-changed="slideChanged(index)">
-          <ion-slide>
-            <h3>TREENIT</h3>
-            <div id="logo">
-              <img style="width:200px;" src="http://leikkikentta.com/fressi/reenari/img/squaredot_black.png">
-            </div>
+      <ion-view left-buttons="leftButtons" right-buttons="rightButtons"  >
+        <ion-slide-box on-slide-changed="slideChanged(index)" style="background:url(img/loadman/run.jpg) no-repeat 20% 0; background-size:auto 100%;" >
+          <ion-slide style="background:transparent;">
+            <h1>TREENIT</h1>
+
             <p>
 				Oletko kova treenaaja?
             </p>
@@ -16,29 +14,41 @@
 				Ota selvää
             </p>
           </ion-slide>
-          <ion-slide>
-            <h3>Aloita tästä</h3>
+          <ion-slide style="background:transparent;">
+            <h1>Aloita tästä</h1>
             
             <div id="list">
-              <h5>Syötä tunnukset</h5>
-              <div class="list">
+              <h4>Syötä tunnukset</h4>
+              <div class="list fadeform">
+			   <!-- Tunnus -->
 			   <label class="item item-input">
 				<input type="text" placeholder="Käyttäjätunnus">
 			   </label>
+			   
+			   <!-- Password -->
 			   <label class="item item-input">
 				<input type="text" placeholder="Salasana">
 			   </label>
+			   
+			   <!-- Choose center -->
+			   <label class="item item-input item-select">
+				<div class="input-label">
+				  Treenipaikka
+				</div>
+				<select>
+				  <option>Valitse</option>
+				  <option>Aplico</option>
+				  <option>Forever</option>
+				  <option>Fressi</option>
+				</select>
+				</label>
+			   
+			   <a class="button button-block button-dark " id="startApp" href="#/tab/dash">
+				  Aloita
+			  </a>
 			</div>
 
             </div>
-          </ion-slide>
-          <ion-slide>
-            <h3>Siirry ohjelmaan</h3>
-            <p>
-              <a class="button button-stable" id="startApp" href="#/tab/dash">
-				  Aloita
-			  </a>
-            </p>
           </ion-slide>
         </ion-slide-box>
       </ion-view>
