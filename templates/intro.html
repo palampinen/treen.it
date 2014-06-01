@@ -2,13 +2,15 @@
 	Template for Intro
 
 -->
-
-    <ion-nav-bar class="bar-dark nav-title-slide-ios7" style="background-color:#000;">
-		<img src="http://leikkikentta.com/fressi/reenari/img/squaredot_white_gradient.png" style=" height:30px;display:block;margin:2px auto 0;" />
+	
+	
+    <ion-nav-bar class="bar-dark nav-title-slide-ios7" style="background-color:transparent;border:0;" >
+		<!--<img src="http://leikkikentta.com/fressi/reenari/img/squaredot_white_gradient.png" style=" height:30px;display:block;margin:2px auto 0;" />-->
 	</ion-nav-bar>
+	
 
       <ion-view left-buttons="leftButtons" right-buttons="rightButtons" style="background:#000;" >
-        <ion-slide-box on-slide-changed="slideChanged(index)" style="background:#000;" >
+        <ion-slide-box on-slide-changed="slideChanged(index)" style="background:#000;" class="intropage">
           
 		  
 		  
@@ -19,15 +21,15 @@
 			
             
 			
-			<h2 style="color:#FFF">Mitä tarvitset?</h2>
-            <p style="color:#FFF">Treenipaikkasi varaustunnukset.</p>
+			<h2 >Treenit Puhelimessasi</h2>
+            <p>Tarvitset vain treenipaikkasi varaustunnukset. Syötä ne <a style="font-weight:500;color:#FFF; text-decoration:none;" href="#slide2" >nyt ›</a></p>
 			
         </ion-slide>
 		  
-        <ion-slide style="background:url(img/loadman/new.jpg) no-repeat 50% 45%; background-size: auto 120%; ">
-            <h1 style="color:#FFF;text-transform:uppercase; font-size:300%;">Aloita tästä</h1>
+        <ion-slide id="slide2" style="background:url(img/loadman/new.jpg) no-repeat 0% 0%; background-size: auto 100%; ">
+            <h1 style="color:#FFF;text-transform:uppercase; font-size:300%;">Aloita <span style="font-weight:300">nyt</span></h1>
             <div id="list" class="list">
-              <h4 style="color:#FFF">Syötä tunnukset</h4>
+              <h4 style="color:#FFF">Syötä tunnuksesi</h4>
               <div class="list fadeform">
 			   <!-- Tunnus -->
 			   <label class="item item-input">
@@ -41,7 +43,7 @@
 			   
 			   <!-- Choose center -->
 			   <label class="item item-input item-select">
-				<span class="input-label">Treenipaikka</span>
+				<span class="input-label">Treenipaikkasi</span>
 				
 				<select id="keskus">
 				  <option>Valitse</option>
@@ -50,7 +52,7 @@
 				  <option>Fressi</option>
 				</select>
 				</label>
-			   
+ 
 			   <a class="button button-block button-dark" id="startApp" href="#/tab/dash">
 				 Aloita <i class="icon ion-ios7-checkmark-outline"></i> <i class="icon ion-ios7-close-outline"></i> <i class="icon ion-ios7-reloading"></i>
 			  </a>

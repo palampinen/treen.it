@@ -66,7 +66,7 @@ if(window.localStorage['didTutorial'] === "true") {
   // Called each time the slide changes
   $scope.slideChanged = function(index) {
 
-    // Check if we should update the left buttons
+    // Check if we should update the left buttons || TODO
     if(index > 0) {
       // If this is not the first slide, give it a back button
       $scope.leftButtons = [
@@ -84,9 +84,9 @@ if(window.localStorage['didTutorial'] === "true") {
       $scope.leftButtons = leftButtons;
     }
     
-    // If this is the last slide, set the right button to
+    // If this is the last slide, set the right button to || TODO
     // move to the app
-    if(index == 2) {
+    if(index == 1) {
       $scope.rightButtons = [
         {
           content: 'Käynnistä TREENIT',
