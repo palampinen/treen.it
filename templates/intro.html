@@ -4,25 +4,21 @@
 -->
 	
 	
-    <ion-nav-bar class="bar-dark nav-title-slide-ios7" style="background-color:transparent;border:0;" >
+    <ion-nav-bar class="bar-dark nav-title-slide-ios7" style="" id="intro-nav-bar">
 		<!--<img src="http://leikkikentta.com/fressi/reenari/img/squaredot_white_gradient.png" style=" height:30px;display:block;margin:2px auto 0;" />-->
 	</ion-nav-bar>
 	
 
-      <ion-view left-buttons="leftButtons" right-buttons="rightButtons" style="background:#000;" >
-        <ion-slide-box on-slide-changed="slideChanged(index)" style="background:#000;" class="intropage">
-		  
-		  
+      <ion-view left-buttons="leftButtons" right-buttons="rightButtons" style="background:#000;" >  	
+		<ion-slide-box on-slide-changed="slideChanged(index)" style="background:#000;" class="intropage">
 		<ion-slide style="background:url(img/loadman/run2.jpg) no-repeat 30% 0; background-size:auto 100%; text-align:left;padding-left:3%;">
-           
-		    <img src="img/treenit100.png" style="width:80px;margin-top:-40px; " />
-			<h1 style="color:#fff; font-size:300%; font-weight:100;margin-bottom:100px; letter-spacing:5px;">TREENIT</h1>
-			
-            
-			
-			<h2 >Treenit Puhelimessasi</h2>
-            <p>Tarvitset vain treenipaikkasi varaustunnukset. Syötä ne <a style="font-weight:500;color:#FFF; text-decoration:none;" href="#slide2" >nyt ›</a></p>
-			
+			<img src="img/treenit100.png" style="width:50px;float:left;margin-right:20px; " />
+		
+			<h1 style="color:#fff; font-size:300%; font-weight:100;margin: 0px 0 100px 0px;">TREENIT</h1>
+			<div class="bottom">
+				<h2>Treenit Puhelimessasi</h2>
+				<p>Tarvitset vain treenipaikkasi varaustunnukset. Syötä ne <a style="font-weight:500;color:#FFF; text-decoration:none;" href="#slide2" >nyt ›</a></p>
+			</div>
         </ion-slide>
 		  
         <ion-slide id="slide2" style="background:url(img/loadman/new.jpg) no-repeat 0% 0%; background-size: auto 100%; ">

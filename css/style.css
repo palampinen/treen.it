@@ -48,6 +48,8 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 
 
 /* Intro */
+
+#intro-nav-bar {display:none;}
 .slider {
   height: 100%;
 }
@@ -79,9 +81,13 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 .fadeform ::-webkit-input-placeholder, .fadeform ::-moz-placeholder {color:#000;}
 
 .intropage, .intropage p, .intropage h2 {color:#FFF; font-weight:300;}
-.intropage p {font-size:20px;line-height:24px;padding-right:40px;}
+.intropage h2 {font-size:24px;}
+.intropage p {font-size:17px;line-height:24px;padding-right:40px;}
 .intropage .input-label {font-weight:900;text-transform:uppercase;}
 .intropage strong {font-weight:500;}
+.intropage .bottom {position:absolute;bottom:50px;}
+.slider-pager .slider-pager-page {color:#FFF;}
+
 
 /* DARK TO BLACK */
 .ionic .tabs-dark > .tabs, .ionic .tabs.tabs-dark {
