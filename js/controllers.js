@@ -136,13 +136,13 @@ if(window.localStorage['didTutorial'] === "true") {
 	var options = {
 		title: 'kk treenit',
 		curveType: 'function',
-		colors: ['#000'],
+		colors: ['#333'],
 		legend: 'none',
-		lineWidth: 5,
+		lineWidth: 2,
         pointSize: 20,
-		pointShape: 'square',
-		crosshair: { trigger: 'both' }
-
+		pointShape: 'circle',
+		crosshair: { trigger: 'vertical' }
+		
 	};
 
 	
