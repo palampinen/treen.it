@@ -8,13 +8,24 @@
 		
 		<h2>GFX</h2>
 		<ion-scroll direction="x" scrollbar-x="false">
-		<div id="chart_div" style="width:1200px; height: 300px; text-align:center;font-size:30px;">
+		<div id="chart_div" style="margin:0; width:1200px; height: 300px; text-align:center;font-size:30px;">
 			<i class="icon ion-loading-c"></i>
 		</div>
 		</ion-scroll>
 	
+		<div style="text-align:center;">
+			<h2>Viikko</h2>
+			<canvas width="300px" height="200px" id="gauge1"></canvas>
+		</div>
+		<div style="text-align:center;">
+			<h2>Kuukausi</h2>
+			<canvas width="300px" height="200px" id="gauge2"></canvas>
+		</div>
 		
-		<div id="myGauge"></div>
+		<div style="text-align:center;">
+			<h2>Vuosi</h2>
+			<canvas width="300px" height="200px" id="gauge3"></canvas>
+		</div>	
 	
 	
   </ion-content>

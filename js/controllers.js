@@ -133,6 +133,7 @@ if(window.localStorage['didTutorial'] === "true") {
 .controller('AccountCtrl', ['MonthActivity', '$scope', function (MonthActivity, $scope) {
 
 	
+	/* Google Chart */
 	var options = {
 		title: 'kk treenit',
 		curveType: 'function',
@@ -146,24 +147,7 @@ if(window.localStorage['didTutorial'] === "true") {
 	};
 
 	
-	var g = new JustGage({
-		id: "myGauge",
-		value: 3,
-		min: 0,
-		max: 7,
-		title: "Tämän viikon treenit",
-		levelColorsGradient:false,
-		shadowSize:0,
-		shadowOpacity :0,
-		showInnerShadow :false,
-		levelColors: new Array('#000'),
-		gaugeWidthScale:0.2,
-		showMinMax: false
-		
-	}); 
-	
-	
-	
+
 	$scope.monthactivity = []; 
 	
 	MonthActivity.all()
@@ -181,6 +165,43 @@ if(window.localStorage['didTutorial'] === "true") {
             // call returned an error
 			alert('fail');
         });
+
+	
+	/* gauge.js */
+	
+	var opts = {
+	  lines: 12, // The number of lines to draw
+	  angle: 0.24, // The length of each line
+	  lineWidth: 0.05, // The line thickness
+	  pointer: {
+		length: 0.9, // The radius of the inner circle
+		strokeWidth: 0.035, // The rotation offset
+		color: '#000000' // Fill color
+	  },
+	  limitMax: 'true',   // If true, the pointer will not go past the end of the gauge
+	  colorStart: '#000',   // Colors
+	  colorStop: '#000',    // just experiment with them
+	  strokeColor: '#E0E0E0',   // to see which ones work best for you
+	  generateGradient: false
+	};
+	var target = document.getElementById('gauge1'); // your canvas element
+	var gauge = new Donut(target).setOptions(opts); // create sexy gauge!
+	gauge.maxValue = 7; // set max gauge value
+	gauge.animationSpeed = 32; // set animation speed (32 is default value)
+	gauge.set(3);
+	
+	
+	var target = document.getElementById('gauge2'); // your canvas element
+	var gauge2 = new Donut(target).setOptions(opts); // create sexy gauge!
+	gauge2.maxValue = 30; // set max gauge value
+	gauge2.animationSpeed = 32; // set animation speed (32 is default value)
+	gauge2.set(23);
+	
+	var target = document.getElementById('gauge3'); // your canvas element
+	var gauge3 = new Donut(target).setOptions(opts); // create sexy gauge!
+	gauge3.maxValue = 365; // set max gauge value
+	gauge3.animationSpeed = 32; // set animation speed (32 is default value)
+	gauge3.set(56);
 	
 	
 	
