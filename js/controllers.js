@@ -139,12 +139,29 @@ if(window.localStorage['didTutorial'] === "true") {
 		colors: ['#333'],
 		legend: 'none',
 		lineWidth: 2,
-        pointSize: 20,
+        pointSize: 10,
 		pointShape: 'circle',
 		crosshair: { trigger: 'vertical' }
 		
 	};
 
+	
+	var g = new JustGage({
+		id: "myGauge",
+		value: 3,
+		min: 0,
+		max: 7,
+		title: "Tämän viikon treenit",
+		levelColorsGradient:false,
+		shadowSize:0,
+		shadowOpacity :0,
+		showInnerShadow :false,
+		levelColors: new Array('#000'),
+		gaugeWidthScale:0.2,
+		showMinMax: false
+		
+	}); 
+	
 	
 	
 	$scope.monthactivity = []; 
