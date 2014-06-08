@@ -26,63 +26,66 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 	
 	
 	// Intro
+	/*
 	.state('intro', {
 		url: '/intro',
 		templateUrl: 'templates/intro.html',
 		controller: 'IntroCtrl'
 	})
+	*/
 	
 	
     // setup an abstract state for the tabs directive
-    .state('tab', {
-      url: "/tab",
+    .state('app', {
+      url: "/app",
       abstract: true,
-      templateUrl: "templates/tabs.html"
+      templateUrl: "templates/menu.html",
+	  controller: 'AppCtrl'
     })
 
     // Each tab has its own nav history stack:
 
-    .state('tab.dash', {
+    .state('app.dash', {
       url: '/dash',
       views: {
-        'tab-dash': {
-          templateUrl: 'templates/tab-dash.html',
+        'menuContent': {
+          templateUrl: 'templates/app-dash.html',
           controller: 'DashCtrl'
         }
       }
     })
 
-    .state('tab.friends', {
+    .state('app.friends', {
       url: '/friends',
       views: {
-        'tab-friends': {
-          templateUrl: 'templates/tab-friends.html',
+        'menuContent': {
+          templateUrl: 'templates/app-friends.html',
           controller: 'FriendsCtrl'
         }
       }
     })
-    .state('tab.friend-detail', {
+    .state('app.friend-detail', {
       url: '/friend/:friendId',
       views: {
-        'tab-friends': {
+        'menuContent': {
           templateUrl: 'templates/friend-detail.html',
           controller: 'FriendDetailCtrl'
         }
       }
     })
 
-    .state('tab.account', {
+    .state('app.account', {
       url: '/account',
       views: {
-        'tab-account': {
-          templateUrl: 'templates/tab-account.html',
+        'menuContent': {
+          templateUrl: 'templates/app-account.html',
           controller: 'AccountCtrl'
         }
       }
     })
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/intro');
+  $urlRouterProvider.otherwise('/app/dash');
 
 });
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
-
+	
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	<!--<script src="js/charts.js"></script>-->
 	<script type="text/javascript">
@@ -30,11 +30,100 @@
         chart.draw(data, options);
       }
     </script>
-
 	
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100' rel='stylesheet' type='text/css'>
+		<script src="js/chart/gauge.min.js"></script>
+	   <link href="css/style.css" rel="stylesheet">
 
+	<style>
+	
+	
+	
+		.gauge {opacity:1;background:#000;padding:5px; display:block; border-radius:100%;overflow:hidden;width:150px; height:150px;position:relative;text-align:center;font-family:'Roboto'}
+		#gauge1 {transform: rotate(180deg);}
+		.gaugeWrap .title {font-size:60px; color:#E0E055;top:-120px;color:#fff; position:relative;font-weight:100; }
+		
+		
+		
+	</style>
+	
   </head>
-  <body >
+  <body style="margin:0; padding:30px; background:url(img/loadman/run2.jpg) no-repeat 50% 50%; background-size:auto 100%;" >
+  
+  	<div class="row">
+		<div class="col col-67">
+			<div class="center gaugeWrap">
+				<h2>Viikko</h2>
+				<div class="gauge" >
+					<canvas width="150px" height="150px" id="gauge1"></canvas>
+					<div class="title" >5</div>
+				</div>
+			</div>
+		</div>
+		<div class="col col-33">
+			<div class="center gaugeWrap">
+				<h2>kk</h2>
+				<canvas width="100%" height="75px" id="gauge2"></canvas>
+				<div class="title">23</div>
+			</div>
+			
+			<div style="center gaugeWrap">
+				<h2>Y</h2>
+				<canvas width="100%" height="75px" id="gauge3"></canvas>
+				<div class="title">56</div>
+			</div>
+		</div>
+	</div>
+  
+  
+  
+	
 		<div id="chart_div" style="width: 100%; height: 300px; background:#000;"></div>
+		
+		
+		
+		
+		
+		
+		
+		
+			<script>
+		/* gauge.js */
+	
+	var opts = {
+	  lines: 12, // The number of lines to draw
+	  angle: 0.5, // The length of each line
+	  lineWidth: 0.06, // The line thickness
+	/*  pointer: {
+		length: 0.9, // The radius of the inner circle
+		strokeWidth: 0.035, // The rotation offset
+		color: '#000000' // Fill color
+	  },*/
+	  limitMax: 'true',   // If true, the pointer will not go past the end of the gauge
+	  colorStart: '#fff',   // Colors
+	  colorStop: '#fff',    // just experiment with them
+	  strokeColor: '#666',   // to see which ones work best for you
+	  generateGradient: false
+	};
+	var target = document.getElementById('gauge1'); // your canvas element
+	var gauge = new Donut(target).setOptions(opts); // create sexy gauge!
+	gauge.maxValue = 7; // set max gauge value
+	gauge.animationSpeed = 32; // set animation speed (32 is default value)
+	gauge.set(5);
+	
+	
+	var target = document.getElementById('gauge2'); // your canvas element
+	var gauge2 = new Donut(target).setOptions(opts); // create sexy gauge!
+	gauge2.maxValue = 30; // set max gauge value
+	gauge2.animationSpeed = 32; // set animation speed (32 is default value)
+	gauge2.set(23);
+	
+	var target = document.getElementById('gauge3'); // your canvas element
+	var gauge3 = new Donut(target).setOptions(opts); // create sexy gauge!
+	gauge3.maxValue = 365; // set max gauge value
+	gauge3.animationSpeed = 32; // set animation speed (32 is default value)
+	gauge3.set(56);
+	</script>
+
   </body>
 </html>

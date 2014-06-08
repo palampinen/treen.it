@@ -1,0 +1,35 @@
+<!-- 
+  Create tabs with an icon and label, using the tabs-positive style. 
+  Each tab's child <ion-nav-view> directive will have its own 
+  navigation history that also transitions its views in and out.
+-->
+
+
+<ion-side-menus>
+
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-pane>
+
+  <ion-side-menu side="left" style="background:#000 url(img/loadman/new.jpg) no-repeat 0 0; background-size:auto 100%;;">
+    <header class="bar bar-header bar-dark" style="background:#000">
+      <h1 class="title"><img src="img/treenit100.png" style="width:40px;float:left;margin-bottom:-3px;" alt="" /> Valikko</h1>
+    </header>
+    <ion-content class="has-header">
+      <ion-list>
+        <ion-item nav-clear menu-close href="#/app/dash">
+          Dash
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/friends">
+          Friends
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/account">
+          Account
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

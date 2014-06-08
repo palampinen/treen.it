@@ -104,6 +104,10 @@ if(window.localStorage['didTutorial'] === "true") {
 })
 
 
+.controller('AppCtrl', function($scope) {
+
+})
+
 .controller('DashCtrl', ['Trainings', '$scope', function (Trainings, $scope) {
 	
 	

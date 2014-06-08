@@ -89,6 +89,12 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 .slider-pager .slider-pager-page {color:#FFF;}
 
 
+/* GAUGE */
+.center {text-align:center;}
+.gaugeWrap  {position:relative;;}
+.gaugeWrap .title {font-size:30px; position:relative; top:-50px;}
+
+
 /* DARK TO BLACK */
 .ionic .tabs-dark > .tabs, .ionic .tabs.tabs-dark {
     border-color: #000;
