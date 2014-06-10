@@ -1,11 +1,29 @@
-<ion-view title="Friends">
+<ion-view title="Tarkka">
   <ion-nav-buttons side="left">
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
 
 
   <ion-content class="has-header">
-    <ion-list>
+    
+	<!-- test BEGIN -->
+	<div class="center gaugeWrap">	
+		<div class="gauge" >
+			<canvas width="150px" height="150px" id="gauge1"></canvas>
+			<div class="title" >5</div>
+		</div>
+	</div>
+	
+	<style>
+		.gauge {margin:20px;opacity:1;background:#000;padding:5px; display:block; border-radius:100%;overflow:hidden;width:160px; height:160px;position:relative;text-align:center;font-weight:900;}
+		#gauge1 {transform: rotate(180deg);}
+		.gaugeWrap .title {font-size:60px; color:#E0E055;top:-100px;color:#fff; position:relative;font-weight:000; }	
+	</style>
+
+
+	<!-- test END -->
+	
+	<ion-list>
       <ion-item ng-repeat="friend in friends" type="item-text-wrap" href="#/tab/friend/{{friend.id}}">
         {{friend.name}}
       </ion-item>
