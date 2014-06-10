@@ -14,21 +14,28 @@
     <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
   </ion-pane>
 
-  <ion-side-menu side="left" style="background:#000 url(img/loadman/new.jpg) no-repeat 0 0; background-size:auto 100%;;">
+  <ion-side-menu side="left" style="background:#000 url(img/loadman/new_dark.jpg) no-repeat 50% 100%; background-size: 100% auto;">
     <header class="bar bar-header bar-dark" style="background:#000">
       <h1 class="title"><img src="img/treenit100.png" style="width:40px;float:left;margin-bottom:-3px;" alt="" /> Valikko</h1>
     </header>
-    <ion-content class="has-header">
+    <ion-content class="has-header sidenav">
       <ion-list>
         <ion-item nav-clear menu-close href="#/app/dash">
-          Dash
+         <i class="icon ion-ios7-heart-outline"></i> Treenisi
         </ion-item>
         <ion-item nav-clear menu-close href="#/app/friends">
-          Friends
+          <i class="icon ion-ios7-pie-outline"></i> Tarkka
         </ion-item>
         <ion-item nav-clear menu-close href="#/app/account">
-          Account
+         <i class="icon ion-ios7-chatbubble-outline"></i> Blogit
         </ion-item>
+		
+		<ion-item nav-clear menu-close href="#/app/account">
+         <i class="icon ion-ios7-gear-outline"></i> Asetukset
+        </ion-item>
+			
+		
+		
       </ion-list>
     </ion-content>
   </ion-side-menu>

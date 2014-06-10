@@ -95,6 +95,37 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 .gaugeWrap .title {font-size:30px; position:relative; top:-50px;}
 
 
+
+/* SIDENAV */
+.sidenav .list .item-content {background:transparent;}
+.sidenav .item-complex, .sidenav a.item.item-complex, .sidenav button.item.item-complex {background:transparent; color:#ddd;font-weight:500;border:0;border-bottom:1px dotted #111;}
+.sidenav .item-complex:hover, .sidenav .item-complex:active, .sidenav .item-complex.activated,
+.sidenav  a.item.item-complex:hover, .sidenav  a.item.item-complex:active,
+.sidenav button.item.item-complex:hover, .sidenav button.item.item-complex:active {color:#FFF;}
+.sidenav .item-complex {font-size:130%;}
+.sidenav .item-complex .icon{margin-right:10px;font-size:160%;position:relative; top:3px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* DARK TO BLACK */
 .ionic .tabs-dark > .tabs, .ionic .tabs.tabs-dark {
     border-color: #000;
