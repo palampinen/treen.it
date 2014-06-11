@@ -47,6 +47,8 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 
 
 
+
+
 /* Intro */
 
 #intro-nav-bar {display:none;}
@@ -97,13 +99,16 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 
 
 /* SIDENAV */
+.menu .bar .title {margin:0;text-transform:uppercase;font-size:20px;text-align:left;}
+.menu .bar .title img{width: 34px; float: left;  margin: 0 5px 0 7px; position: relative;}
 .sidenav .list .item-content {background:transparent;}
 .sidenav .item-complex, .sidenav a.item.item-complex, .sidenav button.item.item-complex {background:transparent; color:#ddd;font-weight:500;border:0;border-bottom:1px dotted #111;}
 .sidenav .item-complex:hover, .sidenav .item-complex:active, .sidenav .item-complex.activated,
 .sidenav  a.item.item-complex:hover, .sidenav  a.item.item-complex:active,
-.sidenav button.item.item-complex:hover, .sidenav button.item.item-complex:active {color:#FFF;}
+.sidenav button.item.item-complex:hover, .sidenav button.item.item-complex:active {color:#FFF;background:rgba(255,255,255,.1);}
 .sidenav .item-complex {font-size:130%;}
 .sidenav .item-complex .icon{margin-right:10px;font-size:160%;position:relative; top:3px;}
+.sidenav .list .item-content {line-height:35px;}
 
 
 
@@ -212,10 +217,11 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 }
 	
 .ionic .bar-dark .button {
-    border-color: #222;
+    border-color: #000;
     background-color: #000;
     color: #fff; 
 }
+
 	
 .ionic .tabs-dark > .tabs, .ionic .tabs.tabs-dark {
     border-color: #000;

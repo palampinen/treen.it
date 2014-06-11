@@ -1,4 +1,4 @@
-<ion-view title="Asetukset">
+<ion-view title="Aikajana">
   <ion-nav-buttons side="left">
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
@@ -6,9 +6,9 @@
 
   <ion-content class="has-header padding" >
    
-	<h2>Aikajana</h2>
+
 		<ion-scroll direction="y" scrollbar-y="true">
-		
+		<div style="text-align:center;">
 		<h3>Kesäkuu 2014</h3>
 		<ul id="list_days">
 	
@@ -343,7 +343,7 @@
 		</li>
 		
 		</ul>
-		
+		</div>
 		
 		</ion-scroll>	
 		<style>
@@ -352,9 +352,9 @@
     content: "";
     display: block;
     height: 100px;
-    left: -78px;
+    left: -74px;
     position: absolute;
-    top: 37px;
+    top: 47px;
     width: 100px;
     z-index: 0;
 }
@@ -370,29 +370,36 @@
     color: #DDDDDD;
     display: block;
     float: none;
-    font-size: 16px;
-    font-weight: 900;
-    height: 38px;
-    line-height: 22px;
+    font-size: 22px;
+    font-weight: 100;
+	font-family:sans-serif;
+    height: 48px;
+    line-height: 35px;
     list-style: none outside none;
     margin: 0 6px 40px 0;
     padding: 7px;
     position: relative;
     text-align: center;
-    width: 38px;
+    width: 48px;
     z-index: 999;
 	
+}
+#list_days > li.has_events:hover,
+#list_days > li.has_events:active {
+	background:#8C042F
 }
 .weekday {
     font-weight: 100;
     position: absolute;
-    right: -17px;
+    right: -27px;
+	text-align:left;
 }
 
 ul#list_days {
     max-width: 50px;
     position: relative;
-	margin-left:40px;
+	margin:0 auto;
+	overflow:visible;
 }
 		</style>
 	

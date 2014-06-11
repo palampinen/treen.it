@@ -10,7 +10,7 @@ logindata.u = API_USER;
 logindata.p = API_PASS;
 logindata.c = API_CENTERURL;
 	
-angular.module('starter.services', [])
+angular.module('treenit.services', [])
 
 /**
  * A simple example service that returns some data.

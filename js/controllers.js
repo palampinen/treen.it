@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('treenit.controllers', [])
 
 
 
@@ -89,7 +89,7 @@ if(window.localStorage['didTutorial'] === "true") {
     if(index == 1) {
       $scope.rightButtons = [
         {
-          content: 'Käynnistä TREENIT',
+          content: 'Käynnistä treenit',
           type: 'button-positive button-clear',
           tap: function(e) {
             startApp();
