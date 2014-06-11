@@ -126,6 +126,30 @@ if(window.localStorage['didTutorial'] === "true") {
  // $scope.trainings = Trainings.all();
 }])
 
+
+
+.controller('TimelineCtrl', function($scope) {
+
+  var d = new Date().getDate(),
+	  html = 'test';
+
+  for($i = parseInt(d);$i > 0; $i--){
+	if($i%2)
+		html += '<li class="hasevent">'+$i+'</li>';
+	else
+		html += '<li>'+$i+'</li>';
+		
+		console.log(html);
+	}
+  $scope.day = html;
+	
+})
+  
+  
+  
+
+
+
 .controller('FriendsCtrl', function($scope, Friends) {
   $scope.friends = Friends.all();
   
