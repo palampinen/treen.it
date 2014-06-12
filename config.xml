@@ -4,7 +4,7 @@
     <description>
         Treenit puhelimeesi
     </description>
-    <author email="pasi.deeper@gmail.com" href="http://deeper.fi/">
+    <author email="palampinen@gmail.com" href="http://deeper.fi/">
 		Pasi Lampinen
     </author>
     <content src="index.html" />
@@ -13,6 +13,8 @@
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
+	<preference name="orientation" value="portrait" />
+
 
     <!-- Don't store local date in an iCloud backup. Turn this to "cloud" to enable storage 
          to be sent to iCloud. Note: enabling this could result in Apple rejecting your app.

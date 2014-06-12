@@ -107,7 +107,7 @@ if(window.localStorage['didTutorial'] === "true") {
 .controller('AppCtrl', function($scope, $location) {
 
 	$scope.isItemActive = function(item) {
-		console.log($location.path());
+		//console.log($location.path());
 		return $location.path().indexOf(item) > -1;
 	};
 
