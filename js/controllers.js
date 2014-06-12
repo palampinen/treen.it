@@ -178,7 +178,7 @@ if(window.localStorage['didTutorial'] === "true") {
 	var target = document.getElementById('gauge1'); // your canvas element
 	var gauge = new Donut(target).setOptions(opts); // create sexy gauge!
 	gauge.maxValue = 7; // set max gauge value
-	gauge.animationSpeed = 32; // set animation speed (32 is default value)
+	gauge.animationSpeed = 12; // set animation speed (32 is default value)
 	gauge.set(5);
 	
   
@@ -250,20 +250,20 @@ if(window.localStorage['didTutorial'] === "true") {
 	var target = document.getElementById('gauge1'); // your canvas element
 	var gauge = new Donut(target).setOptions(opts); // create sexy gauge!
 	gauge.maxValue = 7; // set max gauge value
-	gauge.animationSpeed = 32; // set animation speed (32 is default value)
+	gauge.animationSpeed = 12; // set animation speed (32 is default value)
 	gauge.set(3);
 	
 	
 	var target = document.getElementById('gauge2'); // your canvas element
 	var gauge2 = new Donut(target).setOptions(opts); // create sexy gauge!
 	gauge2.maxValue = 30; // set max gauge value
-	gauge2.animationSpeed = 32; // set animation speed (32 is default value)
+	gauge2.animationSpeed = 2; // set animation speed (32 is default value)
 	gauge2.set(23);
 	
 	var target = document.getElementById('gauge3'); // your canvas element
 	var gauge3 = new Donut(target).setOptions(opts); // create sexy gauge!
 	gauge3.maxValue = 365; // set max gauge value
-	gauge3.animationSpeed = 32; // set animation speed (32 is default value)
+	gauge3.animationSpeed = 22; // set animation speed (32 is default value)
 	gauge3.set(56);
 	
 	
