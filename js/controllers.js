@@ -104,7 +104,12 @@ if(window.localStorage['didTutorial'] === "true") {
 })
 
 
-.controller('AppCtrl', function($scope) {
+.controller('AppCtrl', function($scope, $location) {
+
+	$scope.isItemActive = function(item) {
+		console.log($location.path());
+		return $location.path().indexOf(item) > -1;
+	};
 
 })
 
@@ -139,7 +144,7 @@ if(window.localStorage['didTutorial'] === "true") {
 	else
 		html += '<li>'+$i+'</li>';
 		
-		console.log(html);
+	//	console.log(html);
 	}
   $scope.day = html;
 	
@@ -158,7 +163,7 @@ if(window.localStorage['didTutorial'] === "true") {
   	var opts = {
 	  lines: 12, // The number of lines to draw
 	  angle: 0.5, // The length of each line
-	  lineWidth: 0.06, // The line thickness
+	  lineWidth: 0.01, // The line thickness
 	/*  pointer: {
 		length: 0.9, // The radius of the inner circle
 		strokeWidth: 0.035, // The rotation offset
@@ -191,14 +196,15 @@ if(window.localStorage['didTutorial'] === "true") {
 	
 	/* Google Chart */
 	var options = {
-		title: 'kk treenit',
+		title: 'Treenit kuukausittain',
 		curveType: 'function',
-		colors: ['#333'],
+		colors: ['#45B7CD'],
 		legend: 'none',
 		lineWidth: 2,
         pointSize: 10,
 		pointShape: 'circle',
-		crosshair: { trigger: 'vertical' }
+		crosshair: { trigger: 'vertical' },
+		backgroundColor: 'transparent'
 		
 	};
 
@@ -227,7 +233,7 @@ if(window.localStorage['didTutorial'] === "true") {
 	
 	var opts = {
 	  lines: 12, // The number of lines to draw
-	  angle: 0.24, // The length of each line
+	  angle: 0.33, // The length of each line
 	  lineWidth: 0.05, // The line thickness
 	  pointer: {
 		length: 0.9, // The radius of the inner circle
@@ -235,9 +241,10 @@ if(window.localStorage['didTutorial'] === "true") {
 		color: '#000000' // Fill color
 	  },
 	  limitMax: 'true',   // If true, the pointer will not go past the end of the gauge
-	  colorStart: '#000',   // Colors
-	  colorStop: '#000',    // just experiment with them
-	  strokeColor: '#E0E0E0',   // to see which ones work best for you
+	  colorStart: '#CF5777',   // Colors
+	  colorStop: '#CF5777',    // just experiment with them
+	  //strokeColor: '#E7ABBB',   // to see which ones work best for you
+	  strokeColor: 'rgba(235,235,235,0.4)',   // to see which ones work best for you
 	  generateGradient: false
 	};
 	var target = document.getElementById('gauge1'); // your canvas element
