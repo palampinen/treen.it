@@ -6,9 +6,9 @@ var API_URL = 'http://minnemenna.com/dev/wp-content/plugins/omafressi/dev/api/',
 	
 // TEMP
 var logindata = {};
-logindata.u = API_USER;
-logindata.p = API_PASS;
-logindata.c = API_CENTERURL;
+logindata.username = API_USER;
+logindata.password = API_PASS;
+logindata.center = API_CENTERURL;
 	
 angular.module('treenit.services', [])
 
@@ -48,8 +48,11 @@ angular.module('treenit.services', [])
 
 			
 			var deferred = $q.defer();
-			
-			$http({method : 'GET',url : API_URL+'all'})
+			$http({
+					method: 'GET',
+					url : API_URL, 
+					params: {'command':'all', 'TREENI_USER':logindata.username, 'TREENI_PASS':logindata.password, 'TREENI_CENTER':logindata.center},
+				})
 				.success(function(data, status) {
 					//return data;
 					deferred.resolve(data)
@@ -75,9 +78,10 @@ angular.module('treenit.services', [])
 		all: function() {
 			var deferred = $q.defer();
 			
-			$http({method : 'GET',url : API_URL+'month'})
+			$http({method : 'GET',url : API_URL, params: {command:'month', TREENI_USER: logindata.username, TREENI_PASS:logindata.password, TREENI_CENTER:logindata.center}})
 				.success(function(data, status) {
 					//return data;
+					
 					deferred.resolve(data)
 				})
 				.error(function(data, status) {

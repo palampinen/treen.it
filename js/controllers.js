@@ -155,20 +155,17 @@ if(window.localStorage['didTutorial'] === "true") {
 
 
 
-.controller('FriendsCtrl', function($scope, Friends) {
+.controller('FriendsCtrl', function($scope, Friends,MonthActivity) {
   $scope.friends = Friends.all();
   
   
   // GAUGE TEST
+	/*
   	var opts = {
 	  lines: 12, // The number of lines to draw
 	  angle: 0.5, // The length of each line
 	  lineWidth: 0.01, // The line thickness
-	/*  pointer: {
-		length: 0.9, // The radius of the inner circle
-		strokeWidth: 0.035, // The rotation offset
-		color: '#000000' // Fill color
-	  },*/
+
 	  limitMax: 'true',   // If true, the pointer will not go past the end of the gauge
 	  colorStart: '#fff',   // Colors
 	  colorStop: '#fff',    // just experiment with them
@@ -180,31 +177,21 @@ if(window.localStorage['didTutorial'] === "true") {
 	gauge.maxValue = 7; // set max gauge value
 	gauge.animationSpeed = 12; // set animation speed (32 is default value)
 	gauge.set(5);
-	
+	*/
   
   
-  
-  
-})
-
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
-})
-
-.controller('AccountCtrl', ['MonthActivity', '$scope', function (MonthActivity, $scope) {
-
-	
-	/* Google Chart */
+    	/* Google Chart */
 	var options = {
 		title: 'Treenit kuukausittain',
 		curveType: 'function',
-		colors: ['#45B7CD'],
+		colors: ['#CF5777'],
 		legend: 'none',
 		lineWidth: 2,
         pointSize: 10,
 		pointShape: 'circle',
 		crosshair: { trigger: 'vertical' },
-		backgroundColor: 'transparent'
+		backgroundColor: 'transparent',
+		fontName:'RobotoLight'
 		
 	};
 
@@ -228,6 +215,20 @@ if(window.localStorage['didTutorial'] === "true") {
 			alert('fail');
         });
 
+  
+  
+  
+  
+})
+
+.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
+  $scope.friend = Friends.get($stateParams.friendId);
+})
+
+.controller('AccountCtrl', ['MonthActivity', '$scope', function ( $scope) {
+
+	
+
 	
 	/* gauge.js */
 	
@@ -235,14 +236,14 @@ if(window.localStorage['didTutorial'] === "true") {
 	  lines: 12, // The number of lines to draw
 	  angle: 0.33, // The length of each line
 	  lineWidth: 0.05, // The line thickness
-	  pointer: {
+	  /*pointer: {
 		length: 0.9, // The radius of the inner circle
 		strokeWidth: 0.035, // The rotation offset
 		color: '#000000' // Fill color
-	  },
+	  },*/
 	  limitMax: 'true',   // If true, the pointer will not go past the end of the gauge
-	  colorStart: '#CF5777',   // Colors
-	  colorStop: '#CF5777',    // just experiment with them
+	  colorStart: '#45CCBE',   // Colors
+	  colorStop: '#45CCBE',    // just experiment with them
 	  //strokeColor: '#E7ABBB',   // to see which ones work best for you
 	  strokeColor: 'rgba(235,235,235,0.4)',   // to see which ones work best for you
 	  generateGradient: false

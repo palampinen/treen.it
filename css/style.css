@@ -36,6 +36,13 @@
 	src: url(../assets/Roboto/Roboto-Bold.ttf);
     font-style: normal;
 }
+@font-face
+{
+	font-family: RobotoLight;
+	src: url(../assets/Roboto/Roboto-Light.ttf);
+    font-style: normal;
+}
+
 
 
 
