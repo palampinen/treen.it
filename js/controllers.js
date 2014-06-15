@@ -157,6 +157,7 @@ if(window.localStorage['didTutorial'] === "true") {
 			n2+=r2,e2.innerHTML=n2,n2>=t2&&(e2.innerHTML=t2,window.clearInterval(i2))
 		},40);
 		
+	
 	var e3 = document.getElementById("num3"),
 		t3=parseInt(e3.innerHTML,10),
 		n3=0,
@@ -184,7 +185,9 @@ if(window.localStorage['didTutorial'] === "true") {
 	*/
 	
 	
-	$scope.trainings = []; 
+	
+	
+	$scope.trainings = [];
 	
 	Trainings.all()
         .then(function(data) {

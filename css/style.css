@@ -120,7 +120,7 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 
 /* GAUGE */
 .center {text-align:center;}
-.gaugeWrap  {position:relative;color:rgba(255,255,255,.8);font-size:11px;font-weight:500; margin-bottom:20px;}
+.gaugeWrap  {position:relative;color:rgba(255,255,255,.8);font-size:11px;font-weight:500; margin:20px 0 40px;}
 .gaugeWrap.big {font-size:13px;font-weight:600;}
 .gaugeWrap .title {font-size:18px;  position:relative; color:rgba(255,255,255,.8);font-family:'RobotoLight';}
 .gaugeWrap.big .title {font-size:70px; line-height:63px; font-family:'Roboto';}
@@ -135,7 +135,11 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 .numWrap h3 {color:#45CCBE;color:#45CCBE;text-transform:uppercase; font-weight:600;font-size:12px;white-space:nowrap;color:#627F7B }
 .numWrap .num {font-family:'RobotoThin';color:rgba(0,0,0,.7);font-size:30px;}
 .bordercol {border-right:1px solid rgba(0,0,0,.1);padding-bottom:0 !important;}
-.numrow{margin-top:20px;}
+
+@media (min-height: 490px) {
+.fullheight .scroll {min-height:100%;}
+.numrow{position:absolute;bottom:20px;}
+}
 
 /* SIDENAV */
 .menu .bar .title {margin:0;text-transform:uppercase;font-size:20px;text-align:left;}

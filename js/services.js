@@ -103,7 +103,7 @@ angular.module('treenit.services', [])
 
 .factory('User', function() {
 
-  var user = { name: 'Pasi Lampinen', sex: 'male', email:'palampinen@gmail.com' }
+  var user = { name: 'Pasi Lampinen', sex: 'female', email:'palampinen@gmail.com' }
 	
 	
 	return user;
