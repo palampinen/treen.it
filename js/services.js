@@ -55,6 +55,7 @@ angular.module('treenit.services', [])
 				})
 				.success(function(data, status) {
 					//return data;
+					//alert(data.toSource());
 					deferred.resolve(data)
 				})
 				.error(function(data, status) {
@@ -76,11 +77,13 @@ angular.module('treenit.services', [])
 
 	return {
 		all: function() {
+			console.log('getting data');
 			var deferred = $q.defer();
 			
 			$http({method : 'GET',url : API_URL, params: {command:'month', TREENI_USER: logindata.username, TREENI_PASS:logindata.password, TREENI_CENTER:logindata.center}})
 				.success(function(data, status) {
-					//return data;
+				
+					localStorage.setItem("treenit-month",JSON.stringify(data));
 					
 					deferred.resolve(data)
 				})
@@ -89,10 +92,20 @@ angular.module('treenit.services', [])
 					//alert("Error");
 			});
 			return deferred.promise;
+			
 		}
 	};
 	
 	
   
-}]);
+}])
 
+
+.factory('User', function() {
+
+  var user = { name: 'Pasi Lampinen', sex: 'male', email:'palampinen@gmail.com' }
+	
+	
+	return user;
+
+})

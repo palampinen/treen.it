@@ -104,16 +104,84 @@ if(window.localStorage['didTutorial'] === "true") {
 })
 
 
-.controller('AppCtrl', function($scope, $location) {
+.controller('AppCtrl', function($scope, $location, User) {
 
 	$scope.isItemActive = function(item) {
 		//console.log($location.path());
 		return $location.path().indexOf(item) > -1;
 	};
+	
+	$scope.user = User;
 
 })
 
 .controller('DashCtrl', ['Trainings', '$scope', function (Trainings, $scope) {
+	
+	
+	
+		
+	/* gauge.js */
+	
+	var opts = {
+	  lines: 12, // The number of lines to draw
+	  angle: 0.33, // The length of each line
+	  lineWidth: 0.05, // The line thickness
+	  limitMax: 'true',   // If true, the pointer will not go past the end of the gauge
+	  colorStart: '#45CCBE',   // Colors
+	  colorStop: '#45CCBE',    // just experiment with them
+	  //strokeColor: '#E7ABBB',   // to see which ones work best for you
+	  strokeColor: 'rgba(235,235,235,0.4)',   // to see which ones work best for you
+	  generateGradient: false
+	};
+	var target = document.getElementById('gauge1'); // your canvas element
+	var gauge = new Donut(target).setOptions(opts); // create sexy gauge!
+	gauge.maxValue = 7; // set max gauge value
+	gauge.animationSpeed = 10; // set animation speed (32 is default value)
+	gauge.set(4);
+
+	
+// 1	
+	var e = document.getElementById("num1"),
+		t=parseFloat(e.innerHTML,10),
+		n=0,
+		r=(t/25),
+		i=setInterval(function(){
+			n+=r,e.innerHTML=(Math.round(n*10) / 10).toFixed(1),n>=t&&(e.innerHTML=(Math.round(t*10) / 10).toFixed(1),window.clearInterval(i))
+		},40);
+	
+	var e2 = document.getElementById("num2"),
+		t2=parseInt(e2.innerHTML,10),
+		n2=0,
+		r2=Math.ceil(t2/25),
+		i2=setInterval(function(){
+			n2+=r2,e2.innerHTML=n2,n2>=t2&&(e2.innerHTML=t2,window.clearInterval(i2))
+		},40);
+		
+	var e3 = document.getElementById("num3"),
+		t3=parseInt(e3.innerHTML,10),
+		n3=0,
+		r3=Math.ceil(t3/25),
+		i3=setInterval(function(){
+			n3+=r3,e3.innerHTML=n3,n3>=t3&&(e3.innerHTML=t3,window.clearInterval(i3))
+		},40);
+		
+	var e4 = document.getElementById("num4"),
+		t4=parseInt(e4.innerHTML,10),
+		n4=0,
+		r4=Math.ceil(t4/25),
+		i4=setInterval(function(){
+			n4+=r4,e4.innerHTML=n4,n4>=t4&&(e4.innerHTML=t4,window.clearInterval(i4))
+		},40);
+	
+	
+	/*
+		var t=parseInt(e.text(),10);
+		var n=0;
+		var r=Math.ceil(t/25);
+		var i=setInterval(function(){
+				n+=r,e.text(n),n>=t&&(e.text(t),window.clearInterval(i))
+		},40);
+	*/
 	
 	
 	$scope.trainings = []; 
@@ -124,11 +192,12 @@ if(window.localStorage['didTutorial'] === "true") {
             $scope.trainings = data;
         }, function(data) {
             // call returned an error
-            alert('fail');
+            alert('Treenejä ei saatu haettua');
         });
-	
-	
- // $scope.trainings = Trainings.all();
+		
+		
+
+	// $scope.trainings = Trainings.all();
 }])
 
 
@@ -199,10 +268,21 @@ if(window.localStorage['didTutorial'] === "true") {
 
 	$scope.monthactivity = []; 
 	
+	
+	
+	if( localStorage.getItem('treenit-month') ) {
+	
+		var data = JSON.parse(localStorage.getItem('treenit-month'));
+		var gData = new google.visualization.DataTable(data),
+			chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+		chart.draw(gData, options);
+			
+        $scope.monthactivity = data;	
+	
+	} else
 	MonthActivity.all()
         .then(function(data) {
             // call was successful
-
 			
 			var gData = new google.visualization.DataTable(data);
 			var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
@@ -212,7 +292,7 @@ if(window.localStorage['didTutorial'] === "true") {
 			
         }, function(data) {
             // call returned an error
-			alert('fail');
+			alert('Tietoja ei saatu haettua.');
         });
 
   
@@ -229,45 +309,7 @@ if(window.localStorage['didTutorial'] === "true") {
 
 	
 
-	
-	/* gauge.js */
-	
-	var opts = {
-	  lines: 12, // The number of lines to draw
-	  angle: 0.33, // The length of each line
-	  lineWidth: 0.05, // The line thickness
-	  /*pointer: {
-		length: 0.9, // The radius of the inner circle
-		strokeWidth: 0.035, // The rotation offset
-		color: '#000000' // Fill color
-	  },*/
-	  limitMax: 'true',   // If true, the pointer will not go past the end of the gauge
-	  colorStart: '#45CCBE',   // Colors
-	  colorStop: '#45CCBE',    // just experiment with them
-	  //strokeColor: '#E7ABBB',   // to see which ones work best for you
-	  strokeColor: 'rgba(235,235,235,0.4)',   // to see which ones work best for you
-	  generateGradient: false
-	};
-	var target = document.getElementById('gauge1'); // your canvas element
-	var gauge = new Donut(target).setOptions(opts); // create sexy gauge!
-	gauge.maxValue = 7; // set max gauge value
-	gauge.animationSpeed = 12; // set animation speed (32 is default value)
-	gauge.set(3);
-	
-	
-	var target = document.getElementById('gauge2'); // your canvas element
-	var gauge2 = new Donut(target).setOptions(opts); // create sexy gauge!
-	gauge2.maxValue = 30; // set max gauge value
-	gauge2.animationSpeed = 2; // set animation speed (32 is default value)
-	gauge2.set(23);
-	
-	var target = document.getElementById('gauge3'); // your canvas element
-	var gauge3 = new Donut(target).setOptions(opts); // create sexy gauge!
-	gauge3.maxValue = 365; // set max gauge value
-	gauge3.animationSpeed = 22; // set animation speed (32 is default value)
-	gauge3.set(56);
-	
-	
+
 	
 
 }]);

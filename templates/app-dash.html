@@ -3,9 +3,45 @@
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
 	
-  <ion-content class="has-header">
-    <h1><i class="icon ion-ios7-heart"></i> Treenisi</h1>
+  <ion-content class="has-header padding bg bg-run" >
+    
+	<div class="row">
+		<div class="col col-100">
+			<div class="center gaugeWrap big">
+				
+				<div class="gauge-circle">
+					<canvas width="150px" height="150px" id="gauge1" class="gaugecanvas"></canvas>
+					<span class="title-top">tällä viikolla</span>
+					<div class="title" >3</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col-50 bordercol">
+			<div class="left numWrap">
+
+				<h3 class="title">Keskiarvo viikossa</h3>
+				<span class="num" id="num1">3.8</span>
+					
+				<h3 class="title">30 päivän aikana</h3>
+				<span class="num" id="num2">23</span>
+			</div>
+		</div>
+		<div class="col col-50">
+			<div class="right numWrap">
 	
+				<h3 class="title">Vuoden aikana</h3>
+				<span class="num" id="num3">108</span>
+					
+				<h3 class="title">Yhteensä</h3>
+				<span class="num" id="num4">505</span>
+			</div>
+		</div>
+
+	</div>
+		
 	<!--
 	<ion-list>
       <ion-item ng-repeat="training in trainings" type="item-text-wrap" href="#/tab/training/{{training.id}}">
@@ -18,4 +54,5 @@
 	-->
 	
   </ion-content>
+  
 </ion-view>

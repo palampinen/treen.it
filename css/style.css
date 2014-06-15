@@ -43,6 +43,14 @@
     font-style: normal;
 }
 
+@font-face
+{
+	font-family: RobotoThin;
+	src: url(../assets/Roboto/Roboto-Thin.ttf);
+    font-style: normal;
+}
+
+
 
 
 
@@ -60,8 +68,6 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 
 
 .button {font-weight:bold;text-transform:uppercase;}
-
-
 
 
 
@@ -109,16 +115,36 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 .slider-pager .slider-pager-page {color:#FFF;}
 
 
+/* BG */
+.bg-run {background:url(../img/loadman/run2_light.jpg) no-repeat 25% 50%; background-size:auto 100%;}
+
 /* GAUGE */
 .center {text-align:center;}
-.gaugeWrap  {position:relative;;}
-.gaugeWrap .title {font-size:30px; position:relative; color:rgba(255,255,255,.8);font-family:'Roboto';}
-.gauge-circle {margin:0 auto; background:rgba(0,0,0,.6); border-radius:50%; padding:10px;width:170px; height:170px;}
+.gaugeWrap  {position:relative;color:rgba(255,255,255,.8);font-size:11px;font-weight:500; margin-bottom:20px;}
+.gaugeWrap.big {font-size:13px;font-weight:600;}
+.gaugeWrap .title {font-size:18px;  position:relative; color:rgba(255,255,255,.8);font-family:'RobotoLight';}
+.gaugeWrap.big .title {font-size:70px; line-height:63px; font-family:'Roboto';}
+.gauge-circle {margin:0 auto; background:rgba(0,0,0,.4); border-radius:50%; padding:5px; width:75px; height:75px; position:relative;}
+.gaugeWrap.big .gauge-circle {width:170px; height:170px;padding:45px 20px 10px; background:rgba(0,0,0,.6);}
+.gaugeWrap  .gaugecanvas{position:absolute; left:5px;top:5px;margin:0 auto; display:inline-block;}
+.gaugeWrap.big  .gaugecanvas{left:10px; top:10px;}
 
+.numWrap {margin-top:-7px;}
+.numWrap.left {text-align:left;}
+.numWrap.right {text-align:right;}
+.numWrap h3 {color:#45CCBE;color:#45CCBE;text-transform:uppercase; font-weight:600;font-size:12px;white-space:nowrap;color:#627F7B }
+.numWrap .num {font-family:'RobotoThin';color:rgba(0,0,0,.7);font-size:30px;}
+.bordercol {border-right:1px solid rgba(0,0,0,.1);padding-bottom:0 !important;}
+.numrow{margin-top:20px;}
 
 /* SIDENAV */
 .menu .bar .title {margin:0;text-transform:uppercase;font-size:20px;text-align:left;}
 .menu .bar .title img{width: 34px; float: left;  margin: 0 5px 0 7px; position: relative;}
+.menu .bar .title.username .profile{background:#444; display:inline-block;text-align:center; font-size:22px; margin:1px 5px  0 10px; line-height:28px;width:28px; height:28px; border-radius:50%;color:#aaa;}
+.menu .bar .title.username.female .profile{color:#82616A}
+.menu .bar .title.username.male .profile{color:#627F7B}
+
+
 .sidenav .list .item-content {background:transparent;}
 .sidenav .item-complex, .sidenav a.item.item-complex, .sidenav button.item.item-complex {background:transparent; color:#ddd;font-weight:500;border:0;border-bottom:1px dotted #111;}
 .sidenav .item-complex:hover, .sidenav .item-complex:active, .sidenav .item-complex.activated,
@@ -129,6 +155,8 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 .sidenav .item-complex {font-size:130%;}
 .sidenav .item-complex .icon{margin-right:10px;font-size:160%;position:relative; top:3px;}
 .sidenav .list .item-content {line-height:35px;}
+
+
 
 
 
