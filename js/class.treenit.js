@@ -2,17 +2,20 @@
 var treeniJSON = [{"date":"11.6.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"10.6.2014","time":"05:00-23:00","hourtype":"Kuntosali "},{"date":"7.6.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"7.6.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"5.6.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"4.6.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"2.6.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"1.6.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"30.5.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"27.5.2014","time":"05:00-23:00","hourtype":"Kuntosali "},{"date":"26.5.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"24.5.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"23.5.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"20.5.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"19.5.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"16.5.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"14.5.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"12.5.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"10.5.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"8.5.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"7.5.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"5.5.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"4.5.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"3.5.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"2.5.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"28.4.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"27.4.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"24.4.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"23.4.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"21.4.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"18.4.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"16.4.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"14.4.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"11.4.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"10.4.2014","time":"05:00-23:00","hourtype":"Kuntosali "},{"date":"9.4.2014","time":"05:00-23:00","hourtype":"Kuntosali "},{"date":"8.4.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"7.4.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"4.4.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"3.4.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"1.4.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"31.3.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"30.3.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"28.3.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"27.3.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"25.3.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"22.3.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"21.3.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"18.3.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"17.3.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"14.3.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"13.3.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"11.3.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"10.3.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"8.3.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"6.3.2014","time":"05:00-23:00","hourtype":"Kuntosali "},{"date":"6.3.2014","time":"05:00-23:00","hourtype":"Kuntosali "},{"date":"5.3.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"4.3.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"2.3.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"1.3.2014","time":"05:00-23:00","hourtype":"Kuntosali "},{"date":"28.2.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"24.2.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"22.2.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"21.2.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"18.2.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"17.2.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"15.2.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"12.2.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"11.2.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"11.2.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"10.2.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"9.2.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"8.2.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"6.2.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"5.2.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"3.2.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"1.2.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"30.1.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"29.1.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"28.1.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"27.1.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"24.1.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"23.1.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"22.1.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"20.1.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"17.1.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"16.1.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"15.1.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"13.1.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"12.1.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"10.1.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"8.1.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"7.1.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"6.1.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"4.1.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"3.1.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"2.1.2014","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"30.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"29.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"27.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"26.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"25.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"22.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"20.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"19.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"19.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"19.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"19.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"19.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"19.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"17.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"16.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"14.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"11.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"10.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"8.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"7.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"5.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"4.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"3.12.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"30.11.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"28.11.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"26.11.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"25.11.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"23.11.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"22.11.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"21.11.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"20.11.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"19.11.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"17.11.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"15.11.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"13.11.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"11.11.2013","time":"19:30-20:15","hourtype":"CrossCore 45 (Sali 2)"},{"date":"11.11.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"10.11.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"7.11.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"5.11.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"4.11.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"1.11.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"31.10.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"29.10.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"28.10.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"26.10.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"25.10.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"23.10.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"22.10.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"20.10.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"17.10.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"16.10.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"15.10.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"14.10.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"11.10.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"10.10.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"7.10.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"6.10.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"3.10.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"2.10.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"1.10.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"30.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"27.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"26.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"25.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"24.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"23.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"21.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"19.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"18.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"17.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"16.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"14.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"13.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"12.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"11.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"10.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"9.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"4.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"3.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"2.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"1.9.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"22.8.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"21.8.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"20.8.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"19.8.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"14.8.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"13.8.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"12.8.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"11.8.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"8.8.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"6.8.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"5.8.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"3.8.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"2.8.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"1.8.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"30.7.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"25.7.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"23.7.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"22.7.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"22.7.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"20.7.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"17.7.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"15.7.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"14.7.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"10.7.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"8.7.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"7.7.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"5.7.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"2.7.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"1.7.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"29.6.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"28.6.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"27.6.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"26.6.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"25.6.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"24.6.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"21.6.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"19.6.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"18.6.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"17.6.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"16.6.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"11.6.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"9.6.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"8.6.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"8.6.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"7.6.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"6.6.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"4.6.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"2.6.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"1.6.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"29.5.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"28.5.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"27.5.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"25.5.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"23.5.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"22.5.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"21.5.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"20.5.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"16.5.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"15.5.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"14.5.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"13.5.2013","time":"05:00-23:00","hourtype":"Kuntosali"},{"date":"12.5.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"9.5.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"7.5.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"5.5.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"3.5.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"2.5.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"29.4.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"24.4.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"23.4.2013","time":"18:20-19:20","hourtype":"BodyStep (Sali 1)"},{"date":"23.4.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"22.4.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"20.4.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"17.4.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"16.4.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"15.4.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"12.4.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"11.4.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"10.4.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"9.4.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"8.4.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"5.4.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"4.4.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"3.4.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"2.4.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"1.4.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"31.3.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"26.3.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"25.3.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"24.3.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"22.3.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"21.3.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"20.3.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"19.3.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"18.3.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"15.3.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"14.3.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"13.3.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"12.3.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"11.3.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"7.3.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"6.3.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"5.3.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"4.3.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"3.3.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"1.3.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"28.2.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"27.2.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"26.2.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"21.2.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"20.2.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"19.2.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"18.2.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"17.2.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"16.2.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"15.2.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"14.2.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"13.2.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"12.2.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"11.2.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"10.2.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"6.2.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"5.2.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"4.2.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"3.2.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"3.2.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"31.1.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"30.1.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"29.1.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"28.1.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"26.1.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"24.1.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"23.1.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"22.1.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"21.1.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"18.1.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"17.1.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"16.1.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"15.1.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"14.1.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"13.1.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"11.1.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"9.1.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"8.1.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"7.1.2013","time":"06:00-23:00","hourtype":"Kuntosali"},{"date":"4.1.2013","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"3.1.2013","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"2.1.2013","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"31.12.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"21.12.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"20.12.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"19.12.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"18.12.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"15.12.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"14.12.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"13.12.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"11.12.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"10.12.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"7.12.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"6.12.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"4.12.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"3.12.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"30.11.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"29.11.2012","time":"06:00-22:00","hourtype":"Kuntosali "},{"date":"28.11.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"27.11.2012","time":"18:30-19:15","hourtype":"Venyttely 45 (Sali 1)"},{"date":"26.11.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"22.11.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"21.11.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"20.11.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"19.11.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"15.11.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"14.11.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"13.11.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"12.11.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"10.11.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"8.11.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"7.11.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"6.11.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"5.11.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"1.11.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"1.11.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"31.10.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"30.10.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"29.10.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"27.10.2012","time":"10:45-11:15","hourtype":"KevytSpin 30"},{"date":"25.10.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"24.10.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"23.10.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"22.10.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"18.10.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"17.10.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"16.10.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"15.10.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"13.10.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"13.10.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"11.10.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"10.10.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"9.10.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"8.10.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"6.10.2012","time":"10:45-11:15","hourtype":"KevytSpin 30"},{"date":"3.10.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"2.10.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"1.10.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"27.9.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"26.9.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"25.9.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"24.9.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"19.9.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"18.9.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"17.9.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"11.9.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"10.9.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"6.9.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"5.9.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"4.9.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"3.9.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"1.9.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"23.8.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"22.8.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"21.8.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"20.8.2012","time":"06:00-22:00","hourtype":"Kuntosali"},{"date":"17.8.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"15.8.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"14.8.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"13.8.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"10.8.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"8.8.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"7.8.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"6.8.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"4.8.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"2.8.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"1.8.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"1.8.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"31.7.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"31.7.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"29.7.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"24.7.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"23.7.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"22.7.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"16.7.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"13.7.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"12.7.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"11.7.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"10.7.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"9.7.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"8.7.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"5.7.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"4.7.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"3.7.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"2.7.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"28.6.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"27.6.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"25.6.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"20.6.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"19.6.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"17.6.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"14.6.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"13.6.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"11.6.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"9.6.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"6.6.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"5.6.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"4.6.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"3.6.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"31.5.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"30.5.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"29.5.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"28.5.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"26.5.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"23.5.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"22.5.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"21.5.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"16.5.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"15.5.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"14.5.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"13.5.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"10.5.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"9.5.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"8.5.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"7.5.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"5.5.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"26.4.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"23.4.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"21.4.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"19.4.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"10.4.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"7.4.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"3.4.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"2.4.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"28.3.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"27.3.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"26.3.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"25.3.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"22.3.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"21.3.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"20.3.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"20.3.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"19.3.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"15.3.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"14.3.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"13.3.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"13.3.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"12.3.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"8.3.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"7.3.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"6.3.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"5.3.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"29.2.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"28.2.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"23.2.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"22.2.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"16.2.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"15.2.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"13.2.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"10.2.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"9.2.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"8.2.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"7.2.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"6.2.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"3.2.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"1.2.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"31.1.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"27.1.2012","time":"16:30-17:30","hourtype":"BodyPump (Sali 1)"},{"date":"25.1.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"24.1.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"23.1.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"17.1.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"16.1.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"13.1.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"11.1.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"10.1.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"9.1.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"6.1.2012","time":"06:00-22:00","hourtype":" Kuntosali"},{"date":"2.1.2012","time":"06:00-22:00","hourtype":" Kuntosali"}];
 
 
+
+
 // Define a class like this
 function Treenit(name, data){
 
    // Add object properties like this
    this.name = name;
    this.data = data;
+
 }
 
 // Add methods like this.  All Person objects will be able to invoke this
 Treenit.prototype.all = function(){
-    console.log(this.data);
+    return this.data;
 }
 
 
@@ -38,6 +41,8 @@ Treenit.prototype.getTimeFromLastVisit = function(){
 *	Count of this weeks trainings
 */
 Treenit.prototype.getThisWeekActivity = function() {
+	   
+
 	var weekCount = 0,
 		d = new Date(),
 		treenidate,
@@ -131,6 +136,106 @@ Treenit.prototype.getYearActivity = function(){
 }
 
 
+
+var monthJSON = {"cols":[
+		{"id":"A","label":"Month","type":"string"},
+		{"id":"B","label":"Pasi","type":"number"},
+		{"id":"C","label":"Pasi2013","type":"number"}
+	],
+	"rows":[
+		{"c":[{"v":"kesäskuu"},{"v":9},{"v":7}]},
+		{"c":[{"v":"toukokuu"},{"v":17},{"v":15}]},
+		{"c":[{"v":"huhtikuu"},{"v":16},{"v":14}]},
+		{"c":[{"v":"maaliskuu"},{"v":19},{"v":17}]},
+		{"c":[{"v":"helmikuu"},{"v":16},{"v":14}]},
+		{"c":[{"v":"tammikuu"},{"v":20},{"v":18}]},
+		{"c":[{"v":"joulukuu"},{"v":18},{"v":16}]},
+		{"c":[{"v":"marraskuu"},{"v":19},{"v":17}]},
+		{"c":[{"v":"lokakuu"},{"v":19},{"v":17}]},
+		{"c":[{"v":"syyskuu"},{"v":21},{"v":19}]},
+		{"c":[{"v":"elokuu"},{"v":14},{"v":12}]},
+		{"c":[{"v":"heinäkuu"},{"v":14},{"v":12}]}
+	]}
+
+
+var x 	= [
+		  ['Month' , '2014', '2013'],
+          ['Tammi' ,  1000,   400],
+          ['Helmi' ,  1170,   460],
+          ['Maalis',  660,    1120],
+          ['Huhti' ,  1030,   540]
+		  ];
+
+		  
+	
+/* 
+	Year Activity for Google Chart
+*/
+Treenit.prototype.getYearActivityChart = function(){
+
+	var monthCount = {},
+		dateParts;
+	_.forEach(this.data, function(training){
+		dateParts = training.date.split(".");
+		
+		
+		if(!monthCount[dateParts[2]])
+			monthCount[dateParts[2]] = {};
+			
+		if(!monthCount[dateParts[2]][dateParts[1]])
+			monthCount[dateParts[2]][dateParts[1]] = 0;
+		
+		monthCount[dateParts[2]][dateParts[1]]++;
+		
+		
+	})
+	
+	
+	var months = [
+		['kuukausi'],
+		['tammi'],
+		['helmi'],
+		['maalis'],
+		['huhti'],
+		['touko'],
+		['kesä'],
+		['heinä'],
+		['elo'],
+		['syys'],
+		['loka'],
+		['marras'],
+		['joulu']
+	];
+	
+	
+	var year = 1,i;
+		
+	_.each(monthCount, function(val,key) {
+		months[0].push(key);
+		
+		
+		// 0 to all
+		_.each(months,function(k,v){
+			if(v > 0)
+				months[v].push(0);
+
+		})
+		
+		
+		_.each(val, function(a,b) {
+			months[b][year] = a;
+
+		})
+		year++;
+		
+	})
+	
+	return months;
+	
+}
+
+
+
 /*
 * Longest Streak in days, possible to get days of streak as array with little modification on 'return'
 */
@@ -185,9 +290,34 @@ Treenit.prototype.getLongestStreak = function(){
 
 
 
+Treenit.prototype.getLatestCountByDays = function( days) {
+	if(!this.data) return 0;
+	
+	// Should be this day 23:59:59 ?
+	var d = new Date(),
+		count = 0,
+		limit = d.setDate(d.getDate()-days);
+	console.log(limit);
+	
+	
+	_.forEach(this.data, function(training){
+	
+		traindateObj = date2Date(training.date);
+		if(traindateObj.getTime() >= limit)
+			count++;
+		else 
+			return;
+			
+	});
+	
+	return count;
+	
+}
 
 
-/* TEST BY JQUERY */
+
+
+/* TEST BY JQUERY 
 $(function() {
 
 
@@ -196,8 +326,13 @@ $(function() {
 var treeni = new Treenit("Bob", treeniJSON);
 
 
+
+
 var testi = treeni.getThisWeekActivity();
 console.log('This week '+testi);
+
+testi = treeni.getLatestCountByDays(30);
+console.log('Last 30 days '+testi);
 
 testi = treeni.getWeeklyAverage();
 console.log('Weekly avg '+testi);
@@ -216,6 +351,10 @@ console.log('This Year Trainings '+testi);
 testi = treeni.getYearActivity();   
 console.log(testi);
 
+testi = treeni.getYearActivityChart();   
+console.log(testi);
+
+
 
 testi = treeni.getLongestStreak();   
 console.log('Longest Streak '+ testi);
@@ -227,12 +366,12 @@ console.log('Days '+testi);
 //console.log(testi);
 
 // Invoke methods like this
-treeni.all(); 
+//treeni.all(); 
 
 
 });
 
-
+*/
 
 
 

@@ -26,7 +26,7 @@
 {
 	font-family: Raleway;
 	src: url(../assets/Raleway/Raleway-Heavy.ttf);
-	font-weight: bold;
+	font-weight: 900;
     font-style: normal;
 }
 
@@ -57,7 +57,7 @@
 
 html,body{background:#000;}
 body {font-weight:300; font-family:'Raleway','Roboto','Helvetica',Arial; background:#000;}
-#chart_div { font-family:'Raleway','Roboto','Helvetica',Arial;}
+input, button, select, textarea, .button  {font-weight:300; font-family:'Raleway','Roboto','Helvetica',Arial;}
 h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 .pane, .view {background:#EDEBE8;}
 
@@ -67,7 +67,7 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 #ph2dXof90-an-obj-20 > span {font-size:45px; font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 
 
-.button {font-weight:bold;text-transform:uppercase;}
+.button {font-weight:900;text-transform:uppercase;}
 
 
 
@@ -117,6 +117,8 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 
 /* BG */
 .bg-run {background:url(../img/loadman/run2_light.jpg) no-repeat 25% 50%; background-size:auto 100%;}
+.bg-weight {background:url(../img/loadman/weight_light.jpg) no-repeat 100% 100%; background-size: 130% auto; }
+.bg-new {background:url(../img/loadman/new_light.jpg) no-repeat 0% 100%; background-size:  auto 130%; }
 
 /* GAUGE */
 .center {text-align:center;}
@@ -132,8 +134,10 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 .numWrap {margin-top:-7px;}
 .numWrap.left {text-align:left;}
 .numWrap.right {text-align:right;}
-.numWrap h3 {color:#45CCBE;color:#45CCBE;text-transform:uppercase; font-weight:600;font-size:12px;white-space:nowrap;color:#627F7B }
-.numWrap .num {font-family:'RobotoThin';color:rgba(0,0,0,.7);font-size:30px;}
+.numWrap h3 {text-transform:uppercase; font-weight:600;font-size:12px;white-space:nowrap;color:#45CCBE;color:#627F7B;color:#4C938B;}
+.numWrap .num{font-family:'RobotoThin';color:rgba(0,0,0,.7);font-size:30px;}
+.numWrap .numicon  {font-size:30px;color:#45CCBE;}
+.numWrap .numicon.down  {color:#CF5777;}
 .bordercol {border-right:1px solid rgba(0,0,0,.1);padding-bottom:0 !important;}
 
 @media (min-height: 490px) {
@@ -141,12 +145,18 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 .numrow{position:absolute;bottom:20px;}
 }
 
+/* CHART */
+.chartwrap {margin:30px auto 0;}
+#chart_div { font-family:'Raleway','Roboto','Helvetica',Arial; position:relative;}
+
+
+
 /* SIDENAV */
 .menu .bar .title {margin:0;text-transform:uppercase;font-size:20px;text-align:left;}
 .menu .bar .title img{width: 34px; float: left;  margin: 0 5px 0 7px; position: relative;}
 .menu .bar .title.username .profile{background:#444; display:inline-block;text-align:center; font-size:22px; margin:1px 5px  0 10px; line-height:28px;width:28px; height:28px; border-radius:50%;color:#aaa;}
-.menu .bar .title.username.female .profile{color:#82616A}
-.menu .bar .title.username.male .profile{color:#627F7B}
+/*.menu .bar .title.username.female .profile{color:#CF5777}
+.menu .bar .title.username.male .profile{color:#45CCBE}*/
 
 
 .sidenav .list .item-content {background:transparent;}

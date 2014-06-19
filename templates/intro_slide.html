@@ -1,0 +1,61 @@
+<!-- 
+	Template for Intro
+
+-->
+	
+	
+    <ion-nav-bar class="bar-dark nav-title-slide-ios7" style="" id="intro-nav-bar">
+		<!--<img src="http://leikkikentta.com/fressi/reenari/img/squaredot_white_gradient.png" style=" height:30px;display:block;margin:2px auto 0;" />-->
+	</ion-nav-bar>
+	
+
+      <ion-view left-buttons="leftButtons" right-buttons="rightButtons" style="background:#000;" >  	
+		<ion-slide-box on-slide-changed="slideChanged(index)" style="background:#000;" class="intropage">
+		<ion-slide style="background:url(img/loadman/run2.jpg) no-repeat 30% 0; background-size:auto 100%; text-align:left;padding-left:3%;">
+			<img src="img/treenit100.png" style="width:50px;float:left;margin-right:20px; " />
+		
+			<h1 style="color:#fff; font-size:300%; font-weight:100;margin: 0px 0 100px 0px;">TREENIT</h1>
+			<div class="bottom">
+				<h2>Treenit Puhelimessasi</h2>
+				<p>Tarvitset vain treenipaikkasi varaustunnukset. Syötä ne <a style="font-weight:500;color:#FFF; text-decoration:none;" href="#slide2" >nyt ›</a></p>
+			</div>
+        </ion-slide>
+		  
+        <ion-slide id="slide2" style="background:url(img/loadman/new.jpg) no-repeat 0% 0%; background-size: auto 100%; ">
+            <h1 style="color:#FFF;text-transform:uppercase; font-size:300%;">Aloita <span style="font-weight:300">nyt</span></h1>
+            <div id="list" class="list">
+              <h4 style="color:#FFF">Syötä tunnuksesi</h4>
+              <div class="list fadeform">
+			   <!-- Tunnus -->
+			   <label class="item item-input">
+				<input type="text" placeholder="Käyttäjätunnus" id="user">
+			   </label>
+			   
+			   <!-- Password -->
+			   <label class="item item-input">
+				<input type="text" placeholder="Salasana" id="pass">
+			   </label>
+			   
+			   <!-- Choose center -->
+			   <label class="item item-input item-select">
+				<span class="input-label">Treenipaikkasi</span>
+				
+				<select id="keskus">
+				  <option>Valitse</option>
+				  <option>Aplico</option>
+				  <option>Forever</option>
+				  <option>Fressi</option>
+				</select>
+				</label>
+ 
+			   <a class="button button-block button-dark" id="startApp" href="#/app/dash">
+				 Aloita <i class="icon ion-ios7-checkmark-outline"></i> <i class="icon ion-ios7-close-outline"></i> <i class="icon ion-ios7-reloading"></i>
+			  </a>
+			</div>
+
+            </div>
+        </ion-slide>
+
+		  
+        </ion-slide-box>
+      </ion-view>

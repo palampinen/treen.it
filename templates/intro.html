@@ -1,61 +1,54 @@
 <!-- 
 	Template for Intro
-
 -->
 	
-	
-    <ion-nav-bar class="bar-dark nav-title-slide-ios7" style="" id="intro-nav-bar">
-		<!--<img src="http://leikkikentta.com/fressi/reenari/img/squaredot_white_gradient.png" style=" height:30px;display:block;margin:2px auto 0;" />-->
+<ion-view >	
+    <!--
+	<ion-nav-bar class="bar-dark nav-title-slide-ios7" style="" id="intro-nav-bar">
 	</ion-nav-bar>
+	-->
 	
 
-      <ion-view left-buttons="leftButtons" right-buttons="rightButtons" style="background:#000;" >  	
-		<ion-slide-box on-slide-changed="slideChanged(index)" style="background:#000;" class="intropage">
-		<ion-slide style="background:url(img/loadman/run2.jpg) no-repeat 30% 0; background-size:auto 100%; text-align:left;padding-left:3%;">
+	<ion-content class="padding"  style="background:#000 url(img/loadman/new.jpg) no-repeat 30% 0; background-size:auto 100%; text-align:left;">
+	
 			<img src="img/treenit100.png" style="width:50px;float:left;margin-right:20px; " />
 		
 			<h1 style="color:#fff; font-size:300%; font-weight:100;margin: 0px 0 100px 0px;">TREENIT</h1>
-			<div class="bottom">
-				<h2>Treenit Puhelimessasi</h2>
-				<p>Tarvitset vain treenipaikkasi varaustunnukset. Syötä ne <a style="font-weight:500;color:#FFF; text-decoration:none;" href="#slide2" >nyt ›</a></p>
-			</div>
-        </ion-slide>
-		  
-        <ion-slide id="slide2" style="background:url(img/loadman/new.jpg) no-repeat 0% 0%; background-size: auto 100%; ">
-            <h1 style="color:#FFF;text-transform:uppercase; font-size:300%;">Aloita <span style="font-weight:300">nyt</span></h1>
-            <div id="list" class="list">
-              <h4 style="color:#FFF">Syötä tunnuksesi</h4>
-              <div class="list fadeform">
-			   <!-- Tunnus -->
-			   <label class="item item-input">
-				<input type="text" placeholder="Käyttäjätunnus" id="user">
-			   </label>
-			   
-			   <!-- Password -->
-			   <label class="item item-input">
-				<input type="text" placeholder="Salasana" id="pass">
-			   </label>
-			   
-			   <!-- Choose center -->
-			   <label class="item item-input item-select">
-				<span class="input-label">Treenipaikkasi</span>
+			
+				<h2 class="center">Treenit Puhelimessasi</h2>
 				
-				<select id="keskus">
-				  <option>Valitse</option>
-				  <option>Aplico</option>
-				  <option>Forever</option>
-				  <option>Fressi</option>
-				</select>
-				</label>
- 
-			   <a class="button button-block button-dark" id="startApp" href="#/app/dash">
-				 Aloita <i class="icon ion-ios7-checkmark-outline"></i> <i class="icon ion-ios7-close-outline"></i> <i class="icon ion-ios7-reloading"></i>
-			  </a>
-			</div>
+				
+				<form class="list fadeform" name="loginForm" >
+				   <!-- Tunnus -->
+				   <label class="item item-input">
+					<input type="text" placeholder="Käyttäjätunnus" id="username" name="username" data-ng-model="user.username"  required />
+				   </label>
+				   
+				   <!-- Password -->
+				   <label class="item item-input">
+					<input type="password" placeholder="Salasana" id="password" name="password" data-ng-model="user.password" required  />
+				   </label>
+				   
+				   <!-- Choose center -->
+				   <label class="item item-input item-select">
+					<span class="input-label">Treenipaikkasi</span>
+					
+					<select id="center" name="center" data-ng-model="user.center" required>
+					  <option value="">Valitse</option>
+					  <option value="aplico">Aplico</option>
+					  <option value="forever">Forever</option>
+					  <option value="fressi">Fressi</option>
+					</select>
+					</label>
+	 
+				   <button type="submit" class="button button-block button-dark" id="startApp" ng-click="tryAuth()"  ng-disabled="myForm.$invalid" >
+						Aloita 
+						<i class="icon ion-ios7-checkmark-outline" ng-show="!loginForm.password.$error.required && !loginForm.username.$error.required && !loginform.center.$error.required"></i> 
+						<i ng-show="loginForm.password.$error.required || loginForm.username.$error.required || loginform.center.$error.required" class="icon ion-ios7-close-outline"></i> 
+				  </button>
+				</form>
+				
 
-            </div>
-        </ion-slide>
-
-		  
-        </ion-slide-box>
-      </ion-view>
+		 
+	</ion-content>
+</ion-view>

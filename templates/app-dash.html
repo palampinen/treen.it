@@ -12,7 +12,7 @@
 				<div class="gauge-circle">
 					<canvas width="150px" height="150px" id="gauge1" class="gaugecanvas"></canvas>
 					<span class="title-top">tällä viikolla</span>
-					<div class="title" >3</div>
+					<div class="title" >{{thisweek}}</div>
 
 				</div>
 			</div>
@@ -23,20 +23,20 @@
 			<div class="left numWrap">
 
 				<h3 class="title">Keskiarvo viikossa</h3>
-				<span class="num" id="num1">3.8</span>
+				<span class="num" id="num1">{{weekAverage}}</span>
 					
 				<h3 class="title">30 päivän aikana</h3>
-				<span class="num" id="num2">23</span>
+				<span class="num" id="num2">{{past30Days}} </span> <i class="numicon icon ion-ios7-arrow-thin-up"></i> <i class="numicon down icon ion-ios7-arrow-thin-down"></i> <i class="numicon icon ion-ios7-minus-empty"></i>
 			</div>
 		</div>
 		<div class="col col-50">
 			<div class="right numWrap">
 	
-				<h3 class="title">Vuoden aikana</h3>
-				<span class="num" id="num3">108</span>
+				<h3 class="title">Tänä vuonna</h3>
+				<span class="num" id="num3">{{thisYearCount}}</span>
 					
 				<h3 class="title">Yhteensä</h3>
-				<span class="num" id="num4">505</span>
+				<span class="num" id="num4">{{total}}</span>
 			</div>
 		</div>
 
