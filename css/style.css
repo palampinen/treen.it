@@ -160,11 +160,11 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 
 
 .sidenav .list .item-content {background:transparent;}
-.sidenav .item-complex, .sidenav a.item.item-complex, .sidenav button.item.item-complex {background:transparent; color:#ddd;font-weight:500;border:0;border-bottom:1px dotted #111;}
+.sidenav .item-complex, .sidenav a.item.item-complex, .sidenav button.item.item-complex {background:transparent; color:#ddd;font-weight:500;border:0;border-bottom:1px solid #111;}
 .sidenav .item-complex:hover, .sidenav .item-complex:active, .sidenav .item-complex.activated,
 .sidenav  a.item.item-complex:hover, .sidenav  a.item.item-complex:active,
 .sidenav button.item.item-complex:hover, .sidenav button.item.item-complex:active,
-.sidenav .item.item-complex.active {color:#FFF}
+.sidenav .item.item-complex.active {color:#FFF; background:rgba(255,255,255,.2)}
 .sidenav .item.item-complex.active {background:rgba(255,255,255,.1)}
 .sidenav .item-complex {font-size:130%;}
 .sidenav .item-complex .icon{margin-right:10px;font-size:160%;position:relative; top:3px;}

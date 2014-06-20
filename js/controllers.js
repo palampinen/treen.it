@@ -140,7 +140,7 @@ if(numCounterFlag) {
 
 
 
-.controller('TimelineCtrl', function($scope) {
+.controller('TimelineCtrl', function($scope, Friends) {
 
   var d = new Date().getDate(),
 	  html = 'test';
@@ -154,6 +154,8 @@ if(numCounterFlag) {
 	//	console.log(html);
 	}
   $scope.day = html;
+	
+	$scope.week = Friends.all();
 	
 })
   

@@ -4,9 +4,102 @@
   </ion-nav-buttons>
 
 
-  <ion-content class="has-header padding" >
-   
+  <ion-content class="has-header" >
+   	<ion-list id="list_days">
+      <ion-item ng-repeat="friend in week" type="item-text-wrap" href="#">
+        <!--{{friend.name}}-->
+		<h2 ng-show="$index==0" style="font-family:RobotoLight; text-align:right;" >KESÄ 2014</h2>
+		<span class="wrap"><span>{{$index*7 +1 }}</span></span>
+		<span class="wrap"><span>{{$index*7 +2 }}</span></span>
+		<span class="wrap"><span class="has_events">{{$index*7 +3 }}</span></span>
+		<span class="wrap"><span>{{$index*7 +4 }}</span></span>
+		<span class="wrap"><span>{{$index*7 +5 }}</span></span>
+		<span class="wrap"><span>{{$index*7 +6 }}</span></span>
+		<span class="wrap"><span>{{$index*7 +7 }}</span></span>
 
+      </ion-item>
+	  
+	   <ion-item ng-repeat="friend in week" type="item-text-wrap" href="#">
+		<h2 ng-show="$index==0" style="font-family:RobotoLight;  text-align:right;">TOUKO 2014</h2>
+		<span class="wrap"><span>{{$index*7 +1 }}</span></span>
+		<span class="wrap"><span>{{$index*7 +2 }}</span></span>
+		<span class="wrap"><span >{{$index*7 +3 }}</span></span>
+		<span class="wrap"><span>{{$index*7 +4 }}</span></span>
+		<span class="wrap"><span>{{$index*7 +5 }}</span></span>
+		<span class="wrap"><span class="has_events">{{$index*7 +6 }}</span></span>
+		<span class="wrap"><span>{{$index*7 +7 }}</span></span>
+
+      </ion-item>
+	  
+	  <ion-item ng-repeat="friend in week" type="item-text-wrap" href="#">
+		<h2 ng-show="$index==0" style="font-family:RobotoLight;  text-align:right;">HUHTI 2014</h2>
+		<span class="wrap"><span class="has_events">{{$index*7 +1 }}</span></span>
+		<span class="wrap"><span>{{$index*7 +2 }}</span></span>
+		<span class="wrap"><span >{{$index*7 +3 }}</span></span>
+		<span class="wrap"><span>{{$index*7 +4 }}</span></span>
+		<span class="wrap"><span>{{$index*7 +5 }}</span></span>
+		<span class="wrap"><span >{{$index*7 +6 }}</span></span>
+		<span class="wrap"><span>{{$index*7 +7 }}</span></span>
+
+      </ion-item>
+	  
+	   <ion-item ng-repeat="friend in week" type="item-text-wrap" href="#">
+		<h2 ng-show="$index==0" style="font-family:RobotoLight;  text-align:right;">MAALIS 2014</h2>
+		<span class="wrap"><span>{{$index*7 +1 }}</span></span>
+		<span class="wrap"><span>{{$index*7 +2 }}</span></span>
+		<span class="wrap"><span>{{$index*7 +3 }}</span></span>
+		<span class="wrap"><span>{{$index*7 +4 }}</span></span>
+		<span class="wrap"><span >{{$index*7 +5 }}</span></span>
+		<span class="wrap"><span>{{$index*7 +6 }}</span></span>
+		<span class="wrap"><span class="has_events">{{$index*7 +7 }}</span></span>
+
+      </ion-item>
+	  
+    </ion-list>
+	
+	
+	<style>
+
+#list_days .item {border-color:#f2f2f2;}
+#list_days .item-complex .item-content {padding-right:15px;}
+
+#list_days span.wrap {
+	width: 13%;
+	width: 13.284%;
+	float:left;
+	margin: 0 1% 0 0;
+	position: relative;
+}
+#list_days a span.wrap:last-child {margin-right:0;}
+
+
+#list_days span > span {
+    background: none repeat scroll 0 0 #f2f2f2;
+    border-radius: 100%;
+    color: #666;
+    display: block;
+	margin:0 auto;
+    font-size: 18px;
+    font-weight:normal;
+	font-family:RobotoLight;
+	width: 42px;
+    height: 42px;
+    line-height: 42px;
+    padding: 0;
+   
+    text-align: center;
+
+}
+#list_days span > span.has_events {
+	background:#45CCBE;
+	color:#FFF;
+}
+#list_days h2 {color:#45CCBE; margin-bottom:15px; margin-top:25px;}
+
+</style>
+
+	
+<!--
 		<ion-scroll direction="y" scrollbar-y="true">
 		<div style="text-align:center;">
 		<h3>Kesäkuu 2014</h3>
@@ -402,6 +495,7 @@ ul#list_days {
 	overflow:visible;
 }
 		</style>
-	
+-->
+
   </ion-content>
 </ion-view>
