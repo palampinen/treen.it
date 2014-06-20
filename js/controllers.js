@@ -94,14 +94,15 @@ angular.module('treenit.controllers', [])
 	/* gauge.js */
 	
 	var opts = {
-	  lines: 12, // The number of lines to draw
+	  lines: 14, // The number of lines to draw
 	  angle: 0.33, // The length of each line
 	  lineWidth: 0.05, // The line thickness
 	  limitMax: 'true',   // If true, the pointer will not go past the end of the gauge
 	  colorStart: '#45CCBE',   // Colors
 	  colorStop: '#45CCBE',    // just experiment with them
 	  //strokeColor: '#E7ABBB',   // to see which ones work best for you
-	  strokeColor: 'rgba(235,235,235,0.4)',   // to see which ones work best for you
+//	  strokeColor: 'rgba(235,235,235,0.4)',   
+	  strokeColor: '#ABABAB',   //
 	  generateGradient: false
 	};
 	var target = document.getElementById('gauge1'); // your canvas element
