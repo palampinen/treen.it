@@ -311,8 +311,11 @@ angular.module('treenit.services', [])
 		yearActivityChart: function() {
 			return treeni.getYearActivityChart();
 		},
-		yearActivityChartDT: function() {
-			return treeni.getYearActivityChartDT();
+		yearActivityChartDT: function(limit) {
+			return treeni.getYearActivityChartDT(limit);
+		},
+		yearActivityChartCJS: function(limit,type) {
+			return treeni.getYearActivityChartCJS(limit,type)
 		},
 		longestStreak: function() {
 			return treeni.getLongestStreak();

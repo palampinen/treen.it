@@ -205,38 +205,19 @@ Treenit.prototype.getYearActivityChart = function(){
 }
 
 
-var monthJSON = {
-	"cols":[
-		{"id":"A","label":"Month","type":"string"},
-		{"id":"B","label":"Pasi","type":"number"},
-		{"id":"C","label":"Pasi2013","type":"number"}
-	],
-	"rows":[
-		{"c":[{"v":"kesäskuu"},{"v":9},{"v":7}]},
-		{"c":[{"v":"toukokuu"},{"v":17},{"v":15}]},
-		{"c":[{"v":"huhtikuu"},{"v":16},{"v":14}]},
-		{"c":[{"v":"maaliskuu"},{"v":19},{"v":17}]},
-		{"c":[{"v":"helmikuu"},{"v":16},{"v":14}]},
-		{"c":[{"v":"tammikuu"},{"v":20},{"v":18}]},
-		{"c":[{"v":"joulukuu"},{"v":18},{"v":16}]},
-		{"c":[{"v":"marraskuu"},{"v":19},{"v":17}]},
-		{"c":[{"v":"lokakuu"},{"v":19},{"v":17}]},
-		{"c":[{"v":"syyskuu"},{"v":21},{"v":19}]},
-		{"c":[{"v":"elokuu"},{"v":14},{"v":12}]},
-		{"c":[{"v":"heinäkuu"},{"v":14},{"v":12}]}
-	]}
-	
 /* 
 	Year Activity for Google Chart as DataTable format
 */
-Treenit.prototype.getYearActivityChartDT = function(){
+Treenit.prototype.getYearActivityChartDT = function(limit){
 
+	
 	var monthData = {};
 	monthData.cols = [];
 	monthData.rows = [];
 
 	var monthCount = {},
 		dateParts;
+	console.log(this.data);
 	_.forEach(this.data, function(training){
 		dateParts = training.date.split(".");
 		
@@ -286,6 +267,10 @@ Treenit.prototype.getYearActivityChartDT = function(){
 	
 	var year = 1,i;	
 	_.each(monthCount, function(val,key) {
+		
+		if(year > limit)
+			return;
+		
 		monthData.cols.push(
 			{"id":year,"label":key,"type":"number"}
 		)
@@ -294,7 +279,7 @@ Treenit.prototype.getYearActivityChartDT = function(){
 		
 				// 0 to all
 		_.each(months,function(k,v){
-			monthData.rows[v]['c'].push({"v":0});
+			monthData.rows[v]['c'].push({"v":"-1"});
 			//	months[v].push(0);
 
 		})
@@ -308,8 +293,98 @@ Treenit.prototype.getYearActivityChartDT = function(){
 		year++;
 		
 	})
-	
+
 	return monthData
+	
+}
+
+
+/* 
+	Year Activity for CanvasJS
+*/
+Treenit.prototype.getYearActivityChartCJS = function(limit,type){
+
+	
+	var monthData   = [],
+		tmpYearObj  = {},
+		tmpMonthObj = {},
+		monthCount  = {},
+		dateParts;
+		
+	
+	_.forEach(this.data, function(training){
+		dateParts = training.date.split(".");
+		
+		
+		if(!monthCount[dateParts[2]])
+			monthCount[dateParts[2]] = {};
+			
+		if(!monthCount[dateParts[2]][dateParts[1]])
+			monthCount[dateParts[2]][dateParts[1]] = 0;
+		
+		monthCount[dateParts[2]][dateParts[1]]++;
+		
+		
+	})
+	//
+	console.log(monthCount);
+	
+	var months = [
+		['tammi'],
+		['helmi'],
+		['maalis'],
+		['huhti'],
+		['touko'],
+		['kesä'],
+		['heinä'],
+		['elo'],
+		['syys'],
+		['loka'],
+		['marras'],
+		['joulu']
+	];
+	
+	
+	
+	var year = 1,i;	
+	_.each(monthCount, function(val,key) {
+		
+		if(year > limit)
+			return;
+		
+		tmpYearObj = {};
+		tmpYearObj.type			= type;
+		/* splineArea
+		tmpYearObj.markerSize			= 10;
+		tmpYearObj.color			= '#45CCBE';
+		if(year > 1) 
+			tmpYearObj.color			= 'rgba(80,80,80,0.5)';
+		*/
+        tmpYearObj.showInLegend = true;
+        tmpYearObj.name	 		= key;
+        tmpYearObj.dataPoints	= [];
+		
+		// 0 to all, but not this year
+		_.each(months,function(k,v){
+			if(key < new Date().getFullYear() || v <= new Date().getMonth())
+			tmpYearObj.dataPoints.push( 
+				{label: k[0], y: 0}
+			)
+		});
+		
+		i = 0;
+		_.each(val, function(a,b) {
+			tmpYearObj.dataPoints[i].y = a;
+			i++;
+		})
+		
+		monthData.push(tmpYearObj);
+		
+		year++;
+		
+	})
+
+	return monthData;
 	
 }
 
@@ -434,6 +509,9 @@ testi = treeni.getYearActivityChart();
 console.log(testi);
 
 console.log('========================================================');
+
+testi = treeni.getYearActivityChartCJS();
+console.log(testi);
 
 testi = treeni.getYearActivityChartDT();   
 console.log(testi);

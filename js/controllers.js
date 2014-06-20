@@ -155,19 +155,25 @@ if(numCounterFlag) {
 .controller('FriendsCtrl', function($scope,MonthActivity, Treenidata) {
   
 
-    /* Google Chart */
+/* Google Chart 
 	var options = {
 		title: 'Treenit kuukausittain',
 		curveType: 'function',
-		colors: ['#45CCBE','#F4DB1F','#CF5777'],
+		colors: ['#45CCBE','#666','#333'],
+		//colors: ['#000','#555','#999'],
 		legend: 'none',
 		lineWidth: 2,
-        pointSize: 10,
+        pointSize: 6,
 		pointShape: 'circle',
-		crosshair: { trigger: 'vertical' },
 		backgroundColor: 'transparent',
 		fontName:'RobotoLight',
 		//width:'500',
+		legend: {
+			textStyle: {
+				color: '#eee'
+			},
+			position: 'bottom' 
+		},
 		chartArea: {
             left: 40,
             top: 10,
@@ -180,54 +186,133 @@ if(numCounterFlag) {
 				max:32
 			},
 			gridlines:{
-				count:4
+				count:4,
+				color:'#222'
+			},
+			titleTextStyle:{
+				color:'#eee'
+			},
+			textStyle:{
+				color:'#eee'
 			}
 		},
-		legend: { position: 'bottom' }
+		hAxis: {
+			titleTextStyle: {
+				color:'#eee'
+			},
+			textStyle:{
+				color:'#eee'
+			}
+		},
+		titleTextStyle: {
+			color:'#eee'
+		}
+		
 		
 	};
-
-
 	
-
-	$scope.monthactivity = []; 
-	
-	
-	/*
-	if( localStorage.getItem('treenit-month') ) {
-	
-		var data = JSON.parse(localStorage.getItem('treenit-month'));
-		console.log(data);
-		var gData = new google.visualization.DataTable(data),
-			chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-		chart.draw(gData, options);
-			
-        $scope.monthactivity = data;	
-	
-	} else
-	
-	*/
-	
-	
-	google.setOnLoadCallback(function(){
+		google.setOnLoadCallback(function(){
 		console.log('g.setOnLoadCallback');
 	});
 	
-	
-
-	
-
+			
 		
-		
-		
-		var monthdata = Treenidata.yearActivityChartDT(),
+		var monthdata = Treenidata.yearActivityChartDT(2),
 			//datatable = google.visualization.arrayToDataTable(monthdata),
 			gData = new google.visualization.DataTable(monthdata),
-			chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+			chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
 			//chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
 		chart.draw(gData, options);	
 		$scope.monthactivity = monthdata;
 	//	console.log(data);
+	
+*/
+
+	
+	$scope.monthactivity = []; 
+	
+	
+	
+	var monthdata = Treenidata.yearActivityChartCJS(2,'spline')
+
+	
+	
+
+	CanvasJS.addColorSet("treeniShades",
+					[
+					"#45CCBE",
+					"#666",
+					"#333",
+					"#222",
+					"#111"                
+					]);
+
+	var chart = new CanvasJS.Chart("chart_div",
+		{
+		  colorSet:  "treeniShades",
+		  backgroundColor: "transparent",
+		  theme:"theme1",
+		  title:{
+			//text: "",
+			fontFamily:"RobotoLight",
+			fontweight: "100"
+		  },
+		  axisX :{
+			includeZero: false,
+			labelFontFamily: "RobotoLight",
+			labelFontColor:"#eee",
+			labelFontSize:10,
+			lineColor: "#222",
+			lineThickness: 1,
+			tickColor: "#000",
+			gridThickness: 1,
+			gridColor: '#222'
+
+		  },
+		  axisY :{
+			includeZero: true,
+			labelFontFamily: "RobotoLight",
+			labelFontColor:"#eee",
+			lineColor: "#000",
+			tickColor: "#000",
+			gridThickness: 1,
+			gridColor: '#333',
+			maximum: 30
+			
+		  },
+		  toolTip: {
+			shared: "true"
+		  },
+		  legend:{
+			fontFamily:  "RobotoLight",
+			fontColor:"#eee",
+			fontSize:24,
+			cursor:"pointer",
+			itemclick : function(e) {
+			  if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible ){
+				e.dataSeries.visible = false;
+			  }
+			  else {
+				e.dataSeries.visible = true;
+			  }
+			  chart.render();
+			}
+			
+		  },
+		  data: monthdata,
+		  
+		});
+
+		chart.render();
+		
+	
+
+	
+
+	
+
+		
+
 		
 	/*
 	MonthActivity.all()
