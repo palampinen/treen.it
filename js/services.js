@@ -68,6 +68,8 @@ angular.module('treenit.services', [])
 						// Merge data
 						
 						
+						
+						// Combine old data and new data
 						var oldData = localStorage.getItem('treenit-data'),
 							newData;
 						if(oldData)
@@ -75,7 +77,15 @@ angular.module('treenit.services', [])
 						else 
 							newData = data
 						
-						localStorage.setItem('treenit-data', JSON.stringify( newData) );
+						// Make sure that fetched data is an array
+						if( _.isArray(data)){
+							
+							// unique data based on just date // TODO uniq based on date, time AND hourtype
+							newData = _.uniq(newData, false, function(training) {return training.date;})
+							
+							localStorage.setItem('treenit-data', JSON.stringify( newData) );
+							console.log('Data is array');
+						}
 						
 						// Update last update timestamp
 						var d = new Date();
@@ -290,6 +300,9 @@ angular.module('treenit.services', [])
 		},
 		yearActivityChart: function() {
 			return treeni.getYearActivityChart();
+		},
+		yearActivityChartDT: function() {
+			return treeni.getYearActivityChartDT();
 		},
 		longestStreak: function() {
 			return treeni.getLongestStreak();

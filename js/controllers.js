@@ -162,8 +162,7 @@ if(numCounterFlag) {
 
 
 
-.controller('FriendsCtrl', function($scope, Friends,MonthActivity) {
-  $scope.friends = Friends.all();
+.controller('FriendsCtrl', function($scope,MonthActivity, Treenidata) {
   
 
     /* Google Chart */
@@ -184,7 +183,17 @@ if(numCounterFlag) {
             top: 10,
             width: window.innerWidth-60,
             height: 320
-        }
+        },
+		vAxis: {
+			viewWindow:{
+				min:0,
+				max:32
+			},
+			gridlines:{
+				count:4
+			}
+		},
+		legend: { position: 'bottom' }
 		
 	};
 
@@ -206,10 +215,36 @@ if(numCounterFlag) {
         $scope.monthactivity = data;	
 	
 	} else
+	
 	*/
+	
+	
+	google.setOnLoadCallback(function(){
+		console.log('g.setOnLoadCallback');
+	});
+	
+	
+
+	
+
+		
+		
+		
+		var monthdata = Treenidata.yearActivityChartDT(),
+			//datatable = google.visualization.arrayToDataTable(monthdata),
+			gData = new google.visualization.DataTable(monthdata),
+			chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+			//chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+		chart.draw(gData, options);	
+		$scope.monthactivity = monthdata;
+	//	console.log(data);
+		
+	/*
 	MonthActivity.all()
         .then(function(data) {
             // call was successful
+			
+			console.log(data);
 			
 			var gData = new google.visualization.DataTable(data);
 			var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
@@ -217,13 +252,15 @@ if(numCounterFlag) {
 			
             $scope.monthactivity = data;
 			
+	
+			
+			
         }, function(data) {
             // call returned an error
 			alert('Tietoja ei saatu haettua.');
         });
-
   
-  
+  */
   
   
 })

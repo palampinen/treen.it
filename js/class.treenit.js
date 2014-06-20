@@ -137,37 +137,7 @@ Treenit.prototype.getYearActivity = function(){
 
 
 
-var monthJSON = {"cols":[
-		{"id":"A","label":"Month","type":"string"},
-		{"id":"B","label":"Pasi","type":"number"},
-		{"id":"C","label":"Pasi2013","type":"number"}
-	],
-	"rows":[
-		{"c":[{"v":"kesäskuu"},{"v":9},{"v":7}]},
-		{"c":[{"v":"toukokuu"},{"v":17},{"v":15}]},
-		{"c":[{"v":"huhtikuu"},{"v":16},{"v":14}]},
-		{"c":[{"v":"maaliskuu"},{"v":19},{"v":17}]},
-		{"c":[{"v":"helmikuu"},{"v":16},{"v":14}]},
-		{"c":[{"v":"tammikuu"},{"v":20},{"v":18}]},
-		{"c":[{"v":"joulukuu"},{"v":18},{"v":16}]},
-		{"c":[{"v":"marraskuu"},{"v":19},{"v":17}]},
-		{"c":[{"v":"lokakuu"},{"v":19},{"v":17}]},
-		{"c":[{"v":"syyskuu"},{"v":21},{"v":19}]},
-		{"c":[{"v":"elokuu"},{"v":14},{"v":12}]},
-		{"c":[{"v":"heinäkuu"},{"v":14},{"v":12}]}
-	]}
 
-
-var x 	= [
-		  ['Month' , '2014', '2013'],
-          ['Tammi' ,  1000,   400],
-          ['Helmi' ,  1170,   460],
-          ['Maalis',  660,    1120],
-          ['Huhti' ,  1030,   540]
-		  ];
-
-		  
-	
 /* 
 	Year Activity for Google Chart
 */
@@ -231,6 +201,115 @@ Treenit.prototype.getYearActivityChart = function(){
 	})
 	
 	return months;
+	
+}
+
+
+var monthJSON = {
+	"cols":[
+		{"id":"A","label":"Month","type":"string"},
+		{"id":"B","label":"Pasi","type":"number"},
+		{"id":"C","label":"Pasi2013","type":"number"}
+	],
+	"rows":[
+		{"c":[{"v":"kesäskuu"},{"v":9},{"v":7}]},
+		{"c":[{"v":"toukokuu"},{"v":17},{"v":15}]},
+		{"c":[{"v":"huhtikuu"},{"v":16},{"v":14}]},
+		{"c":[{"v":"maaliskuu"},{"v":19},{"v":17}]},
+		{"c":[{"v":"helmikuu"},{"v":16},{"v":14}]},
+		{"c":[{"v":"tammikuu"},{"v":20},{"v":18}]},
+		{"c":[{"v":"joulukuu"},{"v":18},{"v":16}]},
+		{"c":[{"v":"marraskuu"},{"v":19},{"v":17}]},
+		{"c":[{"v":"lokakuu"},{"v":19},{"v":17}]},
+		{"c":[{"v":"syyskuu"},{"v":21},{"v":19}]},
+		{"c":[{"v":"elokuu"},{"v":14},{"v":12}]},
+		{"c":[{"v":"heinäkuu"},{"v":14},{"v":12}]}
+	]}
+	
+/* 
+	Year Activity for Google Chart as DataTable format
+*/
+Treenit.prototype.getYearActivityChartDT = function(){
+
+	var monthData = {};
+	monthData.cols = [];
+	monthData.rows = [];
+
+	var monthCount = {},
+		dateParts;
+	_.forEach(this.data, function(training){
+		dateParts = training.date.split(".");
+		
+		
+		if(!monthCount[dateParts[2]])
+			monthCount[dateParts[2]] = {};
+			
+		if(!monthCount[dateParts[2]][dateParts[1]])
+			monthCount[dateParts[2]][dateParts[1]] = 0;
+		
+		monthCount[dateParts[2]][dateParts[1]]++;
+		
+		
+	})
+	//
+	console.log(monthCount);
+	
+	var months = [
+		['tammi'],
+		['helmi'],
+		['maalis'],
+		['huhti'],
+		['touko'],
+		['kesä'],
+		['heinä'],
+		['elo'],
+		['syys'],
+		['loka'],
+		['marras'],
+		['joulu']
+	];
+	
+	
+	
+	
+	monthData.cols.push(
+		{"id":0,"label":"Kuukausi","type":"string"}
+	);
+	
+	// define month names
+	_.each(months,function(k,v){
+		monthData.rows.push(
+				{"c":[{"v":k}]}
+		)		
+	})
+	
+	
+	var year = 1,i;	
+	_.each(monthCount, function(val,key) {
+		monthData.cols.push(
+			{"id":year,"label":key,"type":"number"}
+		)
+		
+		
+		
+				// 0 to all
+		_.each(months,function(k,v){
+			monthData.rows[v]['c'].push({"v":0});
+			//	months[v].push(0);
+
+		})
+		
+		i = 0;
+		_.each(val, function(a,b) {
+			
+			monthData.rows[i++]['c'][year].v = a;
+
+		})
+		year++;
+		
+	})
+	
+	return monthData
 	
 }
 
@@ -354,7 +433,10 @@ console.log(testi);
 testi = treeni.getYearActivityChart();   
 console.log(testi);
 
+console.log('========================================================');
 
+testi = treeni.getYearActivityChartDT();   
+console.log(testi);
 
 testi = treeni.getLongestStreak();   
 console.log('Longest Streak '+ testi);
@@ -371,7 +453,7 @@ console.log('Days '+testi);
 
 });
 
-*/
+
 
 
 
