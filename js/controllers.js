@@ -231,6 +231,7 @@ if(numCounterFlag) {
 	
 */
 
+	var d = new Date();
 	
 	$scope.monthactivity = []; 
 	
@@ -269,8 +270,14 @@ if(numCounterFlag) {
 			lineThickness: 1,
 			tickColor: "#000",
 			gridThickness: 1,
-			gridColor: '#222'
-
+			gridColor: '#222',
+			stripLines:[
+				{
+				thickness:1,
+				value: d.getMonth() + (d.getDate() / 32),
+				color:"#CF5777"
+				}
+			]
 		  },
 		  axisY :{
 			includeZero: true,
@@ -287,7 +294,7 @@ if(numCounterFlag) {
 			shared: "true"
 		  },
 		  legend:{
-			fontFamily:  "RobotoLight",
+			fontFamily:  "RobotoThin",
 			fontColor:"#eee",
 			fontSize:24,
 			cursor:"pointer",
@@ -328,7 +335,7 @@ if(numCounterFlag) {
 	];
 	
 	
-	var d = new Date();
+	
 	
 	$scope.thisMonthName 	= months[d.getMonth()];
 	$scope.thisDay 			= d.getDate();

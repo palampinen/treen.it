@@ -133,9 +133,9 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 .gaugeWrap  {position:relative;color:rgba(255,255,255,.8);font-size:11px;font-weight:500; margin:20px 0 40px;}
 .gaugeWrap.big {font-size:13px;font-weight:600;}
 .gaugeWrap .title {font-size:18px;  position:relative; color:rgba(255,255,255,.8);font-family:'RobotoLight';}
-.gaugeWrap.big .title {font-size:70px; line-height:63px; font-family:'Roboto';}
+.gaugeWrap.big .title {font-size:120px; line-height:120px; font-family:'Roboto';}
 .gauge-circle {margin:0 auto; background:rgba(0,0,0,.4); border-radius:50%; padding:5px; width:75px; height:75px; position:relative;}
-.gaugeWrap.big .gauge-circle {width:170px; height:170px;padding:45px 20px 10px; background:rgba(0,0,0,.6);}
+.gaugeWrap.big .gauge-circle {width:170px; height:170px;padding:20px 20px 10px; background:rgba(0,0,0,.6);}
 .gaugeWrap  .gaugecanvas{position:absolute; left:5px;top:5px;margin:0 auto; display:inline-block;}
 .gaugeWrap.big  .gaugecanvas{left:10px; top:10px;}
 
@@ -151,6 +151,7 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 @media (min-height: 490px) {
 .fullheight .scroll {min-height:100%;}
 .numrow{position:absolute;bottom:20px;}
+.bottom-info {position:absolute; bottom:30px;width:100%;}
 }
 
 /* CHART */
@@ -159,6 +160,13 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 .canvasjs-chart-tooltip > div {padding:8px !important;}
 .canvasjs-chart-tooltip,  .canvasjs-chart-tooltip > div{border:0 !important; font-family:'RobotoLight' !important; font-style:normal !important; text-shadow:none !important; border-radius:0 !important;}
 .canvasjs-chart-credit {display:none !important;}
+
+
+.bignumbrow {padding:0; background: #45CCBE;}
+.bignumbrow .col:first-child {border-right:1px solid rgba(255,255,255, 0.3)}
+.bignumbrow .col {text-align:center;}
+.num {color:#eee; margin:0; font-weight:normal; font-family:'Roboto'; font-size:50px;line-height:60px;}
+.help  {color:#555;text-transform:uppercase; font-family:'Raleway'; font-size:13px;}
 
 
 /* SIDENAV */
