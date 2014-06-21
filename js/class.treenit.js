@@ -110,6 +110,28 @@ Treenit.prototype.getThisYearCount = function(){
 	}).length;
 }
 
+/*
+	Training Count in certain year
+	Parameter year
+*/
+Treenit.prototype.getYearCount = function(year){
+	return _.filter(this.data,function(training) {
+		return year == date2Date(training.date).getFullYear();
+	}).length;
+}
+
+/*
+	Training Count in certain year before exact date
+	Parameters year, date
+*/
+Treenit.prototype.getYearCountToDate = function(year,date){
+	console.log(date);
+	return _.filter(this.data,function(training) {
+		return year == date2Date(training.date).getFullYear() && date <= date2Date(training.date);
+	}).length;
+}
+
+
 
 
 Treenit.prototype.getYearActivity = function(){

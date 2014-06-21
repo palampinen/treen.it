@@ -166,7 +166,11 @@ var treeni = new Treenit("XXX", treeniJSON),
 	chart.render();
 }
 </script>
-<style>.canvasjs-chart-credit {display:none !important;}</style>
+<style>
+.canvasjs-chart-tooltip,  .canvasjs-chart-tooltip > div{border:0 !important; font-family:'RobotoLight' !important; font-style:normal !important; text-shadow:none !important; border-radius:0 !important;}
+.canvasjs-chart-credit {display:none !important;}
+
+</style>
 
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100' rel='stylesheet' type='text/css'>
 		<script src="js/chart/gauge.min.js"></script>
@@ -178,7 +182,7 @@ var treeni = new Treenit("XXX", treeniJSON),
 	   <script src="js/underscore-min.js"></script>
 	   <script src="js/class.treenit.js"></script>
 	 <!--  <script src="js/full-calendar.js"></script>-->
-	   <script src="js/canvasjs.min.js"></script>
+	   <script src="js/chart/canvasjs.min.js"></script>
 		
 		<style>body,html,p,* {font-family:'RobotoLight';}
 		

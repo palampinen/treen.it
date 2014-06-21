@@ -92,10 +92,10 @@ angular.module('treenit.controllers', [])
 	$scope.thisweek = thisweek;
 		
 	/* gauge.js */
-	
+/*	
 	var opts = {
 	  lines: 14, // The number of lines to draw
-	  angle: 0.33, // The length of each line
+	  angle: 0.9, // The length of each line
 	  lineWidth: 0.05, // The line thickness
 	  limitMax: 'true',   // If true, the pointer will not go past the end of the gauge
 	  colorStart: '#45CCBE',   // Colors
@@ -110,6 +110,8 @@ angular.module('treenit.controllers', [])
 	gauge.maxValue = 7; // set max gauge value
 	gauge.animationSpeed = 10; // set animation speed (32 is default value)
 	gauge.set(thisweek);
+*/
+
 
 /*
 // 	Counters
@@ -309,8 +311,29 @@ if(numCounterFlag) {
 	
 
 	
-
 	
+	var months = [
+		'tammi',
+		'helmi',
+		'maalis',
+		'huhti',
+		'touko',
+		'kesä',
+		'heinä',
+		'elo',
+		'syys',
+		'loka',
+		'marras',
+		'joulu'
+	];
+	
+	
+	var d = new Date();
+	
+	$scope.thisMonthName 	= months[d.getMonth()];
+	$scope.thisDay 			= d.getDate();
+	$scope.thisYearCount 	= Treenidata.thisYearCount();
+	$scope.lastYearCount 	= Treenidata.yearCountToDate( d.getFullYear()-1, new Date(d.getFullYear()-1, d.getMonth(),d.getDate()));
 
 		
 

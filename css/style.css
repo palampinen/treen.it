@@ -1,5 +1,12 @@
 /* App Styles */
 
+/*
+* Colors:
+Lightgreen: #45CCBE
+Reddish: #CF5777
+Lazy Electric Blue: #5E8CD6
+*/
+
 @font-face
 {
 	font-family: Raleway;
@@ -136,7 +143,7 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 .numWrap.left {text-align:left;}
 .numWrap.right {text-align:right;}
 .numWrap h3 {text-transform:uppercase; font-weight:600;font-size:12px;white-space:nowrap;color:#45CCBE;color:#627F7B;color:#4C938B;}
-.numWrap .num{font-family:'RobotoThin';color:rgba(0,0,0,.7);font-size:30px;}
+.numWrap .num{font-family:'RobotoThin';color:#eee;font-size:34px;}
 .numWrap .numicon  {font-size:30px;color:#45CCBE;}
 .numWrap .numicon.down  {color:#CF5777;}
 .bordercol {border-right:1px solid rgba(0,0,0,.1);padding-bottom:0 !important;}
@@ -148,7 +155,9 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 
 /* CHART */
 .chartwrap {margin:30px auto 0;}
-#chart_div { font-family:'Raleway','RobotoLight','Roboto','Helvetica',Arial; position:relative;}
+#chart_div { font-family:'Raleway','RobotoLight','Roboto','Helvetica',Arial; position:relative; text-transform:uppercase;}
+.canvasjs-chart-tooltip > div {padding:8px !important;}
+.canvasjs-chart-tooltip,  .canvasjs-chart-tooltip > div{border:0 !important; font-family:'RobotoLight' !important; font-style:normal !important; text-shadow:none !important; border-radius:0 !important;}
 .canvasjs-chart-credit {display:none !important;}
 
 

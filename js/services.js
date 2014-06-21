@@ -192,7 +192,6 @@ angular.module('treenit.services', [])
 			centerID: 	localStorage.getItem(treenitNameSpace+'centerID')
 		}
 		
-
 		
 	
 	return {
@@ -304,6 +303,12 @@ angular.module('treenit.services', [])
 		},
 		thisYearCount: function() {
 			return treeni.getThisYearCount();
+		},
+		yearCount: function(year) {
+			return treeni.getYearCount(year);
+		},
+		yearCountToDate: function(year,date) {
+			return treeni.getYearCountToDate(year,date);
 		},
 		yearActivity: function() {
 			return treeni.getYearActivity();
