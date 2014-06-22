@@ -1,0 +1,25 @@
+<ion-view title="Historia">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+
+  <ion-content class="has-header padding bg bg-black" >
+
+	
+	<div class="treeni" ng-repeat="treeni in treenit">
+	
+		<div ng-show="$index==0" class="datecircle"><i class="ion-ios7-calendar-outline"></i> {{treeni.date}}</div>
+		
+		<h2><img src="img/squaredot_green.png" /> {{treeni.hourtype}}</h2>
+		
+		<div class="clearfix"></div>
+		
+		
+		<h3 class="num" ng-show="{{treeni.duration}}"><i class="ion-ios7-timer-outline"></i> {{treeni.duration[0]}}h {{treeni.duration[1]}}min</h3>
+	
+		<div class="clearfix"></div>
+	</div>
+
+  </ion-content>
+</ion-view>

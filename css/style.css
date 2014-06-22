@@ -65,7 +65,7 @@ Lazy Electric Blue: #5E8CD6
 html,body{background:#000;}
 body {font-weight:300; font-family:'Raleway','Roboto','Helvetica',Arial; background:#000;}
 input, button, select, textarea, .button  {font-weight:300; font-family:'Raleway','Roboto','Helvetica',Arial;}
-h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
+h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial; }
 .pane, .view {background:#EDEBE8;}
 
 /* Load Animation */
@@ -194,31 +194,41 @@ height: 230px;
 	position: relative;
 }
 #list_days a span.wrap:last-child {margin-right:0;}
-#list_days span > span {
+#list_days span > a {
     background: none repeat scroll 0 0 transparent;
     border-radius: 100%;
     color: #aaa;
     display: block;
 	margin:0 auto;
-    font-size: 20;
+    font-size: 14px;
     font-weight:normal;
 	font-family:RobotoLight;
-	width: 42px;
-    height: 42px;
-    line-height: 42px;
+	width: 40px;
+    height: 40px;
+    line-height: 40px;
     padding: 0;
     text-align: center;
+	text-decoration:none;
 
 }
-#list_days span > span.weekend {color:#666;}
-#list_days span > span.has_events {background:#45CCBE;color:#FFF;}
+#list_days span > a.weekend {color:#666;}
+#list_days span > a.has_events {background:#45CCBE;color:#FFF;}
 
 #list_days .month {background:#000;}
-#list_days .month h2 {color:#45CCBE; text-align:right;   margin:40px 0 0 ; padding:0 15px;font-size:15px; text-transform:uppercase;font-family: RobotoLight;}
-#list_days .month h2.count {float:left;  text-align:left; color:#FFF ; }
-#list_days .month h2.count img{height: 18px; float: left; margin:0 10px;}
+#list_days .month h2 {color:#45CCBE; text-align:right;   margin:40px 0 0 ; padding:0 20px 0 0;font-size:15px; text-transform:uppercase;font-family: RobotoLight;}
+#list_days .month h2.count {float:left;  text-align:left; color:#FFF ;  padding:0 0 0 15px}
+#list_days .month h2.count img{height: 18px; float: left; margin:0 20px;}
 #list_days .month:first-child h2{margin-top:15px;} 
 
+
+/* Detail Date Page */
+.datepage .nav-bar.bar .title {font-family:RobotoLight;}
+.treeni h2 {color:#45CCBE;font-size:23px; margin:0 auto 10px; font-family:RobotoLight; text-align:center;}
+.treeni h2 img {height:20px;margin:0 5px 0 0;}
+.treeni {color:#EEE;}
+.treeni .num{font-family:RobotoLight; font-size:25px; text-align:center;color:#EEE;}
+.treeni {margin:15px 0 ; padding:15px; border-bottom:1px solid #222;clear:both;}
+.treeni .datecircle {margin: 0px auto 30px; color: rgb(255, 255, 255); background: none repeat scroll 0% 0% rgb(69, 204, 190); display: block; border-radius: 50%; font-family: RobotoLight; text-align: center; line-height: 120px; height: 120px; width: 120px; font-size: 16px;}
 
 /* SIDENAV */
 .grade-b .menu-content, .grade-c .menu-content {border-left:0; border-right:0;}
@@ -246,17 +256,6 @@ height: 230px;
 
 /* HEADER */
 .nav-bar.bar .title {font-size:180%;font-weight:300;}
-
-
-
-
-
-
-
-
-
-
-
 
 
 

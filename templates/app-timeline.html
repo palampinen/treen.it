@@ -8,20 +8,21 @@
    	<ion-list id="list_days">
 	
 	<span ng-repeat="month in months" class="month">
-	    <h2 class="count"><img src="img/treenit-transparent-100.png"> {{month.total}}</h2>
+	    <h2 class="count"><img src="img/treenit-transparent-100.png" /> {{month.total}}</h2>
 		<h2 >{{month.title}}</h2>
 		
       <ion-item  ng-repeat="week in month.weeks" type="item-text-wrap" >
-        <span class="wrap" ng-repeat="day in week" ><span ng-class="{has_events: day.link,weekend: day.weekend}">{{day.text}}</span></span>
+        <span class="wrap" ng-repeat="day in week" >
+			<a ng-show="day.link" ng-href="#/app/timeline/{{day.date}}" ng-class="{has_events: day.link,weekend: day.weekend}">{{day.text}}</a>
+			<a ng-show="!day.link"  ng-class="{weekend: day.weekend}">{{day.text}}</a>
+		
+		</span>
       </ion-item>
 	</span>
 
     </ion-list>
 	
-	
 
-
-	
 
   </ion-content>
 </ion-view>

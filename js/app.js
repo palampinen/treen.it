@@ -73,6 +73,16 @@ angular.module('treenit', ['ionic', 'treenit.controllers', 'treenit.services'])
         }
       }
     })
+	
+	.state('app.timeline-detail', {
+      url: '/timeline/:date',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/app-timeline-detail.html',
+          controller: 'TimelineDetailCtrl'
+        }
+      }
+    })
 
     .state('app.friends', {
       url: '/friends',

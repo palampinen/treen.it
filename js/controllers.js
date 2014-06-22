@@ -188,107 +188,44 @@ if(numCounterFlag) {
 
 
 
-.controller('TimelineCtrl', function($scope, Friends,Treenidata) {
+.controller('TimelineCtrl', function($scope, Treenidata) {
 	
 	var months = [],
 		kesaData = Treenidata.monthCalendar(2014,5);
 		toukoData = Treenidata.monthCalendar(2014,4);
 		huhtiData = Treenidata.monthCalendar(2014,3);
+		maalisData = Treenidata.monthCalendar(2013,3);
 	
 	
 	kesaData.total = Treenidata.monthCount(2014,5);
 	toukoData.total = Treenidata.monthCount(2014,4);
 	huhtiData.total = Treenidata.monthCount(2014,3);
+	maalisData.total = Treenidata.monthCount(2013,3);
 		
 	months.push(kesaData);
 	months.push(toukoData);
 	months.push(huhtiData);
+	months.push(maalisData);
 	$scope.months = months;
 	
 
 	
 })
   
-  
+.controller('TimelineDetailCtrl', function($scope, $stateParams,Treenidata) {
+	
+
+	$scope.date = $stateParams.date;
+	$scope.treenit = Treenidata.trainingsOfDay($stateParams.date);
+	console.log($scope.treenit );
+	
+})
   
 
 
 
 .controller('FriendsCtrl', function($scope,MonthActivity, Treenidata) {
   
-
-/* Google Chart 
-	var options = {
-		title: 'Treenit kuukausittain',
-		curveType: 'function',
-		colors: ['#45CCBE','#666','#333'],
-		//colors: ['#000','#555','#999'],
-		legend: 'none',
-		lineWidth: 2,
-        pointSize: 6,
-		pointShape: 'circle',
-		backgroundColor: 'transparent',
-		fontName:'RobotoLight',
-		//width:'500',
-		legend: {
-			textStyle: {
-				color: '#eee'
-			},
-			position: 'bottom' 
-		},
-		chartArea: {
-            left: 40,
-            top: 10,
-            width: window.innerWidth-60,
-            height: 320
-        },
-		vAxis: {
-			viewWindow:{
-				min:0,
-				max:32
-			},
-			gridlines:{
-				count:4,
-				color:'#222'
-			},
-			titleTextStyle:{
-				color:'#eee'
-			},
-			textStyle:{
-				color:'#eee'
-			}
-		},
-		hAxis: {
-			titleTextStyle: {
-				color:'#eee'
-			},
-			textStyle:{
-				color:'#eee'
-			}
-		},
-		titleTextStyle: {
-			color:'#eee'
-		}
-		
-		
-	};
-	
-		google.setOnLoadCallback(function(){
-		console.log('g.setOnLoadCallback');
-	});
-	
-			
-		
-		var monthdata = Treenidata.yearActivityChartDT(2),
-			//datatable = google.visualization.arrayToDataTable(monthdata),
-			gData = new google.visualization.DataTable(monthdata),
-			chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-			//chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-		chart.draw(gData, options);	
-		$scope.monthactivity = monthdata;
-	//	console.log(data);
-	
-*/
 
 	var d = new Date();
 	
@@ -334,7 +271,7 @@ if(numCounterFlag) {
 				{
 				thickness:1,
 				value: d.getMonth() + (d.getDate() / 32),
-				color:"#CF5777"
+				color:"#fff"
 				}
 			]
 		  },

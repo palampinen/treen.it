@@ -83,7 +83,7 @@ angular.module('treenit.services', [])
 						var oldData = localStorage.getItem('treenit-data'),
 							newData;
 						if(oldData)
-							newData= JSON.parse(oldData).concat(data);
+							newData= data.concat( JSON.parse(oldData) );
 						else 
 							newData = data
 						
@@ -91,8 +91,10 @@ angular.module('treenit.services', [])
 						
 						
 						if( _.isArray(data)){
+						
 							// unique data based on just date // TODO uniq based on date, time AND hourtype
-							newData = _.uniq(newData, false, function(training) {return training.date })
+							newData = _.uniq(newData, false, function(training) {return JSON.stringify(training)})
+							
 							
 							localStorage.setItem('treenit-data', JSON.stringify(newData) );
 							//console.log('Data is array');
@@ -295,6 +297,9 @@ angular.module('treenit.services', [])
 		},
 		lastvisit: function() {
 			return treeni.getTimeFromLastVisit()
+		},
+		trainingsOfDay: function(date) {
+			return treeni.getTrainingsOfDay(date)
 		},
 		weeklyAverage: function() {
 			return treeni.getWeeklyAverage()
