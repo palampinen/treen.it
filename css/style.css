@@ -125,19 +125,28 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 /* BG */
 .bg-black {background:#000;}
 .bg-run {background:url(../img/loadman/run2_light.jpg) no-repeat 25% 50%; background-size:auto 100%;}
+.bg-run2 {background:url(../img/loadman/run2.jpg) no-repeat 25% 50%; background-size:auto 100%;}
 .bg-weight {background:url(../img/loadman/weight_light.jpg) no-repeat 100% 100%; background-size: 130% auto; }
 .bg-new {background:url(../img/loadman/new_light.jpg) no-repeat 0% 100%; background-size:  auto 130%; }
 
 /* GAUGE */
 .center {text-align:center;}
-.gaugeWrap  {position:relative;color:rgba(255,255,255,.8);font-size:11px;font-weight:500; margin:20px 0 40px;}
-.gaugeWrap.big {font-size:13px;font-weight:600;}
-.gaugeWrap .title {font-size:18px;  position:relative; color:rgba(255,255,255,.8);font-family:'RobotoLight';}
-.gaugeWrap.big .title {font-size:120px; line-height:120px; font-family:'Roboto';}
-.gauge-circle {margin:0 auto; background:rgba(0,0,0,.4); border-radius:50%; padding:5px; width:75px; height:75px; position:relative;}
-.gaugeWrap.big .gauge-circle {width:170px; height:170px;padding:20px 20px 10px; background:rgba(0,0,0,.6);}
-.gaugeWrap  .gaugecanvas{position:absolute; left:5px;top:5px;margin:0 auto; display:inline-block;}
-.gaugeWrap.big  .gaugecanvas{left:10px; top:10px;}
+.gaugeWrap  {position:relative;color:rgba(0,0,0,.5);font-size:11px;font-weight:500; margin:20px 0 40px;}
+.gaugeWrap.big {font-size:15px;font-weight:300;font-family:'Raleway';
+margin: 0px auto;
+border-radius: 50%;
+-webkit-border-radius: 50%;
+padding: 45px;
+background:rgba(255,255,255,.25);
+width: 230px;
+height: 230px;
+}
+.gaugeWrap .title {font-size:18px;  position:relative; color:#45CCBE;font-family:'RobotoLight';}
+.gaugeWrap.big .title {font-size:70px; line-height:70px; font-family:'RobotoLight';}
+.gauge-circle {margin:0 auto;border-radius:50%; padding:5px; width:75px; height:75px; position:relative;}
+.gaugeWrap.big .gauge-circle {width:140px; height:140px;padding:16px 20px 10px; background:#FFF;}
+.gauge-circle .title-top {position:relative;top:5px;;}
+
 
 .numWrap {margin-top:-7px;}
 .numWrap.left {text-align:left;}
@@ -151,7 +160,7 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 @media (min-height: 490px) {
 .fullheight .scroll {min-height:100%;}
 .numrow{position:absolute;bottom:20px;}
-.bottom-info {position:absolute; bottom:30px;width:100%;}
+
 }
 
 /* CHART */
@@ -165,11 +174,17 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 .bignumbrow {padding:0; background: #45CCBE;}
 .bignumbrow .col:first-child {border-right:1px solid rgba(255,255,255, 0.3)}
 .bignumbrow .col {text-align:center;}
-.num {color:#eee; margin:0; font-weight:normal; font-family:'Roboto'; font-size:50px;line-height:60px;}
+.bignum {color:#eee; margin:0; font-weight:normal; font-family:'RobotoLight'; font-size:50px;line-height:60px;}
 .help  {color:#555;text-transform:uppercase; font-family:'Raleway'; font-size:13px;}
 
 
+@media (min-height: 530px) {
+.bottom-info {position:absolute; bottom:30px;width:100%;}
+}
+
+
 /* SIDENAV */
+.grade-b .menu-content, .grade-c .menu-content {border-left:0; border-right:0;}
 .menu .bar .title {margin:0;text-transform:uppercase;font-size:20px;text-align:left;}
 .menu .bar .title img{width: 34px; float: left;  margin: 0 5px 0 7px; position: relative;}
 .menu .bar .title.username .profile{background:#444; display:inline-block;text-align:center; font-size:22px; margin:1px 5px  0 10px; line-height:28px;width:28px; height:28px; border-radius:50%;color:#aaa;}
@@ -178,7 +193,7 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial;}
 
 
 .sidenav .list .item-content {background:transparent;}
-.sidenav .item-complex, .sidenav a.item.item-complex, .sidenav button.item.item-complex {background:transparent; color:#ddd;font-weight:500;border:0;border-bottom:1px solid #111;}
+.sidenav .item-complex, .sidenav a.item.item-complex, .sidenav button.item.item-complex {background:transparent; color:#ccc;font-weight:500;border:0;}
 .sidenav .item-complex:hover, .sidenav .item-complex:active, .sidenav .item-complex.activated,
 .sidenav  a.item.item-complex:hover, .sidenav  a.item.item-complex:active,
 .sidenav button.item.item-complex:hover, .sidenav button.item.item-complex:active,

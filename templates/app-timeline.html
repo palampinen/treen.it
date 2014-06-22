@@ -8,6 +8,7 @@
    	<ion-list id="list_days">
       <ion-item ng-repeat="friend in week" type="item-text-wrap" href="#">
         <!--{{friend.name}}-->
+		<h2 ng-show="$index==0"  style="float: left; color: rgb(255, 255, 255); font-family: RobotoLight;"><img src="img/treenit-transparent-100.png" style="height: 18px; float: left; margin-right: 10px; margin-top: 0px; margin-left: 10px;"> 18</h2>
 		<h2 ng-show="$index==0" style="font-family:RobotoLight; text-align:right;" >KESÄ 2014</h2>
 		<span class="wrap"><span>{{$index*7 +1 }}</span></span>
 		<span class="wrap"><span>{{$index*7 +2 }}</span></span>
@@ -20,6 +21,7 @@
       </ion-item>
 	  
 	   <ion-item ng-repeat="friend in week" type="item-text-wrap" href="#">
+	    <h2 ng-show="$index==0"  style="float: left; color: rgb(255, 255, 255); font-family: RobotoLight;"><img src="img/treenit-transparent-100.png" style="height: 18px; float: left; margin-right: 10px; margin-top: 0px; margin-left: 10px;"> 15</h2>
 		<h2 ng-show="$index==0" style="font-family:RobotoLight;  text-align:right;">TOUKO 2014</h2>
 		<span class="wrap"><span>{{$index*7 +1 }}</span></span>
 		<span class="wrap"><span>{{$index*7 +2 }}</span></span>
@@ -32,6 +34,7 @@
       </ion-item>
 	  
 	  <ion-item ng-repeat="friend in week" type="item-text-wrap" href="#">
+	    <h2 ng-show="$index==0"  style="float: left; color: rgb(255, 255, 255); font-family: RobotoLight;"><img src="img/treenit-transparent-100.png" style="height: 18px; float: left; margin-right: 10px; margin-top: 0px; margin-left: 10px;"> 13</h2>
 		<h2 ng-show="$index==0" style="font-family:RobotoLight;  text-align:right;">HUHTI 2014</h2>
 		<span class="wrap"><span class="has_events">{{$index*7 +1 }}</span></span>
 		<span class="wrap"><span>{{$index*7 +2 }}</span></span>
@@ -43,17 +46,6 @@
 
       </ion-item>
 	  
-	   <ion-item ng-repeat="friend in week" type="item-text-wrap" href="#">
-		<h2 ng-show="$index==0" style="font-family:RobotoLight;  text-align:right;">MAALIS 2014</h2>
-		<span class="wrap"><span>{{$index*7 +1 }}</span></span>
-		<span class="wrap"><span>{{$index*7 +2 }}</span></span>
-		<span class="wrap"><span>{{$index*7 +3 }}</span></span>
-		<span class="wrap"><span>{{$index*7 +4 }}</span></span>
-		<span class="wrap"><span >{{$index*7 +5 }}</span></span>
-		<span class="wrap"><span>{{$index*7 +6 }}</span></span>
-		<span class="wrap"><span class="has_events">{{$index*7 +7 }}</span></span>
-
-      </ion-item>
 	  
     </ion-list>
 	

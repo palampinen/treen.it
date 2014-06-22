@@ -89,9 +89,50 @@ angular.module('treenit.controllers', [])
 .controller('DashCtrl', function (Trainings, $scope, Treenidata) {
 	
 	var thisweek = Treenidata.thisweek();
+	$scope.thisweek  = 0;
 	$scope.thisweek = thisweek;
+
+	
+	
+	 CanvasJS.addColorSet("mainChartColors",
+                [//colorSet Array
+					"#45CCBE",
+					"transparent"      
+                ]);
+	
+	var chart = new CanvasJS.Chart("mainChart",
+	{
+			backgroundColor:'transparent',
+			interactivityEnabled: 'false',
+			theme: "theme1",
+			colorSet: 'mainChartColors',
+			toolTip: {
+				enabled:false
+			},
+			data: [
+			{     
+				type: "doughnut",
+				indexLabelFontFamily: "Raleway",       
+				indexLabelFontSize: 20,
+				startAngle:-90,
+				indexLabelLineColor: "#CCC", 
+				toolTipContent: "{y} XYZ", 					
+
+				dataPoints: [
+				{  y: thisweek },
+				{  y: 7-thisweek }
+				//{  y: 4 }
+				]
+			}
+			]
+	});
+
+	chart.render();
+	
+	
+	
 		
-	/* gauge.js */
+/* gauge.js */
 /*	
 	var opts = {
 	  lines: 14, // The number of lines to draw
@@ -128,12 +169,16 @@ if(numCounterFlag) {
 }
 */
 	
-	
+	$scope.weekAverage   = 0;
+	$scope.total 		 = 0;
+	$scope.thisYearCount = 0;
+	$scope.past30Days 	 = 0
 	
 	$scope.weekAverage 		= Treenidata.weeklyAverage();
 	$scope.total 			= Treenidata.count();
 	$scope.thisYearCount 	= Treenidata.thisYearCount();
 	$scope.past30Days 		= Treenidata.latestCountByDays(30);
+	
 	
 	
 	$scope.trainings = [];

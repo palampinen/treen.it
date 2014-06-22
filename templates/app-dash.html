@@ -3,20 +3,21 @@
     <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
 	
-  <ion-content class="has-header bg bg-black fullheight" >
+  <ion-content class="has-header bg bg-run2 fullheight" >
     
-	<div class="row">
-		<div class="col col-100">
-			<div class="center gaugeWrap big" style="margin-top:30px;">
-				
-				<div class="gauge-circle">
-					<canvas width="150px" height="150px" id="gauge1" class="gaugecanvas"></canvas>
-					<span class="title-top">tällä viikolla</span>
-					<div class="title" >{{thisweek}}</div>
+	
+	<div id="mainChart" style="height: 300px; width: 100%;">
+	
+	</div>
+	
+	<div style="position:absolute;top:29px;width: 100%;z-index:999;">
 
+			<div class="center gaugeWrap big" >
+				<div class="gauge-circle">
+				<span class="title-top">Tällä viikolla</span>
+				<div class="title" ><img style="height: 34px; float: left; margin-top: 20px;" src="img/squaredot_green.png">{{thisweek}}</div>
 				</div>
 			</div>
-		</div>
 	</div>
 	<div class="row numrow">
 		<div class="col col-50 bordercol">

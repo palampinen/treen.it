@@ -88,13 +88,14 @@ angular.module('treenit.services', [])
 							newData = data
 						
 						// Make sure that fetched data is an array
+						
+						
 						if( _.isArray(data)){
-							
 							// unique data based on just date // TODO uniq based on date, time AND hourtype
-							newData = _.uniq(newData, false, function(training) {return training.date;})
+							newData = _.uniq(newData, false, function(training) {return training.date })
 							
-							localStorage.setItem('treenit-data', JSON.stringify( newData) );
-							console.log('Data is array');
+							localStorage.setItem('treenit-data', JSON.stringify(newData) );
+							//console.log('Data is array');
 						}
 						
 						// Update last update timestamp
