@@ -183,6 +183,43 @@ height: 230px;
 }
 
 
+/* CALENDAR / HISTORY */
+#list_days .item {border-color:#111;background:#000;border-width:0 0 1px 0;margin:0;}
+#list_days .item-complex .item-content {padding-right:15px;background:#000;}
+#list_days span.wrap {
+	width: 13%;
+	width: 13.284%;
+	float:left;
+	margin: 0 1% 0 0;
+	position: relative;
+}
+#list_days a span.wrap:last-child {margin-right:0;}
+#list_days span > span {
+    background: none repeat scroll 0 0 transparent;
+    border-radius: 100%;
+    color: #aaa;
+    display: block;
+	margin:0 auto;
+    font-size: 20;
+    font-weight:normal;
+	font-family:RobotoLight;
+	width: 42px;
+    height: 42px;
+    line-height: 42px;
+    padding: 0;
+    text-align: center;
+
+}
+#list_days span > span.weekend {color:#666;}
+#list_days span > span.has_events {background:#45CCBE;color:#FFF;}
+
+#list_days .month {background:#000;}
+#list_days .month h2 {color:#45CCBE; text-align:right;   margin:40px 0 0 ; padding:0 15px;font-size:15px; text-transform:uppercase;font-family: RobotoLight;}
+#list_days .month h2.count {float:left;  text-align:left; color:#FFF ; }
+#list_days .month h2.count img{height: 18px; float: left; margin:0 10px;}
+#list_days .month:first-child h2{margin-top:15px;} 
+
+
 /* SIDENAV */
 .grade-b .menu-content, .grade-c .menu-content {border-left:0; border-right:0;}
 .menu .bar .title {margin:0;text-transform:uppercase;font-size:20px;text-align:left;}

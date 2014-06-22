@@ -125,11 +125,132 @@ Treenit.prototype.getYearCount = function(year){
 	Parameters year, date
 */
 Treenit.prototype.getYearCountToDate = function(year,date){
-	console.log(date);
 	return _.filter(this.data,function(training) {
 		return year == date2Date(training.date).getFullYear() && date <= date2Date(training.date);
 	}).length;
 }
+
+
+/*
+	Training Count in certain month of year
+	Parameters year, month
+*/
+Treenit.prototype.getMonthCount = function(year,month){
+	return _.filter(this.data,function(training) {
+		return year == date2Date(training.date).getFullYear() && month == date2Date(training.date).getMonth();
+	}).length;
+}
+
+
+/*
+	Trainings in month of year
+	Parameters year, month
+*/
+Treenit.prototype.getMonthCalendar = function(year,month){
+	var monthA =  _.filter(this.data,function(training) {
+		return year == date2Date(training.date).getFullYear() && month == date2Date(training.date).getMonth();
+	});
+	
+	var x = _.map(monthA, function(num) {
+		return _.pick(num,'date');
+	});
+	
+	var y = _.map(x, function(num) { 
+		return _.values(num)
+	});
+	y = _.flatten(y);
+	
+	var days = _.map( y, function(a) {
+		return parseInt(a.split('.')[0]);
+	});
+	
+
+	
+	var months = [
+		'tammi',
+		'helmi',
+		'maalis',
+		'huhti',
+		'touko',
+		'kesä',
+		'heinä',
+		'elo',
+		'syys',
+		'loka',
+		'marras',
+		'joulu'
+	];
+	
+	var monthName = months[month],
+		monthIndex = month;
+	
+// Begin: From full-calendar
+
+  var today= new Date(year,monthIndex,1),	 // 0 to month
+	  start_day,
+	  day=1
+	  month_length = daysInMonth(monthIndex+1,year),
+	  monthObj = {},
+	  tmpArray = [],
+	  text = '';
+
+	  
+  // Monday first, Sunday last
+  (today.getDay() == 0) ? start_day = 7 : start_day = today.getDay();
+
+  
+  monthObj.title 	  = monthName + ' ' + year;
+  monthObj.monthIndex = monthIndex+1;
+  monthObj.year		  = year;
+  monthObj.headings   = [ 'Ma','Ti','Ke','To','Pe','La','Su'];
+
+  
+  // empty cells
+  for (var i=1;i<start_day;i++){
+		tmpArray.push( {
+			text:'',
+			link:false,
+			weekend: false
+		})
+  }
+  
+  // fill the first week of days
+  for (var i=start_day;i<8;i++){
+		tmpArray.push( {
+			text:day,
+			link: (_.indexOf(days,day) >=0),
+			weekend: isWeekEnd(day,monthIndex,year)
+		})
+		
+        day++
+  }
+  monthObj.weeks = []
+  monthObj.weeks.push(tmpArray)
+
+  
+  // fill the remaining weeks
+  while (day <= month_length) {
+	 tmpArray = [];
+     for (var i=1;i<=7;i++){
+		(day > month_length ) ? text = '' : text = day;
+		tmpArray.push( {
+			text:text,
+			link: (_.indexOf(days,day) >=0),
+			weekend: isWeekEnd(day,monthIndex,year)
+		});
+		
+		day++
+     }
+	 monthObj.weeks.push(tmpArray)
+  }
+
+// End: From full-calendar  
+	
+	console.log(monthObj);
+	
+	return monthObj;
+}
+
 
 
 

@@ -95,9 +95,9 @@ angular.module('treenit.controllers', [])
 	
 	
 	 CanvasJS.addColorSet("mainChartColors",
-                [//colorSet Array
+                [
 					"#45CCBE",
-					"transparent"      
+					"rgba(116,217,206,.03)"      
                 ]);
 	
 	var chart = new CanvasJS.Chart("mainChart",
@@ -188,10 +188,24 @@ if(numCounterFlag) {
 
 
 
-.controller('TimelineCtrl', function($scope, Friends) {
-
+.controller('TimelineCtrl', function($scope, Friends,Treenidata) {
 	
-	$scope.week = Friends.all();
+	var months = [],
+		kesaData = Treenidata.monthCalendar(2014,5);
+		toukoData = Treenidata.monthCalendar(2014,4);
+		huhtiData = Treenidata.monthCalendar(2014,3);
+	
+	
+	kesaData.total = Treenidata.monthCount(2014,5);
+	toukoData.total = Treenidata.monthCount(2014,4);
+	huhtiData.total = Treenidata.monthCount(2014,3);
+		
+	months.push(kesaData);
+	months.push(toukoData);
+	months.push(huhtiData);
+	$scope.months = months;
+	
+
 	
 })
   

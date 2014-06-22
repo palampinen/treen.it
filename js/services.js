@@ -288,43 +288,49 @@ angular.module('treenit.services', [])
 	var treeni = new Treenit(User.all().name, treenitJSON);
 	return {
 		count: function() {
-			return treeni.count();
+			return treeni.count()
 		},
 		thisweek: function() { 
-			return treeni.getThisWeekActivity();
+			return treeni.getThisWeekActivity()
 		},
 		lastvisit: function() {
-			return treeni.getTimeFromLastVisit();
+			return treeni.getTimeFromLastVisit()
 		},
 		weeklyAverage: function() {
-			return treeni.getWeeklyAverage();
+			return treeni.getWeeklyAverage()
 		},
 		favdays: function() {
-			return treeni.getFavDays();
+			return treeni.getFavDays()
 		},
 		thisYearCount: function() {
-			return treeni.getThisYearCount();
+			return treeni.getThisYearCount()
 		},
 		yearCount: function(year) {
-			return treeni.getYearCount(year);
+			return treeni.getYearCount(year)
 		},
 		yearCountToDate: function(year,date) {
-			return treeni.getYearCountToDate(year,date);
+			return treeni.getYearCountToDate(year,date)
+		},
+		monthCount: function(year,month) {
+			return treeni.getMonthCount(year,month)
+		},
+		monthCalendar: function(year,month) {
+			return treeni.getMonthCalendar(year,month)
 		},
 		yearActivity: function() {
-			return treeni.getYearActivity();
+			return treeni.getYearActivity()
 		},
 		yearActivityChart: function() {
-			return treeni.getYearActivityChart();
+			return treeni.getYearActivityChart()
 		},
 		yearActivityChartDT: function(limit) {
-			return treeni.getYearActivityChartDT(limit);
+			return treeni.getYearActivityChartDT(limit)
 		},
 		yearActivityChartCJS: function(limit,type) {
 			return treeni.getYearActivityChartCJS(limit,type)
 		},
 		longestStreak: function() {
-			return treeni.getLongestStreak();
+			return treeni.getLongestStreak()
 		},
 		latestCountByDays: function(days) {
 			return treeni.getLatestCountByDays(days);
