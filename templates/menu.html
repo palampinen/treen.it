@@ -8,15 +8,15 @@
     <ion-nav-bar class="bar-dark nav-title-slide-ios7">
       <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Palaa</ion-nav-back-button>
     </ion-nav-bar>
-    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+    <ion-nav-view name="menuContent" animation="no-animation7"></ion-nav-view>
   </ion-pane>
 
-  <ion-side-menu side="left" style="width:50px;background:#000 url(img/loadman/new_dark.jpg) no-repeat 50% 100%; background-size: 150% auto;">
+  <ion-side-menu width="73" side="right" style="background:#000 url(img/loadman/new_dark.jpg) no-repeat 50% 100%; background-size: 150% auto;">
     <header class="bar bar-header bar-dark" style="background:#000">
-		<h1 class="title username {{user.sex}}"><span class="profile"><i class="icon ion-ios7-person"></i></span> {{user.name}}</h1>
-     <!-- <h1 class="title"><img src="img/treenit100.png" style="width:40px;float:left;margin-bottom:-3px;" alt="" /> Valikko</h1>-->
+		<!--<h1 class="title username {{user.sex}}"><span class="profile"><i class="icon ion-ios7-person"></i></span>< {{user.name}}</h1>-->
+		<h1 class="title"><img src="img/treenit100.png" style="width:49px;float:left;position:relative;top:-2px;left:5px;" alt="" /> </h1>
     </header>
-    <ion-content class="has-header sidenav">
+    <ion-content class="has-header sidenav" drag-content="true">
       <ion-list>
         <ion-item nav-clear menu-close ng-href="#/app/dash" ng-class="{active: isItemActive('app/dash')}">
          <i class="icon ion-ios7-heart-outline"></i> Treenisi
@@ -27,7 +27,7 @@
         </ion-item>
 		
         <ion-item nav-clear menu-close ng-href="#/app/friends" ng-class="{active: isItemActive('app/friends')}">
-          <i class="icon ion-stats-bars"></i> Kehitys
+          <i class="icon ion-ios7-pulse"></i> Kehitys
         </ion-item>
 		
 
@@ -37,7 +37,7 @@
         </ion-item>
 		
 		<ion-item nav-clear menu-close ng-href="#/app/account" ng-class="{active: isItemActive('app/accpount')}">
-         <i class="icon ion-ios7-gear"></i> Asetukset
+         <i class="icon ion-gear-a"></i> Asetukset
         </ion-item>
 			
 		
