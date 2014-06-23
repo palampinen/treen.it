@@ -240,16 +240,18 @@ height: 230px;
 
 
 .sidenav .list .item-content {background:transparent;}
-.sidenav .list .item-content .icon{font-size:45px;margin:0 25px 0 5px;}
-.sidenav .item-complex, .sidenav a.item.item-complex, .sidenav button.item.item-complex {background:transparent; color:#ccc;font-weight:500;border:0;}
+.sidenav .item-complex, .sidenav a.item.item-complex, .sidenav button.item.item-complex {background:transparent; color:#888;font-weight:500;border:0;}
 .sidenav .item-complex:hover, .sidenav .item-complex:active, .sidenav .item-complex.activated,
 .sidenav  a.item.item-complex:hover, .sidenav  a.item.item-complex:active,
 .sidenav button.item.item-complex:hover, .sidenav button.item.item-complex:active,
-.sidenav .item.item-complex.active {color:#FFF; background:rgba(255,255,255,.2)}
-.sidenav .item.item-complex.active {background:rgba(255,255,255,.1); background:#45CCBE;}
-.sidenav .item-complex {font-size:130%;}
-.sidenav .item-complex .icon{margin-right:10px;font-size:160%;position:relative; top:3px;}
-.sidenav .list .item-content {line-height:35px;}
+.sidenav .item.item-complex.active { background:rgba(255,255,255,.2); background:rgba(0,0,0,.1)}
+.sidenav .item.item-complex.active {background:rgba(255,255,255,.1);  background:rgba(0,0,0,.05)}
+
+.sidenav .item-complex {font-size:80%;}
+.sidenav .item-complex .icon{position:relative; top:0; display:block; color:#333; font-size:40px;margin:0 5px 0 5px;}
+.sidenav .item.item-complex.active .icon {color:#45CCBE; }
+.sidenav .item-complex .item-content{padding:10px 0;}
+.sidenav .list .item-content {line-height:20px;text-align:center;}
 
 
 
