@@ -226,24 +226,17 @@ if(numCounterFlag) {
 
 .controller('FriendsCtrl', function($scope, Treenidata) {
   
-
 	var d = new Date();
-	
+	var monthdata = Treenidata.yearActivityChartCJS(3,'spline')
 
-	
-	
-	var monthdata = Treenidata.yearActivityChartCJS(2,'spline')
-
-	
-	
 
 	CanvasJS.addColorSet("treeniShades",
 					[
 					"#45CCBE",
 					"#666",
+					"#444",
 					"#333",
-					"#222",
-					"#111"                
+					"#222"                
 					]);
 
 	var chart = new CanvasJS.Chart("chart_div",
@@ -361,6 +354,8 @@ if(numCounterFlag) {
 .controller('DebugCtrl', function($scope, Treenidata, User ) {
 
 	$scope.treenit = Treenidata.all();
+	
+	$scope.month = Treenidata.yearActivityChartCJS(3,'spline')
 	
 	$scope.user = User.all();
 	
