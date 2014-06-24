@@ -217,7 +217,7 @@ height: 230px;
 #list_days .month {background:#000;}
 #list_days .month h2 {color:#45CCBE; text-align:right;   margin:40px 0 0 ; padding:0 20px 0 0;font-size:15px; text-transform:uppercase;font-family: RobotoLight;}
 #list_days .month h2.count {float:left;  text-align:left; color:#FFF ;  padding:0 0 0 15px}
-#list_days .month h2.count img{height: 18px; float: left; margin:0 20px;}
+#list_days .month h2.count img{height: 18px; float: left; margin:0 5px;}
 #list_days .month:first-child h2{margin-top:15px;} 
 
 
@@ -230,25 +230,31 @@ height: 230px;
 .treeni {margin:15px 0 ; padding:15px; border-bottom:1px solid #222;clear:both;}
 .treeni .datecircle {margin: 0px auto 30px; color: rgb(255, 255, 255); background: none repeat scroll 0% 0% rgb(69, 204, 190); display: block; border-radius: 50%; font-family: RobotoLight; text-align: center; line-height: 120px; height: 120px; width: 120px; font-size: 16px;}
 
-/* SIDENAV */
-.grade-b .menu-content, .grade-c .menu-content {border-left:0; border-right:0;}
+/* Sidenav, header */
+
+.bar-header{padding:0 5px;}
+.bar-header .buttons.right-buttons{right:0;bottom:0; top:0;}
+.bar-header .button.button-icon .icon:before, .bar-header .button.button-icon:before, .bar-header .button.button-icon.icon-left:before, .bar-header .button.button-icon.icon-right:before{line-height:43px;}
+.bar-header .buttons .button.activated, .bar-header .buttons .button.active, .bar-header .buttons .button:hover, .bar-header .buttons .button:active,
+.bar-header .buttons .button.focus, .menu-open .bar-header .buttons .button {background:rgba(255,255,255,.3);color:#FFF;}
+.bar-header .buttons .button  {padding:0 15px;border:0;border-radius:0;-webkit-border-radius:0;}
+
+.grade-b .menu-content, .grade-c .menu-content, .menu-content  {border-left:0; border-right:0; box-shadow:none; -webkit-box-shadow:none;}
 .menu .bar .title {margin:0;text-transform:uppercase;font-size:20px;text-align:left;}
 .menu .bar .title img{width: 34px; float: left;  margin: 0 5px 0 7px; position: relative;}
 .menu .bar .title.username .profile{background:#444; display:inline-block;text-align:center; font-size:22px; margin:1px 5px  0 10px; line-height:28px;width:28px; height:28px; border-radius:50%;color:#aaa;}
-/*.menu .bar .title.username.female .profile{color:#CF5777}
-.menu .bar .title.username.male .profile{color:#45CCBE}*/
 
 
 .sidenav .list .item-content {background:transparent;}
-.sidenav .item-complex, .sidenav a.item.item-complex, .sidenav button.item.item-complex {background:transparent; color:#888;font-weight:500;border:0;}
+.sidenav .item-complex, .sidenav a.item.item-complex, .sidenav button.item.item-complex {background:transparent; color:#666;font-weight:500;border:0;}
 .sidenav .item-complex:hover, .sidenav .item-complex:active, .sidenav .item-complex.activated,
 .sidenav  a.item.item-complex:hover, .sidenav  a.item.item-complex:active,
 .sidenav button.item.item-complex:hover, .sidenav button.item.item-complex:active,
-.sidenav .item.item-complex.active { background:rgba(255,255,255,.2); background:rgba(0,0,0,.1)}
-.sidenav .item.item-complex.active {background:rgba(255,255,255,.1);  background:rgba(0,0,0,.05)}
+.sidenav .item.item-complex.active { background:rgba(255,255,255,.2); background:rgba(0,0,0,.6)}
+.sidenav .item.item-complex.active {background:rgba(255,255,255,.1);  background:rgba(0,0,0,.03)}
 
 .sidenav .item-complex {font-size:80%;}
-.sidenav .item-complex .icon{position:relative; top:0; display:block; color:#333; font-size:40px;margin:0 5px 0 5px;}
+.sidenav .item-complex .icon{position:relative; top:0; display:block; color:#111; font-size:40px;margin:0 5px 0 5px;}
 .sidenav .item.item-complex.active .icon {color:#45CCBE; }
 .sidenav .item-complex .item-content{padding:10px 0;}
 .sidenav .list .item-content {line-height:20px;text-align:center;}
