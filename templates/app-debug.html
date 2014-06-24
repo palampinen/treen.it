@@ -1,0 +1,20 @@
+<ion-view title="DEBUG">
+  <ion-nav-buttons side="right">
+    <button menu-toggle="right" class="button button-icon icon ion-more"></button>
+  </ion-nav-buttons>
+
+
+  <ion-content class="has-header padding" >
+	
+	<button ng-click="clearData()" class="button button-block button-dark icon-right ion-ios7-trash-outline">Tyhjennä data</button>
+	
+	<h2>User</h2>
+	{{user}}
+
+	
+	<h2>Treenit</h2>
+	<p style="font-size:10px;line-height:15px;font-family:RobotoLight">{{treenit}}
+	</p>
+	
+  </ion-content>
+</ion-view>

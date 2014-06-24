@@ -15,6 +15,7 @@ angular.module('treenit.services', [])
 /**
  * A simple example service that returns some data.
  */
+ /*
 .factory('Friends', function() {
   // Might use a resource here that returns a JSON array
 
@@ -46,7 +47,7 @@ angular.module('treenit.services', [])
     }
   }
 })
-
+*/
 
 // TOTAL TRAININGS
 .factory('Trainings', ['$http','$q', 'User','$ionicLoading', function ($http, $q, User, $ionicLoading) {
@@ -124,7 +125,8 @@ angular.module('treenit.services', [])
   
 }])
 
-// MONTH ACTIVITY
+/*
+// MONTH ACTIVITY - DEPRECATED
 .factory('MonthActivity', ['$http','$q', function ($http, $q) {
 
 	
@@ -153,7 +155,7 @@ angular.module('treenit.services', [])
 	
   
 }])
-
+*/
 
 .factory('User', function() {
 
@@ -170,18 +172,7 @@ angular.module('treenit.services', [])
   }
   */
 		var treenitNameSpace = 'treenit-user-';
-		/*
-			//Clear User Data;
-			localStorage.setItem(treenitNameSpace+'name'	, '')
-			localStorage.setItem(treenitNameSpace+'center'	, '')
-			localStorage.setItem(treenitNameSpace+'sex'		, '')
-			localStorage.setItem(treenitNameSpace+'email'	, '')
-			localStorage.setItem(treenitNameSpace+'username', '')
-			localStorage.setItem(treenitNameSpace+'password', '')
-			localStorage.setItem('treenit-data', '')
-			localStorage.setItem('treenit-data-last', '')
-			localStorage.setItem('treenit-data-timestamp', '')
-		*/
+
 	
 
 		
@@ -218,6 +209,19 @@ angular.module('treenit.services', [])
 		},
 		all: function() {
 			return userdata;
+		},
+		clear: function() {
+			console.log('clearing local storage values');
+			localStorage.setItem(treenitNameSpace+'name'	, '')
+			localStorage.setItem(treenitNameSpace+'center'	, '')
+			localStorage.setItem(treenitNameSpace+'sex'		, '')
+			localStorage.setItem(treenitNameSpace+'email'	, '')
+			localStorage.setItem(treenitNameSpace+'username', '')
+			localStorage.setItem(treenitNameSpace+'password', '')
+			localStorage.setItem('treenit-data', '')
+			localStorage.setItem('treenit-data-last', '')
+			localStorage.setItem('treenit-data-timestamp', '')
+		
 		}
 		
 	};
@@ -289,6 +293,9 @@ angular.module('treenit.services', [])
 //	console.log(treenitJSON);
 	var treeni = new Treenit(User.all().name, treenitJSON);
 	return {
+		all: function() {
+			return treeni.all()
+		},
 		count: function() {
 			return treeni.count()
 		},

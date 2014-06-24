@@ -224,13 +224,12 @@ if(numCounterFlag) {
 
 
 
-.controller('FriendsCtrl', function($scope,MonthActivity, Treenidata) {
+.controller('FriendsCtrl', function($scope, Treenidata) {
   
 
 	var d = new Date();
 	
-	$scope.monthactivity = []; 
-	
+
 	
 	
 	var monthdata = Treenidata.yearActivityChartCJS(2,'spline')
@@ -338,38 +337,15 @@ if(numCounterFlag) {
 	$scope.thisYearCount 	= Treenidata.thisYearCount();
 	$scope.lastYearCount 	= Treenidata.yearCountToDate( d.getFullYear()-1, new Date(d.getFullYear()-1, d.getMonth(),d.getDate()));
 
-		
-
-		
-	/*
-	MonthActivity.all()
-        .then(function(data) {
-            // call was successful
-			
-			console.log(data);
-			
-			var gData = new google.visualization.DataTable(data);
-			var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-			chart.draw(gData, options);
-			
-            $scope.monthactivity = data;
-			
-	
-			
-			
-        }, function(data) {
-            // call returned an error
-			alert('Tietoja ei saatu haettua.');
-        });
-  
-  */
   
   
 })
 
+/*
 .controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
   $scope.friend = Friends.get($stateParams.friendId);
 })
+*/
 
 .controller('AccountCtrl', function($scope, User) {
 
@@ -378,6 +354,20 @@ if(numCounterFlag) {
 	$scope.save = function() {
 		$scope.User.$save();
 		//$location.path('/');
+	};
+	
+})
+
+.controller('DebugCtrl', function($scope, Treenidata, User ) {
+
+	$scope.treenit = Treenidata.all();
+	
+	$scope.user = User.all();
+	
+	
+	$scope.clearData = function() {
+		User.clear();	
+		
 	};
 	
 });

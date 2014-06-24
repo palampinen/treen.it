@@ -110,7 +110,7 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial; 
 }
 #startApp {background-color:#000;}
 
-.fadeform label{background:rgba(255,255,255,.5); border-color:rgba(0,0,0,.3); }
+.fadeform label{background:rgba(255,255,255,.6); border-color:rgba(0,0,0,.1); }
 .fadeform ::-webkit-input-placeholder, .fadeform ::-moz-placeholder {color:#000;}
 
 .intropage, .intropage p, .intropage h2 {color:#FFF; font-weight:300;}
@@ -127,7 +127,7 @@ h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial; 
 .bg-run {background:url(../img/loadman/run2_light.jpg) no-repeat 25% 50%; background-size:auto 100%;}
 .bg-run2 {background:url(../img/loadman/run2.jpg) no-repeat 25% 50%; background-size:auto 100%;}
 .bg-weight {background:url(../img/loadman/weight_light.jpg) no-repeat 100% 100%; background-size: 130% auto; }
-.bg-new {background:url(../img/loadman/new_light.jpg) no-repeat 0% 100%; background-size:  auto 130%; }
+.bg-new {background:url(../img/loadman/new.jpg) no-repeat 0% 100%; background-size:  auto 120%; }
 
 /* GAUGE */
 .center {text-align:center;}
@@ -234,9 +234,12 @@ height: 230px;
 
 .bar-header{padding:0 5px;}
 .bar-header .buttons.right-buttons{right:0;bottom:0; top:0;}
-.bar-header .button.button-icon .icon:before, .bar-header .button.button-icon:before, .bar-header .button.button-icon.icon-left:before, .bar-header .button.button-icon.icon-right:before{line-height:43px;}
+.bar-header .button.button-icon .icon:before, .bar-header .button.button-icon:before, .bar-header .button.button-icon.icon-left:before, .bar-header .button.button-icon.icon-right:before{line-height:44px;padding:0;}
+.bar .button.button-clear .icon:before, .bar .button.button-clear.icon:before, .bar .button.button-clear.icon-left:before, .bar .button.button-clear.icon-right:before {line-height:42px;}
+
 .bar-header .buttons .button.activated, .bar-header .buttons .button.active, .bar-header .buttons .button:hover, .bar-header .buttons .button:active,
-.bar-header .buttons .button.focus, .menu-open .bar-header .buttons .button {background:rgba(255,255,255,.3);color:#FFF;}
+.bar-header .buttons .button.focus, .menu-open .bar-header .buttons .button {background:rgba(255,255,255,.15);color:#FFF;}
+.bar-header .button {line-height:42px;}
 .bar-header .buttons .button  {padding:0 15px;border:0;border-radius:0;-webkit-border-radius:0;}
 
 .grade-b .menu-content, .grade-c .menu-content, .menu-content  {border-left:0; border-right:0; box-shadow:none; -webkit-box-shadow:none;}
@@ -250,21 +253,21 @@ height: 230px;
 .sidenav .item-complex:hover, .sidenav .item-complex:active, .sidenav .item-complex.activated,
 .sidenav  a.item.item-complex:hover, .sidenav  a.item.item-complex:active,
 .sidenav button.item.item-complex:hover, .sidenav button.item.item-complex:active,
-.sidenav .item.item-complex.active { background:rgba(255,255,255,.2); background:rgba(0,0,0,.6)}
+.sidenav .item.item-complex.active { background:rgba(255,255,255,.2); background:rgba(0,0,0,.06)}
 .sidenav .item.item-complex.active {background:rgba(255,255,255,.1);  background:rgba(0,0,0,.03)}
 
 .sidenav .item-complex {font-size:80%;}
 .sidenav .item-complex .icon{position:relative; top:0; display:block; color:#111; font-size:40px;margin:0 5px 0 5px;}
 .sidenav .item.item-complex.active .icon {color:#45CCBE; }
 .sidenav .item-complex .item-content{padding:10px 0;}
-.sidenav .list .item-content {line-height:20px;text-align:center;}
+.sidenav .list .item-content {line-height:19px;text-align:center;}
 
 
 
 
 
 /* HEADER */
-.nav-bar.bar .title {font-size:180%;font-weight:300;}
+.nav-bar.bar .title {font-size:180%;font-weight:300; }
 
 
 

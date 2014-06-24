@@ -93,6 +93,7 @@ angular.module('treenit', ['ionic', 'treenit.controllers', 'treenit.services'])
         }
       }
     })
+	/*
     .state('app.friend-detail', {
       url: '/friend/:friendId',
       views: {
@@ -102,7 +103,7 @@ angular.module('treenit', ['ionic', 'treenit.controllers', 'treenit.services'])
         }
       }
     })
-
+	*/
     .state('app.account', {
       url: '/account',
       views: {
@@ -113,6 +114,17 @@ angular.module('treenit', ['ionic', 'treenit.controllers', 'treenit.services'])
       }
     })
 
+	.state('app.debug', {
+      url: '/debug',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/app-debug.html',
+          controller: 'DebugCtrl'
+        }
+      }
+    })
+
+	
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/dash');
 

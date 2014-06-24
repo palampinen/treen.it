@@ -8,7 +8,7 @@
     <ion-nav-bar class="bar-dark nav-title-slide-ios7">
       <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Palaa</ion-nav-back-button>
     </ion-nav-bar>
-    <ion-nav-view name="menuContent" animation="fade-in"></ion-nav-view>
+    <ion-nav-view name="menuContent" animation="slide-left-right-ios7"></ion-nav-view>
   </ion-pane>
 
  <!-- <ion-side-menu width="73" side="right" style="background:#000 url(img/loadman/new_dark.jpg) no-repeat 50% 100%; background-size: 150% auto;">-->
@@ -32,15 +32,21 @@
         </ion-item>
 		
 
-		
+		<!--
         <ion-item nav-clear menu-close ng-href="#/app/account" ng-class="{active: isItemActive('app/account')}">
          <i class="icon ion-ios7-chatbubble-outline"></i> Blogit
         </ion-item>
-		
+		-->
 		<ion-item nav-clear menu-close ng-href="#/app/account" ng-class="{active: isItemActive('app/accpount')}">
-         <i class="icon ion-gear-a"></i> Asetukset
+         <i class="icon ion-ios7-person-outline"></i> Asetukset
         </ion-item>
-			
+		
+		
+		
+        <ion-item nav-clear menu-close ng-href="#/app/debug" ng-class="{active: isItemActive('app/debug')}">
+         <i class="icon ion-code-working"></i> Debug
+        </ion-item>
+		
 		
 		
       </ion-list>
