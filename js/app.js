@@ -11,7 +11,7 @@ angular.module('treenit', ['ionic', 'treenit.controllers', 'treenit.services'])
   $ionicPlatform.ready(function() {
 	if(!User.isAuthed()){
 		$location.path('/intro')
-	}else{
+	}else
 	Trainings.all()
 		.then(function(data) {
 			//console.log(data);	
@@ -19,7 +19,7 @@ angular.module('treenit', ['ionic', 'treenit.controllers', 'treenit.services'])
 			// call returned an error
 			alert('Yhteysongelma');
 		});
-	}
+	
     if(window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
@@ -126,7 +126,7 @@ angular.module('treenit', ['ionic', 'treenit.controllers', 'treenit.services'])
 
 	
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/debug');
+  $urlRouterProvider.otherwise('/intro');
 
 });
 

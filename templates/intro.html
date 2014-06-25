@@ -3,23 +3,18 @@
 -->
 	
 <ion-view >	
-    <!--
-	<ion-nav-bar class="bar-dark nav-title-slide-ios7" style="" id="intro-nav-bar">
-	</ion-nav-bar>
-	-->
-	
-
-	<ion-content class="padding"  style="background:#000 url(img/loadman/new.jpg) no-repeat 30% 0; background-size:auto 100%; text-align:left;">
+	<ion-content class="padding"  style="background:#000 url(img/loadman/new.jpg) no-repeat 0% 0%; background-size:auto 110%; text-align:left;">
 	
 			
 		
 			<!--<h1 style="color:#fff; font-size:300%; font-weight:100;margin: 0px 0 100px 0px;">TREENIT</h1>-->
 			<div class="center">
-				<img src="img/treenit100.png" style="width:100px;margin:20px 0 0; " />
+				<img src="img/treenit100.png" style="width:80px;margin:10px 0 0; " />
 				
-				<h1 style="color:#FFF;text-transform:uppercase;margin:20px 0; font-size:300%;">Aloita <span style="font-weight:300">nyt</span></h1>
+				<h1 style="color:#FFF;text-transform:uppercase;margin:10px 0 5px; font-size:300%;">Aloita <span style="font-weight:300">nyt</span></h1>
 			</div>
 				<form class="list fadeform" name="loginForm" >
+				<h4 style="color:#FFF;text-align:center;">Syötä tunnuksesi</h4>
 				   <!-- Tunnus -->
 				   <label class="item item-input">
 					<input type="text" placeholder="Käyttäjätunnus" id="username" name="username" data-ng-model="user.username"  required />
@@ -48,8 +43,5 @@
 						<i ng-show="loginForm.password.$error.required || loginForm.username.$error.required || loginform.center.$error.required" class="icon ion-ios7-close-outline"></i> 
 				  </button>
 				</form>
-				
-
-		 
 	</ion-content>
 </ion-view>

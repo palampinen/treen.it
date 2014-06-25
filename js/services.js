@@ -288,11 +288,14 @@ angular.module('treenit.services', [])
 }])
 
 .factory('Treenidata', ['User', function(User) {
+	var treenidata = localStorage.getItem('treenit-data'),
+		treenitJSON;
 	
-	var treenitJSON = JSON.parse( localStorage.getItem('treenit-data'));
-	
-	if( !treenitJSON)
+	if(treenidata)
+		treenitJSON = JSON.parse( localStorage.getItem('treenit-data'));
+	else 
 		treenitJSON = {};
+		
 //	console.log(treenitJSON);
 	var treeni = new Treenit(User.all().name, treenitJSON);
 	return {

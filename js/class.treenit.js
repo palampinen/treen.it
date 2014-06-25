@@ -94,6 +94,8 @@ Treenit.prototype.getThisWeekActivity = function() {
 */
 Treenit.prototype.getWeeklyAverage = function(){
 	
+	if(!this.data.length) return 0;
+	
 	var firstVisit = this.data[ this.data.length-1 ].date,
 		diff = days_between( new Date(), date2Date(firstVisit));
 	
