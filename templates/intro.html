@@ -11,13 +11,14 @@
 
 	<ion-content class="padding"  style="background:#000 url(img/loadman/new.jpg) no-repeat 30% 0; background-size:auto 100%; text-align:left;">
 	
-			<img src="img/treenit100.png" style="width:50px;float:left;margin-right:20px; " />
-		
-			<h1 style="color:#fff; font-size:300%; font-weight:100;margin: 0px 0 100px 0px;">TREENIT</h1>
 			
-				<h2 class="center">Treenit Puhelimessasi</h2>
+		
+			<!--<h1 style="color:#fff; font-size:300%; font-weight:100;margin: 0px 0 100px 0px;">TREENIT</h1>-->
+			<div class="center">
+				<img src="img/treenit100.png" style="width:100px;margin:20px 0 0; " />
 				
-				
+				<h1 style="color:#FFF;text-transform:uppercase;margin:20px 0; font-size:300%;">Aloita <span style="font-weight:300">nyt</span></h1>
+			</div>
 				<form class="list fadeform" name="loginForm" >
 				   <!-- Tunnus -->
 				   <label class="item item-input">
@@ -42,7 +43,7 @@
 					</label>
 	 
 				   <button type="submit" class="button button-block button-dark" id="startApp" ng-click="tryAuth()"  ng-disabled="myForm.$invalid" >
-						Aloita 
+						Kirjaudu 
 						<i class="icon ion-ios7-checkmark-outline" ng-show="!loginForm.password.$error.required && !loginForm.username.$error.required && !loginform.center.$error.required"></i> 
 						<i ng-show="loginForm.password.$error.required || loginForm.username.$error.required || loginform.center.$error.required" class="icon ion-ios7-close-outline"></i> 
 				  </button>

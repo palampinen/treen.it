@@ -495,8 +495,8 @@ Treenit.prototype.getYearActivityChartCJS = function(limit,type){
 		
 		
 	})
-	//
-	console.log(monthCount);
+	
+	//console.log(monthCount);
 	
 	var months = [
 		['tammi'],

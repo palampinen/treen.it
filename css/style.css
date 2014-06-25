@@ -151,8 +151,8 @@ height: 230px;
 .numWrap {margin-top:-7px;}
 .numWrap.left {text-align:left;}
 .numWrap.right {text-align:right;}
-.numWrap h3 {text-transform:uppercase; font-weight:600;font-size:12px;white-space:nowrap;color:#45CCBE;color:#627F7B;color:#4C938B;}
-.numWrap .num{font-family:'RobotoThin';color:#eee;font-size:34px;}
+.numWrap h3 {text-transform:uppercase; font-weight:600;font-size:12px;white-space:nowrap;color:#627F7B;color:#4C938B;color:#45CCBE;}
+.numWrap .num{font-family:'RobotoThin';color:#eee;font-size:34px;color:#fff;}
 .numWrap .numicon  {font-size:30px;color:#45CCBE;}
 .numWrap .numicon.down  {color:#CF5777;}
 .bordercol {border-right:1px solid rgba(0,0,0,.1);padding-bottom:0 !important;}

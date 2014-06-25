@@ -3,7 +3,7 @@ angular.module('treenit.controllers', [])
 
 
 // INTRO 
-.controller('IntroCtrl', function($scope, $state, $rootScope, $location, User, appAuth, Trainings, $ionicViewService) {
+.controller('IntroCtrl', function($scope, $state, $rootScope, $location, User, appAuth, Trainings, $ionicViewService,$timeout) {
 	
 	
 
@@ -55,10 +55,10 @@ angular.module('treenit.controllers', [])
 			.then(function(data) {
 				// call was successful
 
-				console.log(data);
+				//console.log(data);
 				if(data.result == "1"){
 					User.save(data);
-					startApp();
+					$timeout( startApp, 500);
 				}else
 					alert('Tunnukset eivät kelpaa');
 				
@@ -194,13 +194,13 @@ if(numCounterFlag) {
 		kesaData = Treenidata.monthCalendar(2014,5);
 		toukoData = Treenidata.monthCalendar(2014,4);
 		huhtiData = Treenidata.monthCalendar(2014,3);
-		maalisData = Treenidata.monthCalendar(2013,3);
+		maalisData = Treenidata.monthCalendar(2014,2);
 	
 	
 	kesaData.total = Treenidata.monthCount(2014,5);
 	toukoData.total = Treenidata.monthCount(2014,4);
 	huhtiData.total = Treenidata.monthCount(2014,3);
-	maalisData.total = Treenidata.monthCount(2013,3);
+	maalisData.total = Treenidata.monthCount(2014,2);
 		
 	months.push(kesaData);
 	months.push(toukoData);
@@ -232,9 +232,9 @@ if(numCounterFlag) {
 
 	CanvasJS.addColorSet("treeniShades",
 					[
-					"#45CCBE",
-					"#666",
 					"#444",
+					"#666",
+					"#45CCBE",
 					"#333",
 					"#222"                
 					]);

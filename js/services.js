@@ -176,7 +176,7 @@ angular.module('treenit.services', [])
 	
 
 		
-		var userdata = { 
+		var userdata = {
 			name: 		localStorage.getItem(treenitNameSpace+'name'), 
 			sex: 		localStorage.getItem(treenitNameSpace+'sex'), 
 			email:		localStorage.getItem(treenitNameSpace+'email'),
@@ -290,6 +290,9 @@ angular.module('treenit.services', [])
 .factory('Treenidata', ['User', function(User) {
 	
 	var treenitJSON = JSON.parse( localStorage.getItem('treenit-data'));
+	
+	if( !treenitJSON)
+		treenitJSON = {};
 //	console.log(treenitJSON);
 	var treeni = new Treenit(User.all().name, treenitJSON);
 	return {
