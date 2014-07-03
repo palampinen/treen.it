@@ -10,6 +10,7 @@ angular.module('treenit', ['ionic', 'treenit.controllers', 'treenit.services'])
 .run(function($ionicPlatform,User,$location, Trainings) {
   $ionicPlatform.ready(function() {
 	if(!User.isAuthed()){
+		//$state.go('app.timeline');
 		$location.path('/intro')
 	}else
 	Trainings.all()

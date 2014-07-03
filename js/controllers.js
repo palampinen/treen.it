@@ -116,7 +116,7 @@ angular.module('treenit.controllers', [])
 				indexLabelFontSize: 20,
 				startAngle:-90,
 				indexLabelLineColor: "#CCC", 
-				toolTipContent: "{y} XYZ", 					
+			//	toolTipContent: "{y}", 					
 
 				dataPoints: [
 				{  y: thisweek },
