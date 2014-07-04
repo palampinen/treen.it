@@ -49,7 +49,7 @@ angular.module('treenit', ['ionic', 'treenit.controllers', 'treenit.services'])
     .state('app', {
       url: "/app",
       abstract: true,
-      templateUrl: "templates/menu.html",
+      templateUrl: "templates/tabs.html",
 	  controller: 'AppCtrl'
     })
 
@@ -58,7 +58,7 @@ angular.module('treenit', ['ionic', 'treenit.controllers', 'treenit.services'])
     .state('app.dash', {
       url: '/dash',
       views: {
-        'menuContent': {
+        'tab-dash': {
           templateUrl: 'templates/app-dash.html',
           controller: 'DashCtrl'
         }
@@ -68,7 +68,7 @@ angular.module('treenit', ['ionic', 'treenit.controllers', 'treenit.services'])
 	.state('app.timeline', {
       url: '/timeline',
       views: {
-        'menuContent': {
+        'tab-timeline': {
           templateUrl: 'templates/app-timeline.html',
           controller: 'TimelineCtrl'
         }
@@ -78,18 +78,18 @@ angular.module('treenit', ['ionic', 'treenit.controllers', 'treenit.services'])
 	.state('app.timeline-detail', {
       url: '/timeline/:date',
       views: {
-        'menuContent': {
+        'tab-timeline': {
           templateUrl: 'templates/app-timeline-detail.html',
           controller: 'TimelineDetailCtrl'
         }
       }
     })
 
-    .state('app.friends', {
-      url: '/friends',
+    .state('app.pulse', {
+      url: '/pulse',
       views: {
-        'menuContent': {
-          templateUrl: 'templates/app-friends.html',
+        'tab-pulse': {
+          templateUrl: 'templates/app-pulse.html',
           controller: 'FriendsCtrl'
         }
       }
@@ -108,7 +108,7 @@ angular.module('treenit', ['ionic', 'treenit.controllers', 'treenit.services'])
     .state('app.account', {
       url: '/account',
       views: {
-        'menuContent': {
+        'tab-account': {
           templateUrl: 'templates/app-account.html',
           controller: 'AccountCtrl'
         }
@@ -118,7 +118,7 @@ angular.module('treenit', ['ionic', 'treenit.controllers', 'treenit.services'])
 	.state('app.debug', {
       url: '/debug',
       views: {
-        'menuContent': {
+        'tab-debug': {
           templateUrl: 'templates/app-debug.html',
           controller: 'DebugCtrl'
         }

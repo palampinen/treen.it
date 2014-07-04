@@ -267,7 +267,7 @@ height: 230px;
 
 
 /* HEADER */
-.nav-bar.bar .title {font-size:180%;font-weight:300; }
+.nav-bar.bar .title {font-size:180%;font-weight:100; }
 
 
 
@@ -368,12 +368,22 @@ height: 230px;
 
 	
 .ionic .tabs-dark > .tabs, .ionic .tabs.tabs-dark {
-    border-color: #000;
-    background-color: #000;
+	border-top:0;
+    border-color: #1E2120;
+    background-color: #1E2120;
     background-image: none;
-    color: #fff; 
+    color: #ccc;
 }
+
+.ionic .tabs-dark .tab-item .icon {}
+
 .ionic .tabs-dark > .tabs .tab-item .badge, .ionic .tabs.tabs-dark .tab-item .badge {
     background-color: #fff;
     color: #000;
+}
+
+.tabs-dark .tab-item.tab-item-active {
+	color:#FFF;
+	border-bottom:3px solid #45CCBE;
+	background:#000;
 }
