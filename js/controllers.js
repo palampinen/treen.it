@@ -206,6 +206,7 @@ if(numCounterFlag) {
 	months.push(toukoData);
 	//months.push(huhtiData);
 	//months.push(maalisData);
+
 	$scope.months = months;
 	
 

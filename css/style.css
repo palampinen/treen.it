@@ -276,11 +276,7 @@ height: 230px;
 
 
 /* DARK TO BLACK */
-.ionic .tabs-dark > .tabs, .ionic .tabs.tabs-dark {
-    border-color: #000;
-    background-color: #000;
-    color: #fff; 
-}
+
 .ionic .tabs-dark > .tabs .tab-item .badge, .ionic .tabs.tabs-dark .tab-item .badge {
     background-color: #fff;
     color: #000; 
@@ -367,23 +363,23 @@ height: 230px;
 }
 
 	
-.ionic .tabs-dark > .tabs, .ionic .tabs.tabs-dark {
-	border-top:0;
-    border-color: #1E2120;
+.ionic .tabs-dark > .tabs, .ionic .tabs-dark .tabs{
+	border:0 !important;
     background-color: #1E2120;
     background-image: none;
     color: #ccc;
 }
 
-.ionic .tabs-dark .tab-item .icon {}
+
+.ionic .tabs-dark .tab-item {border:0;color:#ccc;}
+
+.ionic .tabs-dark .tab-item.tab-item-active {
+	color:#FFF;
+	border-bottom:3px solid #45CCBE;
+	background:#000;
+}
 
 .ionic .tabs-dark > .tabs .tab-item .badge, .ionic .tabs.tabs-dark .tab-item .badge {
     background-color: #fff;
     color: #000;
-}
-
-.tabs-dark .tab-item.tab-item-active {
-	color:#FFF;
-	border-bottom:3px solid #45CCBE;
-	background:#000;
 }
