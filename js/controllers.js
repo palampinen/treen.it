@@ -191,22 +191,35 @@ if(numCounterFlag) {
 .controller('TimelineCtrl', function($scope, Treenidata) {
 	
 	var months = [],
-		kesaData = Treenidata.monthCalendar(2014,6);
-		toukoData = Treenidata.monthCalendar(2014,5);
+		heinaData = Treenidata.monthCalendar(2014,6);
+		kesaData = Treenidata.monthCalendar(2014,5);
+		toukoData = Treenidata.monthCalendar(2014,4);
 		huhtiData = Treenidata.monthCalendar(2014,3);
 		maalisData = Treenidata.monthCalendar(2014,2);
+		helmiData = Treenidata.monthCalendar(2014,1);
+		tammiData = Treenidata.monthCalendar(2014,0);
 	
 	
-	kesaData.total = Treenidata.monthCount(2014,6);
-	toukoData.total = Treenidata.monthCount(2014,5);
+	heinaData.total = Treenidata.monthCount(2014,6);
+	kesaData.total = Treenidata.monthCount(2014,5);
+	toukoData.total = Treenidata.monthCount(2014,4);
 	huhtiData.total = Treenidata.monthCount(2014,3);
 	maalisData.total = Treenidata.monthCount(2014,2);
+	tammiData.total = Treenidata.monthCount(2014,1);
+	helmiData.total = Treenidata.monthCount(2014,0);
 		
+	months.push(heinaData);
 	months.push(kesaData);
 	months.push(toukoData);
-	//months.push(huhtiData);
-	//months.push(maalisData);
-
+	months.push(huhtiData);
+	months.push(maalisData);
+	months.push(helmiData);
+	months.push(tammiData);
+	
+	
+	
+	
+	console.log(months);
 	$scope.months = months;
 	
 

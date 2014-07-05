@@ -75,7 +75,7 @@ angular.module('treenit.services', [])
 						},
 					})
 					.success(function(data, status) {
-						console.log(data);
+						//console.log(data);
 						// Merge data
 						
 						
