@@ -364,22 +364,31 @@ height: 230px;
 
 	
 .ionic .tabs-dark > .tabs, .ionic .tabs-dark .tabs{
-	border:0 !important;
+	/*border:0 !important;
+    background-image: none;*/
     background-color: #1E2120;
-    background-image: none;
     color: #ccc;
+	padding-top:0;
 }
 
-
-.ionic .tabs-dark .tab-item {border:0;color:#ccc;}
-
-.ionic .tabs-dark .tab-item.tab-item-active {
+.ionic .tabs-dark .tab-item {color:#ccc;opacity:1;}
+.ionic .tabs-dark .tab-item.tab-item-active,
+.tabs-striped.tabs-dark .tab-item.tab-item-active, .tabs-striped.tabs-dark .tab-item.active, .tabs-striped.tabs-dark .tab-item.activated
+{
+	background:#111;
+	margin:0;
+	border-color:#45CCBE !important;
+	border-style:solid;
+	border-width:0 0 3px 0;
 	color:#FFF;
-	border-bottom:3px solid #45CCBE;
-	background:#000;
 }
+
+.ionic .tabs-dark.tabs-striped .tab-item + .tab-item:before { display:none; }
+
 
 .ionic .tabs-dark > .tabs .tab-item .badge, .ionic .tabs.tabs-dark .tab-item .badge {
     background-color: #fff;
     color: #000;
 }
+
+
