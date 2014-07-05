@@ -191,13 +191,25 @@ if(numCounterFlag) {
 .controller('TimelineCtrl', function($scope, Treenidata) {
 	
 	var months = [],
-		heinaData = Treenidata.monthCalendar(2014,6);
-		kesaData = Treenidata.monthCalendar(2014,5);
-		toukoData = Treenidata.monthCalendar(2014,4);
-		huhtiData = Treenidata.monthCalendar(2014,3);
-		maalisData = Treenidata.monthCalendar(2014,2);
-		helmiData = Treenidata.monthCalendar(2014,1);
-		tammiData = Treenidata.monthCalendar(2014,0);
+		heinaData = Treenidata.monthCalendar(2014,6),
+		kesaData = Treenidata.monthCalendar(2014,5),
+		toukoData = Treenidata.monthCalendar(2014,4),
+		huhtiData = Treenidata.monthCalendar(2014,3),
+		maalisData = Treenidata.monthCalendar(2014,2),
+		helmiData = Treenidata.monthCalendar(2014,1),
+		tammiData = Treenidata.monthCalendar(2014,0),
+		kolmeData1 = Treenidata.monthCalendar(2013,11),
+		kolmeData2 = Treenidata.monthCalendar(2013,10),
+		kolmeData3 = Treenidata.monthCalendar(2013,9),
+		kolmeData4 = Treenidata.monthCalendar(2013,8),
+		kolmeData5 = Treenidata.monthCalendar(2013,7),
+		kolmeData6 = Treenidata.monthCalendar(2013,6),
+		kolmeData7 = Treenidata.monthCalendar(2013,5),
+		kolmeData8 = Treenidata.monthCalendar(2013,4),
+		kolmeData9 = Treenidata.monthCalendar(2013,3),
+		kolmeData10 = Treenidata.monthCalendar(2013,2),
+		kolmeData11 = Treenidata.monthCalendar(2013,1),
+		kolmeData12 = Treenidata.monthCalendar(2013,0);
 	
 	
 	heinaData.total = Treenidata.monthCount(2014,6);
@@ -205,8 +217,20 @@ if(numCounterFlag) {
 	toukoData.total = Treenidata.monthCount(2014,4);
 	huhtiData.total = Treenidata.monthCount(2014,3);
 	maalisData.total = Treenidata.monthCount(2014,2);
-	tammiData.total = Treenidata.monthCount(2014,1);
-	helmiData.total = Treenidata.monthCount(2014,0);
+	helmiData.total = Treenidata.monthCount(2014,1);
+	tammiData.total = Treenidata.monthCount(2014,0);
+	kolmeData1.total = Treenidata.monthCount(2013,11);
+	kolmeData2.total = Treenidata.monthCount(2013,10);
+	kolmeData3.total = Treenidata.monthCount(2013,9);
+	kolmeData4.total = Treenidata.monthCount(2013,8);
+	kolmeData5.total = Treenidata.monthCount(2013,7);
+	kolmeData6.total = Treenidata.monthCount(2013,6);
+	kolmeData7.total = Treenidata.monthCount(2013,5);
+	kolmeData8.total = Treenidata.monthCount(2013,4);
+	kolmeData9.total = Treenidata.monthCount(2013,3);
+	kolmeData10.total = Treenidata.monthCount(2013,2);
+	kolmeData11.total = Treenidata.monthCount(2013,1);
+	kolmeData12.total = Treenidata.monthCount(2013,0);
 		
 	months.push(heinaData);
 	months.push(kesaData);
@@ -215,6 +239,18 @@ if(numCounterFlag) {
 	months.push(maalisData);
 	months.push(helmiData);
 	months.push(tammiData);
+	months.push(kolmeData1);
+	months.push(kolmeData2);
+	months.push(kolmeData3);
+	months.push(kolmeData4);
+	months.push(kolmeData5);
+	months.push(kolmeData6);
+	months.push(kolmeData7);
+	months.push(kolmeData8);
+	months.push(kolmeData9);
+	months.push(kolmeData10);
+	months.push(kolmeData11);
+	months.push(kolmeData12);
 	
 	
 	
