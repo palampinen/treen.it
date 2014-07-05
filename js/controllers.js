@@ -259,6 +259,9 @@ if(numCounterFlag) {
 	$scope.months = months;
 	
 
+	$scope.getItemHeight = function(item,index){
+		return item.weeks.length * 62 + 100;
+	}
 	
 })
   

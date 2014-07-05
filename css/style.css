@@ -215,10 +215,10 @@ height: 230px;
 #list_days span > a.has_events {background:#45CCBE;color:#FFF;}
 
 #list_days .month {background:#000;display:inline-block;width:100%;}
-#list_days .month h2 {color:#45CCBE; text-align:right;   margin:40px 0 0 ; padding:0 20px 0 0;font-size:15px; text-transform:uppercase;font-family: RobotoLight;}
+#list_days .month h2 {color:#45CCBE; text-align:right;   margin:0px 0 0 ; padding:0 20px 0 0;font-size:15px; text-transform:uppercase;font-family: RobotoLight;}
 #list_days .month h2.count {float:left;  text-align:left; color:#FFF ;  padding:0 0 0 15px}
 #list_days .month h2.count img{height: 18px; float: left; margin:0 5px;}
-#list_days .month:first-child h2{margin-top:15px;} 
+/*#list_days .month:first-child h2{margin-top:15px;} */
 
 
 /* Detail Date Page */
@@ -367,15 +367,16 @@ height: 230px;
 	/*border:0 !important;
     background-image: none;*/
     background-color: #1E2120;
-    color: #ccc;
+    color: #45CCBE;
 	padding-top:0;
 }
 
-.ionic .tabs-dark .tab-item {color:#ccc;opacity:1;}
+.ionic .tabs-dark .tab-item {color:#45CCBE;opacity:1;}
 .ionic .tabs-dark .tab-item.tab-item-active,
 .tabs-striped.tabs-dark .tab-item.tab-item-active, .tabs-striped.tabs-dark .tab-item.active, .tabs-striped.tabs-dark .tab-item.activated
 {
 	background:#111;
+	background:#45CCBE;
 	margin:0;
 	border-color:#45CCBE !important;
 	border-style:solid;
