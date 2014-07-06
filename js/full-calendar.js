@@ -71,10 +71,3 @@ function getMonthCalendar(monthName,monthIndex,year)
   return monthObj
 }
 // end hiding -->
-
-
-
-/*
-var kesakuu = getMonthCalendar("Kesä",5,2014)
-console.log(kesakuu);
-*/
