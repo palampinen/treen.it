@@ -115,6 +115,7 @@ angular.module('treenit', ['ionic', 'treenit.controllers', 'treenit.services'])
       }
     })
 
+/*
 	.state('app.debug', {
       url: '/debug',
       views: {
@@ -124,7 +125,7 @@ angular.module('treenit', ['ionic', 'treenit.controllers', 'treenit.services'])
         }
       }
     })
-
+*/
 	
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/intro');

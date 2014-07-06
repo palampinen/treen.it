@@ -3,7 +3,7 @@ angular.module('treenit.controllers', [])
 
 
 // INTRO 
-.controller('IntroCtrl', function($scope, $state, $rootScope, $location, User, appAuth, Trainings, $ionicViewService,$timeout) {
+.controller('IntroCtrl', function($scope, $state, $location, User, appAuth, Trainings, $ionicViewService,$timeout) {
 	
 	
 
@@ -86,11 +86,12 @@ angular.module('treenit.controllers', [])
 
 })
 
-.controller('DashCtrl', function (Trainings, $scope, Treenidata) {
+//.controller('DashCtrl', function (Trainings, $scope, Treenidata) {
+.controller('DashCtrl', function (Trainings, $scope) {
 	
-	var thisweek = Treenidata.thisweek();
+	//var thisweek = Treenidata.thisweek();
 	$scope.thisweek  = 0;
-	$scope.thisweek = thisweek;
+	//$scope.thisweek = thisweek;
 
 	
 	
@@ -131,27 +132,6 @@ angular.module('treenit.controllers', [])
 	
 	
 	
-		
-/* gauge.js */
-/*	
-	var opts = {
-	  lines: 14, // The number of lines to draw
-	  angle: 0.9, // The length of each line
-	  lineWidth: 0.05, // The line thickness
-	  limitMax: 'true',   // If true, the pointer will not go past the end of the gauge
-	  colorStart: '#45CCBE',   // Colors
-	  colorStop: '#45CCBE',    // just experiment with them
-	  //strokeColor: '#E7ABBB',   // to see which ones work best for you
-//	  strokeColor: 'rgba(235,235,235,0.4)',   
-	  strokeColor: '#ABABAB',   //
-	  generateGradient: false
-	};
-	var target = document.getElementById('gauge1'); // your canvas element
-	var gauge = new Donut(target).setOptions(opts); // create sexy gauge!
-	gauge.maxValue = 7; // set max gauge value
-	gauge.animationSpeed = 10; // set animation speed (32 is default value)
-	gauge.set(thisweek);
-*/
 
 
 /*
@@ -172,12 +152,12 @@ if(numCounterFlag) {
 	$scope.weekAverage   = 0;
 	$scope.total 		 = 0;
 	$scope.thisYearCount = 0;
-	$scope.past30Days 	 = 0
+	$scope.past30Days 	 = 0;
 	
-	$scope.weekAverage 		= Treenidata.weeklyAverage();
-	$scope.total 			= Treenidata.count();
-	$scope.thisYearCount 	= Treenidata.thisYearCount();
-	$scope.past30Days 		= Treenidata.latestCountByDays(30);
+//	$scope.weekAverage 		= Treenidata.weeklyAverage();
+//	$scope.total 			= Treenidata.count();
+//	$scope.thisYearCount 	= Treenidata.thisYearCount();
+//	$scope.past30Days 		= Treenidata.latestCountByDays(30);
 	
 	
 	
@@ -188,9 +168,11 @@ if(numCounterFlag) {
 
 
 
-.controller('TimelineCtrl', function($scope, Treenidata) {
+//.controller('TimelineCtrl', function($scope, Treenidata) {
+.controller('TimelineCtrl', function($scope) {
 	
-	var months = [],
+	var months = []
+	/*,
 		heinaData = Treenidata.monthCalendar(2014,6),
 		kesaData = Treenidata.monthCalendar(2014,5),
 		toukoData = Treenidata.monthCalendar(2014,4),
@@ -251,7 +233,7 @@ if(numCounterFlag) {
 	months.push(kolmeData10);
 	months.push(kolmeData11);
 	months.push(kolmeData12);
-	
+	*/
 	
 	
 	
@@ -402,8 +384,8 @@ if(numCounterFlag) {
 		//$location.path('/');
 	};
 	
-})
-
+});
+/*
 .controller('DebugCtrl', function($scope, Treenidata, User ) {
 
 	$scope.treenit = Treenidata.all();
@@ -419,3 +401,4 @@ if(numCounterFlag) {
 	};
 	
 });
+*/
