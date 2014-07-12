@@ -225,19 +225,18 @@ height: 230px;
 .treeni h2 img {height:20px;margin:0 5px 0 0;}
 .treeni {color:#EEE;}
 .treeni .num{font-family:RobotoLight; font-size:25px; text-align:center;color:#EEE;}
-.treeni {margin:15px 0 ; padding:15px; border-bottom:1px solid #222;clear:both;}
+.treeni {margin:15px 0 ; padding:15px 0; border-bottom:1px solid #222;clear:both;}
 .treeni .datecircle {margin: 0px auto 20px; color: rgb(255, 255, 255); background: none repeat scroll 0% 0% rgb(69, 204, 190); display: block; border-radius: 50%; font-family: RobotoLight; text-align: center; line-height: 110px; height: 110px; width: 110px; font-size: 15px;}
 
 .traintypes .item {
 	padding-left:40px;
-	background-image: url('../img/icons/leg.png');
 	background-repeat: no-repeat;
 	background-size: auto 30px;
 	background-position: 0% 50%;
 	font-size:125%;font-weight:900; text-transform:uppercase;
 	color:#ccc;
 }
-
+.traintypes .item.active {color:#45CCBE;background-color:transparent;}
 /* Sidenav, header */
 
 .bar-header{padding:0 5px;}
