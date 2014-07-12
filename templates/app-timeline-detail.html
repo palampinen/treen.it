@@ -28,7 +28,7 @@
 		
 		<ul class="list traintypes">
 
-			<li ng-repeat="traintype in traintypes" ng-class="{active: $active.$index}" class="item item-toggle item-dark" style="background-image:url(img/icons/{{traintype.icon}}.png">
+			<li ng-repeat="traintype in traintypes" ng-class="{active: $active.$index}" class="item item-toggle item-dark" style="background-image:url(img/icons/{{traintype.icon}}.png)">
 				 {{traintype.name}}
 				 <label class="toggle" ng-click="$active.$index=!$active.$index">
 				   <input type="checkbox">
