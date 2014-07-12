@@ -104,7 +104,8 @@ angular.module('treenit.controllers', [])
 	var chart = new CanvasJS.Chart("mainChart",
 	{
 			backgroundColor:'transparent',
-			interactivityEnabled: 'false',
+			animationEnabled: false,
+			interactivityEnabled: false,
 			theme: "theme1",
 			colorSet: 'mainChartColors',
 			toolTip: {
@@ -122,7 +123,6 @@ angular.module('treenit.controllers', [])
 				dataPoints: [
 				{  y: thisweek },
 				{  y: 7-thisweek }
-				//{  y: 4 }
 				]
 			}
 			]
@@ -171,53 +171,6 @@ if(numCounterFlag) {
 .controller('TimelineCtrl', function($scope, Treenidata) {
 	
 	var months = Treenidata.monthCalendarFromBeginning();
-	/*
-		heinaData = Treenidata.monthCalendar(2014,6),
-		kesaData = Treenidata.monthCalendar(2014,5),
-		toukoData = Treenidata.monthCalendar(2014,4),
-		huhtiData = Treenidata.monthCalendar(2014,3),
-		maalisData = Treenidata.monthCalendar(2014,2),
-		helmiData = Treenidata.monthCalendar(2014,1),
-		tammiData = Treenidata.monthCalendar(2014,0),
-		kolmeData1 = Treenidata.monthCalendar(2013,11),
-		kolmeData2 = Treenidata.monthCalendar(2013,10),
-		kolmeData3 = Treenidata.monthCalendar(2013,9),
-		kolmeData4 = Treenidata.monthCalendar(2013,8),
-		kolmeData5 = Treenidata.monthCalendar(2013,7),
-		kolmeData6 = Treenidata.monthCalendar(2013,6),
-		kolmeData7 = Treenidata.monthCalendar(2013,5),
-		kolmeData8 = Treenidata.monthCalendar(2013,4),
-		kolmeData9 = Treenidata.monthCalendar(2013,3),
-		kolmeData10 = Treenidata.monthCalendar(2013,2),
-		kolmeData11 = Treenidata.monthCalendar(2013,1),
-		kolmeData12 = Treenidata.monthCalendar(2013,0);
-	
-
-	months.push(heinaData);
-	months.push(kesaData);
-	months.push(toukoData);
-	months.push(huhtiData);
-	months.push(maalisData);
-	months.push(helmiData);
-	months.push(tammiData);
-	months.push(kolmeData1);
-	months.push(kolmeData2);
-	months.push(kolmeData3);
-	months.push(kolmeData4);
-	months.push(kolmeData5);
-	months.push(kolmeData6);
-	months.push(kolmeData7);
-	months.push(kolmeData8);
-	months.push(kolmeData9);
-	months.push(kolmeData10);
-	months.push(kolmeData11);
-	months.push(kolmeData12);
-	
-	
-	
-	
-	console.log(months);
-	*/
 	$scope.months = months;
 	
 
@@ -232,7 +185,22 @@ if(numCounterFlag) {
 
 	$scope.date = $stateParams.date;
 	$scope.treenit = Treenidata.trainingsOfDay($stateParams.date);
-	console.log($scope.treenit );
+	
+	
+	
+	var traintypes = [
+		{ id: 0, name: 'Aerobinen', icon:'aero' },
+		{ id: 1, name: 'Jalat', icon:'leg' },
+		{ id: 2, name: 'Selkä', icon:'back' },
+		{ id: 3, name: 'Rinta', icon:'chest' },
+		{ id: 4, name: 'Olkapäät', icon:'hand' },
+		{ id: 5, name: 'Hauis', icon:'hand' },
+		{ id: 6, name: 'Ojentaja', icon:'hand' },
+		{ id: 7, name: 'Vatsa', icon:'ab' },
+		
+	];
+  
+	$scope.traintypes = traintypes;
 	
 })
   

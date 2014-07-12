@@ -7,6 +7,7 @@ Reddish: #CF5777
 Lazy Electric Blue: #5E8CD6
 */
 
+
 @font-face
 {
 	font-family: Raleway;
@@ -56,9 +57,6 @@ Lazy Electric Blue: #5E8CD6
 	src: url(../assets/Roboto/Roboto-Thin.ttf);
     font-style: normal;
 }
-
-
-
 
 
 
@@ -151,20 +149,20 @@ height: 230px;
 .numWrap {margin-top:-7px;}
 .numWrap.left {text-align:left;}
 .numWrap.right {text-align:right;}
-.numWrap h3 {text-transform:uppercase; font-weight:600;font-size:12px;white-space:nowrap;color:#627F7B;color:#4C938B;color:#45CCBE;}
-.numWrap .num{font-family:'RobotoThin';color:#eee;font-size:34px;color:#fff;}
+.numWrap h3 {text-transform:uppercase; font-weight:600;font-size:11px;white-space:nowrap;margin-bottom:0;color:#45CCBE;}
+.numWrap .num{font-family:'RobotoThin';color:#eee;font-size:24px;color:#ddd;}
 .numWrap .numicon  {font-size:30px;color:#45CCBE;}
 .numWrap .numicon.down  {color:#CF5777;}
 .bordercol {border-right:1px solid rgba(255,255,255,.1);padding-bottom:0 !important;}
 
-@media (min-height: 490px) {
+@media (min-height: 530px) {
 .fullheight .scroll {min-height:100%;}
-.numrow{position:absolute;bottom:20px;}
+.numrow{position:absolute;bottom:0px;}
 
 }
 
 /* CHART */
-.chartwrap {margin:30px auto 0;}
+.chartwrap {margin:0px auto 0;}
 #chart_div { font-family:'Raleway','RobotoLight','Roboto','Helvetica',Arial; position:relative; text-transform:uppercase;}
 .canvasjs-chart-tooltip > div {padding:8px !important;}
 .canvasjs-chart-tooltip,  .canvasjs-chart-tooltip > div{border:0 !important; font-family:'RobotoLight' !important; font-style:normal !important; text-shadow:none !important; border-radius:0 !important;}
@@ -179,7 +177,7 @@ height: 230px;
 
 
 @media (min-height: 530px) {
-.bottom-info {position:absolute; bottom:30px;width:100%;}
+.bottom-info {position:absolute; bottom:0px;width:100%;}
 }
 
 
@@ -223,12 +221,22 @@ height: 230px;
 
 /* Detail Date Page */
 .datepage .nav-bar.bar .title {font-family:RobotoLight;}
-.treeni h2 {color:#45CCBE;font-size:23px; margin:0 auto 10px; font-family:RobotoLight; text-align:center;}
+.treeni h2 {color:#fff;font-size:23px; margin:0 auto 10px; font-family:RobotoLight; text-align:center;}
 .treeni h2 img {height:20px;margin:0 5px 0 0;}
 .treeni {color:#EEE;}
 .treeni .num{font-family:RobotoLight; font-size:25px; text-align:center;color:#EEE;}
 .treeni {margin:15px 0 ; padding:15px; border-bottom:1px solid #222;clear:both;}
-.treeni .datecircle {margin: 0px auto 30px; color: rgb(255, 255, 255); background: none repeat scroll 0% 0% rgb(69, 204, 190); display: block; border-radius: 50%; font-family: RobotoLight; text-align: center; line-height: 120px; height: 120px; width: 120px; font-size: 16px;}
+.treeni .datecircle {margin: 0px auto 20px; color: rgb(255, 255, 255); background: none repeat scroll 0% 0% rgb(69, 204, 190); display: block; border-radius: 50%; font-family: RobotoLight; text-align: center; line-height: 110px; height: 110px; width: 110px; font-size: 15px;}
+
+.traintypes .item {
+	padding-left:40px;
+	background-image: url('../img/icons/leg.png');
+	background-repeat: no-repeat;
+	background-size: auto 30px;
+	background-position: 0% 50%;
+	font-size:125%;font-weight:900; text-transform:uppercase;
+	color:#ccc;
+}
 
 /* Sidenav, header */
 
@@ -367,16 +375,16 @@ height: 230px;
 	/*border:0 !important;
     background-image: none;*/
     background-color: #1E2120;
-    color: #45CCBE;
+    color: #bbb;
 	padding-top:0;
 }
 
-.ionic .tabs-dark .tab-item {color:#45CCBE;opacity:1;}
+.ionic .tabs-dark .tab-item {color:#bbb;opacity:1;}
 .ionic .tabs-dark .tab-item.tab-item-active,
 .tabs-striped.tabs-dark .tab-item.tab-item-active, .tabs-striped.tabs-dark .tab-item.active, .tabs-striped.tabs-dark .tab-item.activated
 {
 	background:#111;
-	background:#45CCBE;
+	background:#111;
 	margin:0;
 	border-color:#45CCBE !important;
 	border-style:solid;
@@ -392,4 +400,12 @@ height: 230px;
     color: #000;
 }
 
+
+
+/* Green elements */
+.toggle .track {border-color:#555; background-color:#555;}
+.toggle input:checked + .track {
+    border-color: #45CCBE;
+    background-color: #45CCBE;
+}
 

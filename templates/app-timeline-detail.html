@@ -6,7 +6,7 @@
   </ion-nav-buttons>
 
 
-  <ion-content class="has-header padding bg bg-black" >
+  <ion-content class="has-header bg bg-black" >
 
 	
 	<div class="treeni" ng-repeat="treeni in treenit">
@@ -20,10 +20,25 @@
 		
 		<h3 class="num" ng-show="{{treeni.duration}}"><i class="ion-ios7-timer-outline"></i> {{treeni.duration[0]}}h {{treeni.duration[1]}}min</h3>
 		
-		
+		<!--
 		<label class="item item-input" style="background:transparent;  border-width:0;">
 			<input style="background:transparent; border-width:0 0 1px;" type="text" placeholder="Tietoja treenistä">
 		</label>
+		-->
+		
+		<ul class="list traintypes">
+
+			<li ng-repeat="traintype in traintypes" class="item item-toggle item-dark" style="background-image:url(img/icons/{{traintype.icon}}.png">
+				 {{traintype.name}}
+				 <label class="toggle">
+				   <input type="checkbox">
+				   <div class="track">
+					 <div class="handle"></div>
+				   </div>
+				 </label>
+			</li>
+		</ul>
+		
 		
 		<div class="clearfix"></div>
 	</div>
