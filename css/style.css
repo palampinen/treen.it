@@ -61,7 +61,7 @@ Lazy Electric Blue: #5E8CD6
 
 
 html,body{background:#000;}
-body {font-weight:300; font-family:'Raleway','Roboto','Helvetica',Arial; background:#000;}
+body {font-weight:300; font-family:'Raleway','Roboto','Hel<img src="img/squaredot_green.png" style="width:50px"/> Treenisivetica',Arial; background:#000;}
 input, button, select, textarea, .button  {font-weight:300; font-family:'Raleway','Roboto','Helvetica',Arial;}
 h1,h2,h3,h4 {font-weight:100; font-family:'Raleway','Roboto','Helvetica',Arial; }
 .pane, .view {background:#EDEBE8;background:#000;}
@@ -359,6 +359,8 @@ height: 230px;
 .ionic .bar.bar-dark {
     border-color: #000;
     background-color: #000;
+	border-color:transparent;
+	background-color:rgba(0,0,0,.35);
     background-image: none;
     color: #fff; 
 }

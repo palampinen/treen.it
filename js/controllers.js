@@ -193,10 +193,10 @@ if(numCounterFlag) {
 		{ id: 1, name: 'Jalat', icon:'leg' },
 		{ id: 2, name: 'Selkä', icon:'back' },
 		{ id: 3, name: 'Rinta', icon:'chest' },
-		{ id: 4, name: 'Olkapäät', icon:'hand' },
-		{ id: 5, name: 'Hauis', icon:'hand' },
-		{ id: 6, name: 'Ojentaja', icon:'hand' },
-		{ id: 7, name: 'Vatsa', icon:'ab' },
+		{ id: 4, name: 'Kädet', icon:'hand' },
+		//{ id: 5, name: 'Hauis', icon:'hand' },
+		//{ id: 6, name: 'Ojentaja', icon:'hand' },
+		{ id: 5, name: 'Vatsa', icon:'ab' },
 		
 	];
   
