@@ -4,22 +4,22 @@
 
 
 
-// Define a class like this
+// Define Treenit class
 function Treenit(name, data){
 
-   // Add object properties like this
+   // Add object properties 
    this.name = name;
    this.data = data;
 
 }
 
-// Add methods like this.  All Person objects will be able to invoke this
+// All trainings
 Treenit.prototype.all = function(){
     return this.data;
 }
 
 
-// Add methods like this.  All Person objects will be able to invoke this
+// Total trainings
 Treenit.prototype.count = function(){
     return this.data.length;
 }
@@ -35,6 +35,8 @@ Treenit.prototype.getTimeFromLastVisit = function(){
 	
 	return days_between( new Date(), date2Date(this.data[0].date));
 }
+
+
 
 
 /*
@@ -218,7 +220,9 @@ Treenit.prototype.getMonthCalendar = function(year,month){
 	  month_length = daysInMonth(monthIndex+1,year),
 	  monthObj = {},
 	  tmpArray = [],
-	  text = '';
+	  text = '',
+	  total = 0,
+	  linkFlag = false;
 
 	  
   // Monday first, Sunday last
@@ -242,13 +246,16 @@ Treenit.prototype.getMonthCalendar = function(year,month){
   
   // fill the first week of days
   for (var i=start_day;i<8;i++){
+		linkFlag = (_.indexOf(days,day) >=0);
 		tmpArray.push( {
 			text:day,
-			link: (_.indexOf(days,day) >=0),
+			link: linkFlag,
 			date: day+'.'+(monthIndex+1)+'.'+year,
 			weekend: isWeekEnd(day,monthIndex,year)
 		})
 		
+		if(linkFlag)
+			total++;
         day++
   }
   monthObj.weeks = []
@@ -260,18 +267,21 @@ Treenit.prototype.getMonthCalendar = function(year,month){
 	 tmpArray = [];
      for (var i=1;i<=7;i++){
 		(day > month_length ) ? text = '' : text = day;
+		linkFlag = (_.indexOf(days,day) >=0);
 		tmpArray.push( {
 			text:text,
-			link: (_.indexOf(days,day) >=0),
+			link: linkFlag,
 			date: day+'.'+(monthIndex+1)+'.'+year,
 			weekend: isWeekEnd(day,monthIndex,year)
 		});
-		
+		if(linkFlag)
+			total++;
 		day++
      }
 	 monthObj.weeks.push(tmpArray)
   }
 
+  monthObj.total = total;
 // End: From full-calendar  
 	
 	console.log(monthObj);
@@ -279,8 +289,33 @@ Treenit.prototype.getMonthCalendar = function(year,month){
 	return monthObj;
 }
 
+Treenit.prototype.getMonthCalendarFromBeginning = function() {
 
+	var first = this.getFirstVisitMonthYear(),
+		fYear = first[0],
+		fMonth = first[1],
+		d = new Date(),
+		cYear = d.getFullYear(),
+		cMonth = d.getMonth(),
+		cal = [];
 
+	// Current Year
+	for(var j=cMonth; (fYear ==cYear && j>=fMonth) || (fYear != cYear && j>=0) ; j--)
+		cal.push(this.getMonthCalendar(cYear,j));
+		
+		// Years in the middle
+	if(cYear-fYear >= 2)
+		for(var i=cYear-1; i>=fYear+1; i--)
+			for(var j=11; j>=0; j--)
+				cal.push(this.getMonthCalendar(i,j));
+	
+	// Last Year
+	if(fYear!=cYear)	
+		for(var j=11; j>=fMonth; j--)
+			cal.push(this.getMonthCalendar(fYear,j));
+
+	return cal;
+}
 
 
 Treenit.prototype.getYearActivity = function(){
@@ -641,6 +676,14 @@ Treenit.prototype.getLatestCountByDays = function( days) {
 
 
 
+//	first visit month and year
+Treenit.prototype.getFirstVisitMonthYear = function() {
+	var firstVisit = this.data[ this.data.length-1 ].date,
+		firstVisitDate = date2Date(firstVisit);
+	return [firstVisitDate.getFullYear(),firstVisitDate.getMonth()];
+}
+
+
 
 /* TEST BY JQUERY 
 $(function() {
@@ -746,10 +789,13 @@ Date.prototype.getWeek = function() {
 /*
 *	19.9.2009 -> new Date(2009,8,19)
 */
-function date2Date (date1){
+function date2Date(date1){
 	var dateParts = date1.split(".");
 	return new Date(parseInt(dateParts[2]), (parseInt(dateParts[1]) - 1), dateParts[0]);
 }
+
+
+
 
 /*
 * Days between 2 dates

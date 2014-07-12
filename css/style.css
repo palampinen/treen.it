@@ -155,7 +155,7 @@ height: 230px;
 .numWrap .num{font-family:'RobotoThin';color:#eee;font-size:34px;color:#fff;}
 .numWrap .numicon  {font-size:30px;color:#45CCBE;}
 .numWrap .numicon.down  {color:#CF5777;}
-.bordercol {border-right:1px solid rgba(0,0,0,.1);padding-bottom:0 !important;}
+.bordercol {border-right:1px solid rgba(255,255,255,.1);padding-bottom:0 !important;}
 
 @media (min-height: 490px) {
 .fullheight .scroll {min-height:100%;}

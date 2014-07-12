@@ -78,7 +78,7 @@ angular.module('treenit.controllers', [])
 .controller('AppCtrl', function($scope, $location, User) {
 
 	$scope.isItemActive = function(item) {
-		//console.log($location.path());
+		console.log($location.path());
 		return $location.path().indexOf(item) > -1;
 	};
 	
@@ -86,19 +86,19 @@ angular.module('treenit.controllers', [])
 
 })
 
-//.controller('DashCtrl', function (Trainings, $scope, Treenidata) {
-.controller('DashCtrl', function (Trainings, $scope) {
+.controller('DashCtrl', function (Trainings, $scope, Treenidata) {
 	
-	//var thisweek = Treenidata.thisweek();
+	var thisweek = Treenidata.thisweek();
 	$scope.thisweek  = 0;
-	//$scope.thisweek = thisweek;
+	$scope.thisweek = thisweek;
 
 	
 	
 	 CanvasJS.addColorSet("mainChartColors",
                 [
-					"#45CCBE",
-					"rgba(116,217,206,.03)"      
+					//"#45CCBE",
+					"rgba(56,216,198,.7)",
+					"rgba(116,217,206,.04)"      
                 ]);
 	
 	var chart = new CanvasJS.Chart("mainChart",
@@ -154,10 +154,10 @@ if(numCounterFlag) {
 	$scope.thisYearCount = 0;
 	$scope.past30Days 	 = 0;
 	
-//	$scope.weekAverage 		= Treenidata.weeklyAverage();
-//	$scope.total 			= Treenidata.count();
-//	$scope.thisYearCount 	= Treenidata.thisYearCount();
-//	$scope.past30Days 		= Treenidata.latestCountByDays(30);
+	$scope.weekAverage 		= Treenidata.weeklyAverage();
+	$scope.total 			= Treenidata.count();
+	$scope.thisYearCount 	= Treenidata.thisYearCount();
+	$scope.past30Days 		= Treenidata.latestCountByDays(30);
 	
 	
 	
@@ -168,11 +168,10 @@ if(numCounterFlag) {
 
 
 
-//.controller('TimelineCtrl', function($scope, Treenidata) {
-.controller('TimelineCtrl', function($scope) {
+.controller('TimelineCtrl', function($scope, Treenidata) {
 	
-	var months = []
-	/*,
+	var months = Treenidata.monthCalendarFromBeginning();
+	/*
 		heinaData = Treenidata.monthCalendar(2014,6),
 		kesaData = Treenidata.monthCalendar(2014,5),
 		toukoData = Treenidata.monthCalendar(2014,4),
@@ -193,27 +192,7 @@ if(numCounterFlag) {
 		kolmeData11 = Treenidata.monthCalendar(2013,1),
 		kolmeData12 = Treenidata.monthCalendar(2013,0);
 	
-	
-	heinaData.total = Treenidata.monthCount(2014,6);
-	kesaData.total = Treenidata.monthCount(2014,5);
-	toukoData.total = Treenidata.monthCount(2014,4);
-	huhtiData.total = Treenidata.monthCount(2014,3);
-	maalisData.total = Treenidata.monthCount(2014,2);
-	helmiData.total = Treenidata.monthCount(2014,1);
-	tammiData.total = Treenidata.monthCount(2014,0);
-	kolmeData1.total = Treenidata.monthCount(2013,11);
-	kolmeData2.total = Treenidata.monthCount(2013,10);
-	kolmeData3.total = Treenidata.monthCount(2013,9);
-	kolmeData4.total = Treenidata.monthCount(2013,8);
-	kolmeData5.total = Treenidata.monthCount(2013,7);
-	kolmeData6.total = Treenidata.monthCount(2013,6);
-	kolmeData7.total = Treenidata.monthCount(2013,5);
-	kolmeData8.total = Treenidata.monthCount(2013,4);
-	kolmeData9.total = Treenidata.monthCount(2013,3);
-	kolmeData10.total = Treenidata.monthCount(2013,2);
-	kolmeData11.total = Treenidata.monthCount(2013,1);
-	kolmeData12.total = Treenidata.monthCount(2013,0);
-		
+
 	months.push(heinaData);
 	months.push(kesaData);
 	months.push(toukoData);
@@ -233,11 +212,12 @@ if(numCounterFlag) {
 	months.push(kolmeData10);
 	months.push(kolmeData11);
 	months.push(kolmeData12);
-	*/
+	
 	
 	
 	
 	console.log(months);
+	*/
 	$scope.months = months;
 	
 
@@ -365,6 +345,17 @@ if(numCounterFlag) {
 	$scope.thisYearCount 	= Treenidata.thisYearCount();
 	$scope.lastYearCount 	= Treenidata.yearCountToDate( d.getFullYear()-1, new Date(d.getFullYear()-1, d.getMonth(),d.getDate()));
 
+	
+	
+	$scope.weekAverage   = 0;
+	$scope.total 		 = 0;
+	$scope.thisYearCount = 0;
+	$scope.past30Days 	 = 0;
+	
+	$scope.weekAverage 		= Treenidata.weeklyAverage();
+	$scope.total 			= Treenidata.count();
+	$scope.thisYearCount 	= Treenidata.thisYearCount();
+	$scope.past30Days 		= Treenidata.latestCountByDays(30);
   
   
 })
@@ -384,8 +375,8 @@ if(numCounterFlag) {
 		//$location.path('/');
 	};
 	
-});
-/*
+})
+
 .controller('DebugCtrl', function($scope, Treenidata, User ) {
 
 	$scope.treenit = Treenidata.all();
@@ -401,4 +392,3 @@ if(numCounterFlag) {
 	};
 	
 });
-*/

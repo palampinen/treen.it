@@ -1,6 +1,6 @@
 var API_URL = 'http://minnemenna.com/dev/wp-content/plugins/omafressi/dev/api/',
-	API_USER = 'pasilampinen',
-	API_PASS = 'iaY25mx',
+	API_USER = '',
+	API_PASS = '',
 	API_CENTERURL = 'https://fressi.bypolar.fi/mobile/10/history.html';
 
 	
@@ -160,17 +160,7 @@ angular.module('treenit.services', [])
 .factory('User', function() {
 
 //tmp
-/*
-  var userdata = { 
-	name: 		'Pasi Lampinen', 
-	sex: 		'male', 
-	email:		'palampinen@gmail.com',
-	username: 	'pasilampinen',
-	password:	'pasipass',
-	center:		'',
-	centerID: 	''
-  }
-  */
+
 		var treenitNameSpace = 'treenit-user-';
 
 	
@@ -334,6 +324,9 @@ angular.module('treenit.services', [])
 		},
 		monthCalendar: function(year,month) {
 			return treeni.getMonthCalendar(year,month)
+		},
+		monthCalendarFromBeginning: function(){
+			return treeni.getMonthCalendarFromBeginning()
 		},
 		yearActivity: function() {
 			return treeni.getYearActivity()
